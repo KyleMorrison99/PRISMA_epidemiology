@@ -1,0 +1,22 @@
+PRISMA_id,checklist_availability,checklist_availability_type,checklist_fillable,open_source_support,open_source_fillable,version_control,elaboration_document,elaboration_document_comment,statement_document,statement_document_comment,
+PRISMA_2009,yes ,word,yes,no,no,no,yes,10.1136/bmj.b2535 ,yes,10.1136/bmj.b2700 ,
+PRISMA_2020,yes,pdf; word; excel; shiny app,yes,yes,yes,no,yes,10.1136/bmj.n160,yes,10.1136/bmj.n71,
+PRISMA_abstracts,yes,powerpoint; image ,no,no,no,no,no,10.1371/journal.pmed.1001419,yes,10.1371/journal.pmed.1001419,statement and elaboration is one document
+PRISMA_acupuncture,yes,pdf; word,yes,yes,no,no,yes,10.1186/s12906-019-2624-3,yes,10.1186/s12906-019-2624-3,statement and elaboration is one document
+PRISMA_CHM,no,NA,no,no,no,no,yes,10.1142/S0192415X20500639,yes,10.1142/S0192415X20500639,statement and elaboration is one document
+PRISMA_complex,no,NA,no,no,no,no,yes,10.1016/j.jclinepi.2017.06.016,yes,10.1016/j.jclinepi.2017.06.017,
+PRISMA_COSMIN,no,NA,no,no,no,no,yes,Supplementary file 5 - 10.1007/s11136-024-03634-y,yes,10.1007/s11136-024-03634-y,
+PRISMA_DTA,yes,pdf; word,yes,yes,no,no,yes,10.1001/jama.2017.19163,yes,10.1136/bmj.m2632,
+PRISMA_DTA_abstract,yes,pdf; word,yes,yes,no,no,yes,10.1136/bmj.n265 ,yes ,10.1136/bmj.m2632,
+PRISMA_ecoevo,yes,pdf; word; online form; shiny app,yes,yes,yes,no,yes,10.1111/brv.12721,no,NA,
+PRISMA_equity,yes,pdf; word,yes,yes,no,no,yes, 10.1186/s12939-015-0219-2,yes,10.1371/journal.pmed.1001333,
+PRISMA_harms,yes,pdf; word,yes,yes,no,no,yes,10.1136/bmj.i157,yes,10.1136/bmj.i157,statement and elaboration is one document
+PRISMA_IPD,yes,pdf; word,yes,yes,no,no,no,HAS EXAMPLES IN ETABLE2 BUT NO ELABORATION ,yes,10.1001/jama.2015.3656,
+PRISMA_2020_living,yes,pdf,yes,yes,no,no,yes,Web Appendix 3 - 10.1136/bmj-2024-079183 ,yes,10.1136/bmj-2024-079183 ,elaboration in supplement
+PRISMA_moxibustion,yes,pdf; word,yes,yes,no,no,yes,Additonal file 1 - 10.1186/s13643-020-01502-7,yes,10.1186/s13643-020-01502-7,elaboration in supplement
+PRISMA_NMA,yes,pdf; word,yes,yes,no,no,yes,10.7326/M14-2385,yes,10.7326/M14-2385,statement and elaboration is one document
+PRISMA_protocol,yes,pdf; word,yes,yes,no,no,yes,10.1136/bmj.g7647,yes,10.1186/2046-4053-4-1,
+PRISMA_scoping,yes,pdf; word,yes,yes,no,no,yes,10.7326/M18-0850,yes,10.7326/M18-0850,statement and elaboration is one document
+PRISMA_search,yes,pdf; word; excel,yes,yes,no,no,yes,10.1186/s13643-020-01542-z,yes,10.1186/s13643-020-01542-z,statement and elaboration is one document
+SWIM,yes,inline ,no,no,no,no,no,10.1136/bmj.l6890 ,yes,10.1136/bmj.l6890 ,statement and elaboration is one document
+OoSRs,yes,word,yes,no,no,no,no,NA,yes,10.1016/j.jclinepi.2017.10.002,
