@@ -333,9 +333,16 @@ method_extensions
  fig_combined
 
 # Save the combined figure if desired
- ggsave(here("figures", "citations_figure.jpg"), plot = fig_combined, width = 10, height = 14, dpi = 300)
+# ggsave(here("figures", "citations_figure.jpg"), plot = fig_combined, width = 10, height = 14, dpi = 300)
 
 
+citations_by_year <- citations %>%
+  filter(duplicate != "no") %>%            
+  group_by(year) %>%                       
+  summarise(total_citations = sum(citations, na.rm = TRUE)) 
+
+# View result
+citations_by_year 
 ```
 
 
@@ -862,85 +869,96 @@ p <- p1 + p2 + p3 & theme(legend.position = "bottom",
 
 # Geographical map
 ```{r}
-# aggregate the number of unique papers (or authors) associated with each country
-# convert into a long-format
+
+# 1. Prepare geo_data from your `edi_author` data (same as before).
 geo_data <- edi_author %>%
   separate_rows(geographic_diversity, sep = ";") %>%
   mutate(geographic_diversity = trimws(geographic_diversity)) %>%  # remove extra spaces
   group_by(geographic_diversity) %>%
   summarise(count = n(), .groups = "drop")
 
-# rename column
 colnames(geo_data) <- c("Country", "Count")
 
-# join geographic data with world map
+# 2. Map data.
 world_map <- map_data("world")
-geo_data$Country <- trimws(geo_data$Country)  # remove spaces again
+geo_data$Country <- trimws(geo_data$Country)  
 world_map$region <- trimws(world_map$region)
 
-# get unique country names from each dataset
-world_countries <- unique(world_map$region)
-geo_countries <- unique(geo_data$Country)
-
-# find unmatched country names
-unmatched_countries <- geo_countries[!(geo_countries %in% world_countries)]
-unmatched_countries # "England", "NA", "Rhode Island", "united Kingdom", "United Kingdom", "United States" 
-
-# standardizing country names in geo_data
+# 3. Fix mismatched country names.
 geo_data <- geo_data %>%
   mutate(Country = case_when(
-    Country == "England" ~ "United Kingdom",
-    Country == "united Kingdom" ~ "United Kingdom",
-    Country == "United States" ~ "USA",
-    Country == "Rhode Island" ~ "USA",  # Rhode Island is a state, not a country
-    is.na(Country) ~ "Unknown",   # NA 
+    Country == "England"         ~ "United Kingdom",
+    Country == "united Kingdom"  ~ "United Kingdom",
+    Country == "United States"   ~ "USA",
+    Country == "Rhode Island"    ~ "USA",     # treat Rhode Island as USA
+    is.na(Country)               ~ "Unknown", # handle NA
+    TRUE                         ~ Country
+  )) %>%
+  mutate(Country = case_when(
+    Country %in% c("United Kingdom", "united Kingdom") ~ "UK",  
     TRUE ~ Country
   ))
 
-# check again
-unmatched_countries <- geo_data$Country[!(geo_data$Country %in% world_map$region)]
-unmatched_countries # has issues in  "United Kingdom", "United Kingdom", "United Kingdom"
-# check name world_map uses for the United Kingdom
-unique(world_map$region) # UK
-# reconvert
-geo_data <- geo_data %>%
-  mutate(Country = case_when(
-    Country %in% c("United Kingdom", "united Kingdom") ~ "UK",  # match world_map actually uses "UK"
-    is.na(Country) ~ "Unknown",  
-    TRUE ~ Country  # other names unchanged
-  ))
-
-# check again
-unmatched_countries <- geo_data$Country[!(geo_data$Country %in% world_map$region)]
-unmatched_countries # good
-# number of unique county
-geo_data %>% summarise(unique_countries = n_distinct(Country))
-
-# merge
+# 4. Merge map with geo_data.
 map_data_final <- left_join(world_map, geo_data, by = c("region" = "Country"))
 
-# ensure all countries in the map have a count (fill missing with zero)
+# 5. Ensure all countries have a 'Count' (NA -> 0).
 geo_data_complete <- world_map %>%
   distinct(region) %>%
-  left_join(map_data_final, by = c("region" = "region")) %>%
-  mutate(Count = ifelse(is.na(Count), 0, Count))  # assign zero to missing countries
+  left_join(map_data_final, by = "region") %>%
+  mutate(Count = ifelse(is.na(Count), 0, Count))
 
-# map
-p <- ggplot(geo_data_complete, aes(x = long, y = lat, group = group, fill = Count)) +
-  geom_polygon(color = "transparent", size = 0.2) + 
-  scale_fill_gradient(low = "lightblue", high = "darkblue",  na.value = "#F4A460") +
-  viridis:: scale_fill_viridis(option="viridis") +
-  labs(title = "Geographic diversity",
-       fill = "Number of authors by country",
-       x = "",
-       y = "") +
-  theme_minimal() +
-  theme(legend.position = "bottom",
-        axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        panel.grid = element_blank(),
-        plot.title = element_text(size = 10),
-        legend.title = element_text(size = 8)) 
+# 6. Use absolute bins.
+geo_data_complete <- geo_data_complete %>%
+  mutate(Count_bin = case_when(
+    Count == 0            ~ "0",
+    Count <= 10           ~ "1–10",
+    Count <= 20           ~ "11–20",
+    Count <= 50           ~ "21–50",
+    Count  > 50          ~ "50+",
+  )) %>%
+  # 7. Convert 'Count_bin' to factor to control the legend order.
+  mutate(Count_bin = factor(Count_bin,
+                            levels = c("0", "1–10", "11–20", 
+                                       "21–50", "50+")))
+
+# 8. Define a discrete color palette.
+color_palette <- c(
+  "0"     = "#D9D9D9",  
+  "1–10"  = "#6C5B7B",
+  "11–20" = "#F67280",
+  "21–50" = "#F8B195",
+  "50+"=    "#F9DCC4"
+)
+
+# 9. Plot the map with discrete color bins and improved fonts.
+p_map <- ggplot(geo_data_complete, aes(
+    x = long, y = lat, group = group, fill = Count_bin
+  )) +
+  geom_polygon(color = "white", size = 0.2) +  
+  scale_fill_manual(
+    values = color_palette,
+    na.value = "grey90",
+    name = "Authors by country"
+  ) +
+  labs(
+    title = "Geographic diversity",
+    x = NULL,
+    y = NULL
+  ) +
+  theme_minimal(base_size = 12, base_family = "Arial") +
+  theme(
+    legend.position = "bottom",
+    axis.text       = element_blank(),
+    axis.ticks      = element_blank(),
+    panel.grid      = element_blank(),
+    plot.title      = element_text(size = 14, face = "bold"),
+    legend.title    = element_text(size = 11, face = "bold"),
+    legend.text     = element_text(size = 10),
+    plot.margin     = margin(t = 10, r = 10, b = 10, l = 10)
+  )
+
+p_map
 
 ```
 
