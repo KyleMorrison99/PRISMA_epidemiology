@@ -159,7 +159,7 @@ donut_chart(edi,
 
 
 
-## Author and Geographic diversity
+## Gender and Geographic diversity
 
 ```{r}
 # calculate gender and geographic diversity ratios
@@ -403,7 +403,7 @@ df_fig <- df1 %>%
   pivot_longer(cols = everything(), names_to = "variable", values_to = "percent_yes") 
 
 # add diversity info
-diversity_ratios_m <- data.frame(variable = c("author_diversity", "country_diversity"),
+diversity_ratios_m <- data.frame(variable = c("gender_diversity", "country_diversity"),
                                  percent_yes = c(mean(diversity_ratios$female_ratio) * 100, mean(diversity_ratios$global_south_ratio) * 100))
 
 df_fig <- rbind(df_fig, diversity_ratios_m)
@@ -413,7 +413,7 @@ df_fig$variable <- c("EDI considered",
                      "Lingual diversity", 
                      "Stakeholder engagement",
                      "Open access status",
-                     "Author diversity",
+                     "Gender diversity",
                      "Country diversity")
 
 # create the circular barplot
@@ -571,6 +571,9 @@ p2 <- ggplot(df_fig, aes(x = reorder(str_wrap(variable, 5), percent_yes), y = pe
     panel.grid.major.x = element_blank()
   )
 
+png(filename = "circular barplot EDI.png", width = 6, height = 6, units = "in", type = "windows", res = 400)
+p1
+dev.off()
 ```
 
 
@@ -656,9 +659,107 @@ p <- p1 + p2 + p3 & theme(legend.position = "bottom",
 ```
 
 
-
-
 # Geographical map
+
+Kyle's one:
+
+```{r}
+
+# 1. Prepare geo_data from your `edi_author` data (same as before).
+geo_data <- edi_author %>%
+  separate_rows(geographic_diversity, sep = ";") %>%
+  mutate(geographic_diversity = trimws(geographic_diversity)) %>%  # remove extra spaces
+  group_by(geographic_diversity) %>%
+  summarise(count = n(), .groups = "drop")
+
+colnames(geo_data) <- c("Country", "Count")
+
+# 2. Map data.
+world_map <- map_data("world")
+geo_data$Country <- trimws(geo_data$Country)  
+world_map$region <- trimws(world_map$region)
+
+# 3. Fix mismatched country names.
+geo_data <- geo_data %>%
+  mutate(Country = case_when(
+    Country == "England"         ~ "United Kingdom",
+    Country == "united Kingdom"  ~ "United Kingdom",
+    Country == "United States"   ~ "USA",
+    Country == "Rhode Island"    ~ "USA",     # treat Rhode Island as USA
+    is.na(Country)               ~ "Unknown", # handle NA
+    TRUE                         ~ Country
+  )) %>%
+  mutate(Country = case_when(
+    Country %in% c("United Kingdom", "united Kingdom") ~ "UK",  
+    TRUE ~ Country
+  ))
+
+# 4. Merge map with geo_data.
+map_data_final <- left_join(world_map, geo_data, by = c("region" = "Country"))
+
+# 5. Ensure all countries have a 'Count' (NA -> 0).
+geo_data_complete <- world_map %>%
+  distinct(region) %>%
+  left_join(map_data_final, by = "region") %>%
+  mutate(Count = ifelse(is.na(Count), 0, Count))
+
+# 6. Use absolute bins.
+geo_data_complete <- geo_data_complete %>%
+  mutate(Count_bin = case_when(
+    Count == 0            ~ "0",
+    Count <= 10           ~ "1–10",
+    Count <= 20           ~ "11–20",
+    Count <= 50           ~ "21–50",
+    Count  > 50          ~ "50+",
+  )) %>%
+  # 7. Convert 'Count_bin' to factor to control the legend order.
+  mutate(Count_bin = factor(Count_bin,
+                            levels = c("0", "1–10", "11–20", 
+                                       "21–50", "50+")))
+
+# 8. Define a discrete color palette.
+color_palette <- c(
+  "0"     = "#D9D9D9",  
+  "1–10"  = "#6C5B7B",
+  "11–20" = "#F67280",
+  "21–50" = "#F8B195",
+  "50+"=    "#F9DCC4"
+)
+
+# 9. Plot the map with discrete color bins and improved fonts.
+p_map <- ggplot(geo_data_complete, aes(
+    x = long, y = lat, group = group, fill = Count_bin
+  )) +
+  geom_polygon(color = "white", size = 0.2) +  
+  scale_fill_manual(
+    values = color_palette,
+    na.value = "grey90",
+    name = "Authors by country"
+  ) +
+  labs(
+    title = "Geographic diversity",
+    x = NULL,
+    y = NULL
+  ) +
+  theme_minimal(base_size = 12, base_family = "Arial") +
+  theme(
+    legend.position = "bottom",
+    axis.text       = element_blank(),
+    axis.ticks      = element_blank(),
+    panel.grid      = element_blank(),
+    plot.title      = element_text(size = 14, face = "bold"),
+    legend.title    = element_text(size = 11, face = "bold"),
+    legend.text     = element_text(size = 10),
+    plot.margin     = margin(t = 10, r = 10, b = 10, l = 10)
+  )
+
+p_map
+
+```
+
+
+Original one:
+
 ```{r}
 # aggregate the number of unique papers (or authors) associated with each country
 # convert into a long-format
@@ -724,10 +825,10 @@ geo_data_complete <- world_map %>%
   mutate(Count = ifelse(is.na(Count), 0, Count))  # assign zero to missing countries
 
 # map
-p <- ggplot(geo_data_complete, aes(x = long, y = lat, group = group, fill = Count)) +
-  geom_polygon(color = "transparent", size = 0.2) + 
-  scale_fill_gradient(low = "lightblue", high = "darkblue",  na.value = "#F4A460") +
-  viridis:: scale_fill_viridis(option="viridis") +
+p <- ggplot(map_data_final, aes(x = long, y = lat, group = group, fill = Count)) +
+  geom_polygon(color = "white", size = 0.2) + 
+  scale_fill_gradient(low = "lightblue", high = "darkblue",  na.value = "red") + # #F4A460
+  #viridis:: scale_fill_viridis(option="viridis") +
   labs(title = "Geographic diversity",
        fill = "Number of authors by country",
        x = "",
@@ -740,5 +841,9 @@ p <- ggplot(geo_data_complete, aes(x = long, y = lat, group = group, fill = Coun
         plot.title = element_text(size = 10),
         legend.title = element_text(size = 8)) 
 
+
+png(filename = "fig map.png", width = 5.5, height = 3.5, units = "in", type = "windows", res = 400)
+p
+dev.off()
 ```
 
