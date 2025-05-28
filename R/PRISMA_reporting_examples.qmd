@@ -1,0 +1,203 @@
+---
+title: "Examples of Reporting in PRISMA Extensions"
+author: "Kyle Morrison"
+date: '`28/05/2025`'
+knit: (function(inputFile, encoding) rmarkdown::render(inputFile, encoding = encoding))
+output:
+  html_document:
+    theme: flatly
+    toc: false
+    code_folding: hide
+    highlight: tango
+    number_sections: false
+    df_print: paged
+---
+
+# Examples of Reporting in PRISMA Extensions
+
+## Equality, Diversity & Inclusion (EDI) statement
+
+### Example: PRISMA Scoping Review
+
+[DOI: 10.7326/M18-0850](https://doi.org/10.7326/M18-0850)
+
+> We aimed to form an expert panel of approximately 30 members that would be representative of different geography and stakeholder types and research experiences, including persons with experience in the conduct, dissemination, or uptake of scoping reviews.
+
+---
+
+## Involving stakeholders  
+
+### Example: PRISMA Harms
+
+[DOI: 10.1136/bmj.i157](https://doi.org/10.1136/bmj.i157)
+
+> Delphi participants were selected on the basis of their expertise in systematic reviews in general, and in particular reviews of adverse events. This selection was complemented by other content experts including methodologists, statisticians, epidemiologists, clinicians, journal editors, a consumer, and a member of a federal health regulatory agency (Health Canada).
+
+---
+
+## Following an established guideline for development
+
+### Example: PRISMA 2020 for Living Systematic Reviews
+
+[DOI: 10.1136/bmj-2024-079183](https://doi.org/10.1136/bmj-2024-079183)
+
+> We followed the EQUATOR Network’s guidance for developing health research reporting guidelines and registered the project.
+
+---
+
+## Collecting feedback via a Delphi process
+
+### Example: PRISMA for Abstracts
+
+[DOI: 10.1371/journal.pmed.1001419](https://doi.org/10.1371/journal.pmed.1001419)
+
+> In preparation for a consensus meeting, we used a modified Delphi consensus survey method to select and reduce the number of possible checklist items.
+
+---
+
+## Preregistration of the development plan
+
+### Example: PRISMA EcoEvo
+
+[DOI: 10.1111/brv.12721](https://doi.org/10.1111/brv.12721)
+
+> We registered the update with the EQUATOR Network website on **13 December 2017**, and our protocol was uploaded to the Open Science Framework on **14 February 2018**. Deviations from the protocol are noted in Supplement 1.
+
+---
+
+## Holding a consensus meeting
+
+### Example: PRISMA 2009
+
+[DOI: 10.1136/bmj.b2535](https://doi.org/10.1136/bmj.b2535)
+
+> A three-day meeting was held in Ottawa, Canada, in **June 2005** with 29 participants (review authors, methodologists, clinicians, medical editors and a consumer). The objective was to revise and expand the QUOROM checklist and flow diagram.
+
+---
+
+## Reporting feedback from the consensus meeting
+
+### Example: PRISMA DTA (first five excluded items)
+
+| **Excluded item**                                                                 | **Reason for exclusion**                                                                                           |
+|:----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
+| 1. Report whether hand-searching of reference lists was done                      | Considered too detailed, relevant only to a subset of studies; no strong evidence of benefit in DTA reviews.       |
+| 2. List any search of the grey literature (incl. registries)                      | Same rationale as above; grey-literature searching will be covered in the E&E document.                             |
+| 3. Describe methods to identify and account for overlapping patient populations   | Too detailed and not clearly a widespread problem in DTA reviews.                                                  |
+| 4. Report how studies with only a subgroup of participants are handled            | Same rationale as above.                                                                                           |
+| 5. List patient demographic information (age, sex)                                | No strong evidence that age/sex are particularly relevant in DTA reviews.                                          |
+
+---
+
+## Seeking external feedback
+
+### Example: PRISMA NMA
+
+[DOI: 10.7326/M14-2385](https://doi.org/10.7326/M14-2385)
+
+> We implemented an online Delphi survey of authors of network meta-analyses (215 invited; 114 responded — 53 % response rate) to identify items requiring new checklist entries or elaboration statements, and to flag topics needing further discussion.
+
+---
+
+## Reporting the external feedback collected
+
+### Example: PRISMA-CI (external feedback summary)
+
+[DOI: 10.1016/j.jclinepi.2017.06.016](https://doi.org/10.1016/j.jclinepi.2017.06.016)
+
+| **Theme**              | **Element**                                                 | **%**  |
+|:-----------------------|:------------------------------------------------------------|:------:|
+| **Population**         | Target group (individual, population, health system, etc.)  | 100 %  |
+|                        | Demographics / age / gender / ethnicity / language          | 100 %  |
+|                        | Skills / education level required                           | 78.3 % |
+|                        | Medical & social risk status                                | 100 %  |
+|                        | Behaviours targeted for change                              | 91.3 % |
+| **Intervention**       | Number of components                                        | 91.3 % |
+|                        | A-priori vs. final components                               | 82.6 % |
+|                        | All active and optional components                          | 91.3 % |
+|                        | Timing or sequence of components                            | 95.7 % |
+|                        | Type (dynamic / static)                                     | 82.6 % |
+|                        | Fidelity (adaptability, tailoring)                          | 95.7 % |
+|                        | Replicability detail                                        | 95.7 % |
+|                        | Intensity & frequency                                        | 87–96 % |
+|                        | Theoretical foundation                                      | 86.9 % |
+|                        | Incentives                                                  | 82.6 % |
+|                        | Deliverer characteristics                                   | 95.7 % |
+| **Comparator**         | Describe comparator/'usual care'                            | 100 %  |
+| **Setting / Context**  | Contextual factors & system description                     | 95.7 % |
+|                        | Champion attributes                                         | 100 %  |
+|                        | Organisational leadership                                   | 100 %  |
+|                        | Geographic location                                         | 86.9 % |
+|                        | Financial setting                                           | 91.3 % |
+|                        | Clinical setting                                            | 95.7 % |
+| **Outcomes / Eval.**   | Expected effects                                            | 86.9 % |
+|                        | Evaluation criteria                                         | 95.7 % |
+|                        | Explicitly list negative findings                           | 100 %  |
+
+<details>
+<summary>Optional elements (click to expand)</summary>
+
+| **Theme**             | **Element**                                           | **%**   |
+|:----------------------|:------------------------------------------------------|:-------:|
+| **Population**        | Cultural characterisation                             | 86.9 %  |
+| **Intervention**      | Independent vs. interactive components                | 73.9 %  |
+|                       | Variability within/between components                 | 78.3 %  |
+|                       | Replicability – theoretical basis                     | 69.6 %  |
+|                       | Replicability – evidence                              | 43.5 %  |
+|                       | Cost of intervention                                  | 82.6 %  |
+|                       | Logic model / conceptual diagram                      | 78.3 %  |
+| **Setting / Context** | Organisational readiness                              | 95.7 %  |
+|                       | Rival activities                                      | 86.9 %  |
+| **Outcomes / Eval.**  | Resource utilisation                                  | 91.3 %  |
+
+</details>
+
+---
+
+## Conflict-of-interest statement
+
+### Example: PRISMA Search Strategy Extension
+
+[DOI: 10.1186/s13643-020-01542-z](https://doi.org/10.1186/s13643-020-01542-z)
+
+> The authors declare no competing interests. MJP and DM are leading the PRISMA 2020 update.
+
+---
+
+## Detailed COI disclosure
+
+### Example: PRISMA-IPD
+
+[DOI: 10.1001/jama.2015.3656](https://doi.org/10.1001/jama.2015.3656)
+
+> **Funding/Support:** National Institute for Health Research (NIHR) Senior Investigator award (Dr L. Stewart); MRC–NIHR Methodology Research Programme (grant 88053).  
+> **Role of funders/sponsors:** No role in design, analysis, manuscript preparation or the decision to publish.  
+> **Disclaimer:** The views expressed are those of the authors and not necessarily those of the Cochrane Collaboration, MRC, NHS, NIHR or the Department of Health.
+
+---
+
+## Stated limitations of the development process
+
+### Example: PRISMA-M (Moxibustion)
+
+[DOI: 10.1186/s13643-020-01502-7](https://doi.org/10.1186/s13643-020-01502-7)
+
+> Although guidelines do improve reporting quality, more than half of our experts were CM professionals, which may limit international applicability. We also did not run a large user-based survey to test practicality. Future updates will broaden expert input and collect wider user feedback.
+
+---
+
+## Extended items and deviations from the original PRISMA
+
+### Example: PRISMA – Chinese Herbal Medicine (first four items)
+
+[DOI: 10.1142/S0192415X20500639](https://doi.org/10.1142/S0192415X20500639)
+
+| **PRISMA item**                                                                     | **CHM-specific extension**                                                                                                                                                 |
+|:-------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Identify the report as a systematic review, meta-analysis or both.                   | **1a.** Name the CHM substance(s) or formula(s). **1b.** State whether the review targets: (1) a Western-medicine disease; (2) that disease with a specific TCM pattern; or (3) a TCM pattern alone. |
+| Provide a structured summary (background, objectives, data sources, etc.).           | Include the name & form of the CHM intervention and any TCM pattern applied.                                                                                                |
+| Describe the rationale for the review.                                               | **3a.** Explain the rationale for the CHM intervention in TCM terms. **3b.** State the importance of the review.                                                            |
+| State the review question (PICOS).                                                   | Specify whether the CHM targets a disease, a TCM pattern, or both.                                                                                                         |
+
+---
+
