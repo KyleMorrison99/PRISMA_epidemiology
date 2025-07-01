@@ -19,4 +19,4 @@ PRISMA_protocol,yes,pdf; word,yes,yes,no,no,yes,10.1136/bmj.g7647,yes,10.1186/20
 PRISMA_scoping,yes,pdf; word,yes,yes,no,no,yes,10.7326/M18-0850,yes,10.7326/M18-0850,statement and elaboration is one document
 PRISMA_search,yes,pdf; word; excel,yes,yes,no,no,yes,10.1186/s13643-020-01542-z,yes,10.1186/s13643-020-01542-z,statement and elaboration is one document
 SWIM,yes,inline ,no,no,no,no,no,10.1136/bmj.l6890 ,yes,10.1136/bmj.l6890 ,statement and elaboration is one document
-OoSRs,yes,word,yes,no,no,no,no,NA,yes,10.1016/j.jclinepi.2017.10.002,
+PRIO_harms,yes,word,yes,no,no,no,no,NA,yes,10.1016/j.jclinepi.2017.10.002,

@@ -1,7 +1,7 @@
 ---
 title: "Examples of Reporting in PRISMA Extensions"
 author: "Kyle Morrison"
-date: '`28/05/2025`'
+date: '`r format(Sys.Date(), "%d %B %Y")`'
 knit: (function(inputFile, encoding) rmarkdown::render(inputFile, encoding = encoding))
 output:
   html_document:
