@@ -218,8 +218,8 @@ original_count <- citations %>%
 topic_extensions <- plot_prisma_citations(
   data      = citations %>% filter(category == "PICO", duplicate == "no", year < 2025),
   join_data = bibliometric_information %>% select(study_id, PRISMA_id),
-  title     = "Yearly Citations of PRISMA Extensions based on PECO elements",
-  caption   = "Data: PRISMA Extensions based on PECO elements (2009–2024)",
+  title     = "Yearly Citations of PRISMA Extensions based on PICO elements",
+  caption   = "Data: PRISMA Extensions based on PICO elements (2009–2024)",
   y_limit   = 300
 )
 
@@ -361,12 +361,12 @@ diversity_ratios_m <- data.frame(
 df_fig <- rbind(df_fig, diversity_ratios_m)
 
 # 4. Clean and relabel variables ---------------------------------------------
-df_fig$variable <- c("EDI considered", 
-                     "Lingual diversity", 
-                     "Stakeholder engagement",
-                     "Open access status",
-                     "Gender diversity",
-                     "Country diversity")
+df_fig$variable <- c("Country Diversity", 
+                      "Lingual Diversity",
+                     "Stakeholder Engagement",
+                     "Open Access Status",
+                     "Female Representation",
+                     "EDI Considered")
 
 # 5. Create circular barplot -------------------------------------------------
 figure_3 <- ggplot(df_fig, aes(x = reorder(str_wrap(variable, 5), percent_yes), y = percent_yes, fill = percent_yes)) +
@@ -402,7 +402,7 @@ figure_3 <- ggplot(df_fig, aes(x = reorder(str_wrap(variable, 5), percent_yes), 
   )
 
 # 6. Save figure (optional) ---------------------------------------------------
-# ggsave(here("figures", "figure_3_edi_circular_barplot.jpg"), plot = figure_3, width = 10, height = 10, dpi = 300)
+# ggsave(here("figures", "figure_3_edi_circular_barplot.jpg"), plot = figure_3, width = 6, height = 6, dpi = 300)
 ```
 
 # *Figure 4A & B*
@@ -637,8 +637,8 @@ bubble_plot_flipped <- ggplot() +
 # *Figure 5*
 A Polar plot illustrating transparency practices across 23 PRISMA extensions. The plot displays the proportion of extensions reporting key development practices, including conducting a consensus meeting, providing feedback mechanisms, acknowledging limitations, including and declaring conflicts of interest, seeking external feedback, preregistering the development process, identifying unique or extended checklist items, and adhering to an established guideline development framework.
 ```{r}
-# 1. Compute percentage of "Yes" responses for transparency indicators --------
-df_fig <- df2 %>%
+# 1. Compute percentage of “yes” responses ------------------------------------
+df_fig <- df2 %>% 
   summarise(across(
     c(
       guideline_adherence, 
@@ -651,150 +651,129 @@ df_fig <- df2 %>%
       conflict_interest_declare, 
       limitation_acknowledged, 
       unique_items
-    ), 
+    ),
     ~ mean(. == "yes", na.rm = TRUE) * 100
-  )) %>%
-  pivot_longer(cols = everything(), names_to = "variable", values_to = "percent_yes")
+  )) %>% 
+  pivot_longer(everything(),
+               names_to  = "variable",
+               values_to = "percent_yes")
 
-df_fig$variable <- c(
-  "Guideline adherence", 
-  "Delphi feedback", 
-  "Preregistration",
-  "Consensus meeting", 
-  "Consensus meeting feedback", 
-  "External feedback", 
-  "Conflict interest statement", 
-  "Conflict interest declaration", 
-  "Limitation acknowledgment", 
-  "Unique items"
-)
+# helper: tidy label once, then reuse everywhere ------------------------------
+df_fig <- df_fig %>% 
+  mutate(label = str_wrap(str_to_title(str_replace_all(variable, "_", " ")), 5))
 
-# 2. Create circular barplot --------------------------------------------------
-p2 <- ggplot(df_fig, aes(x = reorder(str_wrap(variable, 5), percent_yes), y = percent_yes, fill = percent_yes)) +
-  geom_col(position = "dodge2", show.legend = TRUE, alpha = 0.9) +
-  geom_segment(
-    aes(x = reorder(str_wrap(variable, 5), percent_yes), y = 0, 
-        xend = reorder(str_wrap(variable, 5), percent_yes), yend = 100),
-    linetype = "dashed", color = "gray12"
-  ) +
-  geom_hline(aes(yintercept = y), data.frame(y = seq(0, 100, by = 25)), color = "lightgrey") +
-  annotate(x = 11.5, y = 25,  label = "25%",  geom = "text", color = "gray12", size = 3) +
-  annotate(x = 11.5, y = 50,  label = "50%",  geom = "text", color = "gray12", size = 3) +
-  annotate(x = 11.5, y = 75,  label = "75%",  geom = "text", color = "gray12", size = 3) +
-  annotate(x = 11.5, y = 100, label = "100%", geom = "text", color = "gray12", size = 3) +
-  scale_y_continuous(
-    limits = c(-10, 110),  
-    expand = c(0, 0),
-    breaks = seq(0, 100, by = 25)
-  ) + 
-  scale_fill_gradientn(
-    "Percentage of 'Yes'",
-    colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195")
-  ) +
-  guides(
-    fill = guide_colorsteps(
-      barwidth = 15, barheight = 0.5, title.position = "top", title.hjust = 0.5
-    )
-  ) +
+# 2. Circular barplot ---------------------------------------------------------
+p2 <- ggplot(df_fig,
+             aes(x    = reorder(label, percent_yes),
+                 y    = percent_yes,
+                 fill = percent_yes)) +
+  geom_col(position = "dodge2", alpha = 0.9, show.legend = TRUE) +
+  geom_segment(aes(x    = reorder(label, percent_yes),
+                   xend = reorder(label, percent_yes),
+                   y    = 0, yend = 100),
+               linetype = "dashed", colour = "grey12") +
+  geom_hline(aes(yintercept = y),
+             data.frame(y = seq(0, 100, 25)),
+             colour = "lightgrey") +
+  annotate("text", x = 11.5, y = c(25, 50, 75, 100),
+           label = paste0(c(25, 50, 75, 100), "%"),
+           colour = "grey12", size = 3) +
+  scale_y_continuous(limits = c(-10, 110),
+                     breaks = seq(0, 100, 25),
+                     expand = c(0, 0)) +
+  scale_fill_gradientn("Percentage of 'Yes'",
+                       colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195")) +
+  guides(fill = guide_colorsteps(barwidth = 15, barheight = 0.5,
+                                 title.position = "top", title.hjust = 0.5)) +
   coord_polar() +
-  labs(title = "Transparency of the development of PRISMA checklists") + 
+  labs(title = "Transparency of the development of PRISMA checklists") +
   theme_minimal() +
-  theme(
-    axis.title       = element_blank(),
-    axis.ticks       = element_blank(),
-    axis.text.y      = element_blank(),
-    axis.text.x      = element_text(color = "gray12", size = 8), 
-    legend.position  = "bottom",
-    legend.box.spacing = unit(-10, "pt"),
-    text             = element_text(color = "gray12"),
-    plot.title       = element_text(face = "bold", size = 12, hjust = 0.5),
-    plot.subtitle    = element_text(size = 12, hjust = 0.05),
-    plot.caption     = element_text(size = 10, hjust = 0.5),
-    panel.background = element_rect(fill = "white", color = "white"),
-    panel.grid       = element_blank(),
-    panel.grid.major.x = element_blank()
-  )
+  theme(axis.title       = element_blank(),
+        axis.ticks       = element_blank(),
+        axis.text.y      = element_blank(),
+        axis.text.x      = element_text(colour = "grey12", size = 8),
+        legend.position  = "bottom",
+        legend.box.spacing = unit(-10, "pt"),
+        text             = element_text(colour = "grey12"),
+        plot.title       = element_text(face = "bold", size = 12, hjust = 0.5),
+        plot.subtitle    = element_text(size = 12, hjust = 0.05),
+        plot.caption     = element_text(size = 10, hjust = 0.5),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        panel.grid       = element_blank(),
+        panel.grid.major.x = element_blank())
 
 # 3. Save plot to figures folder ----------------------------------------------
-# ggsave(here("figures", "transparency_circular_plot.jpg"), p2, width = 10, height = 10, dpi = 300)
+ ggsave(here("figures", "transparency_circular_plot.jpg"), p2, width = 6, height = 6, dpi = 300)
 ```
 
 # *Figure 6*
 A polar plot illustrating the accessibility features across 23 PRISMA extensions. The plot presents the overall reporting of PRISMA extensions provided a statement document, an elaboration document, a checklist document, a fillable checklist, a version of record, and whether the checklist was available in open-source fillable or supportable formats.
 ```{r}
-# 1. Compute percentage of "Yes" responses for accessibility indicators -------
-df_fig <- df3 %>%
+# 1. Percentage of "yes" responses -------------------------------------------
+df_fig <- df3 %>% 
   summarise(across(
     c(
       checklist_availability, checklist_fillable, open_source_support, 
       open_source_fillable, version_control, elaboration_document, 
       statement_document
-    ), 
-    ~ mean(. == "yes") * 100
-  )) %>%
-  pivot_longer(cols = everything(), names_to = "variable", values_to = "percent_yes")
+    ),
+    ~ mean(. == "yes", na.rm = TRUE) * 100
+  )) %>% 
+  pivot_longer(everything(),
+               names_to  = "variable",
+               values_to = "percent_yes") %>% 
+  mutate(label = str_wrap(str_to_title(str_replace_all(variable, "_", " ")), 5))
 
-# 2. Manually adjust the fifth entry to 5% ------------------------------------
+# 2. Manually adjust the fifth entry to 0.05 % --------------------------------
 df_fig$percent_yes[5] <- 0.05
 
-# 3. Rename variables for plot labels -----------------------------------------
-df_fig$variable <- c(
-  "Checklist available", "Checklist fillable", "Open source supportable", 
-  "Open source fillable", "Version of record", "Elaboration document", 
-  "Statement document"
-)
-
-# 4. Create circular barplot --------------------------------------------------
-p3 <- ggplot(df_fig, aes(x = reorder(str_wrap(variable, 5), percent_yes), 
-                         y = percent_yes, fill = percent_yes)) +
-  geom_col(position = "dodge2", show.legend = TRUE, alpha = 0.9) +
-  geom_segment(
-    aes(x = reorder(str_wrap(variable, 5), percent_yes), y = 0,
-        xend = reorder(str_wrap(variable, 5), percent_yes), yend = 100),
-    linetype = "dashed", color = "gray12"
-  ) +
-  geom_hline(aes(yintercept = y), 
-             data.frame(y = seq(0, 100, by = 25)), color = "lightgrey") +
-  annotate(x = 7.5, y = 25,  label = "25%",  geom = "text", color = "gray12", size = 3) +
-  annotate(x = 7.5, y = 50,  label = "50%",  geom = "text", color = "gray12", size = 3) +
-  annotate(x = 7.5, y = 75,  label = "75%",  geom = "text", color = "gray12", size = 3) +
-  annotate(x = 7.5, y = 100, label = "100%", geom = "text", color = "gray12", size = 3) +
-  scale_y_continuous(
-    limits = c(-10, 110), 
-    expand = c(0, 0),
-    breaks = seq(0, 100, by = 25)
-  ) + 
-  scale_fill_gradientn(
-    "Percentage of 'Yes'",
-    colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195"),
-    limits  = c(0, 100),
-    breaks  = c(40, 60, 80),
-    labels  = c("40%", "60%", "80%")
-  ) +
-  guides(fill = guide_colorsteps(
-    barwidth = 15, barheight = 0.5, title.position = "top", title.hjust = 0.5
-  )) +
+# 3. Circular barplot ---------------------------------------------------------
+p3 <- ggplot(df_fig,
+             aes(x    = reorder(label, percent_yes),
+                 y    = percent_yes,
+                 fill = percent_yes)) +
+  geom_col(position = "dodge2", alpha = 0.9, show.legend = TRUE) +
+  geom_segment(aes(x    = reorder(label, percent_yes),
+                   xend = reorder(label, percent_yes),
+                   y    = 0, yend = 100),
+               linetype = "dashed", colour = "gray12") +
+  geom_hline(aes(yintercept = y),
+             data.frame(y = seq(0, 100, 25)),
+             colour = "lightgrey") +
+  annotate("text", x = 7.5, y = c(25, 50, 75, 100),
+           label = paste0(c(25, 50, 75, 100), "%"),
+           colour = "gray12", size = 3) +
+  scale_y_continuous(limits = c(-10, 110),
+                     breaks = seq(0, 100, 25),
+                     expand = c(0, 0)) +
+  scale_fill_gradientn("Percentage of 'Yes'",
+                       colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195"),
+                       limits  = c(0, 100),
+                       breaks  = c(40, 60, 80),
+                       labels  = c("40%", "60%", "80%")) +
+  guides(fill = guide_colorsteps(barwidth = 15, barheight = 0.5,
+                                 title.position = "top", title.hjust = 0.5)) +
   coord_polar() +
   labs(title = "Accessibility of PRISMA checklists") +
   theme_minimal() +
-  theme(
-    axis.title         = element_blank(),
-    axis.ticks         = element_blank(),
-    axis.text.y        = element_blank(),
-    axis.text.x        = element_text(color = "gray12", size = 8),
-    legend.position    = "bottom",
-    legend.box.spacing = unit(-10, "pt"),
-    text               = element_text(color = "gray12"),
-    plot.title         = element_text(face = "bold", size = 12, hjust = 0.5),
-    plot.subtitle      = element_text(size = 12, hjust = 0.05),
-    plot.caption       = element_text(size = 10, hjust = 0.5),
-    panel.background   = element_rect(fill = "white", color = "white"),
-    panel.grid         = element_blank(),
-    panel.grid.major.x = element_blank()
-  )
+  theme(axis.title         = element_blank(),
+        axis.ticks         = element_blank(),
+        axis.text.y        = element_blank(),
+        axis.text.x        = element_text(colour = "gray12", size = 8),
+        legend.position    = "bottom",
+        legend.box.spacing = unit(-10, "pt"),
+        text               = element_text(colour = "gray12"),
+        plot.title         = element_text(face = "bold", size = 12, hjust = 0.5),
+        plot.subtitle      = element_text(size = 12, hjust = 0.05),
+        plot.caption       = element_text(size = 10, hjust = 0.5),
+        panel.background   = element_rect(fill = "white", colour = "white"),
+        panel.grid         = element_blank(),
+        panel.grid.major.x = element_blank())
+
+# print(p3)
 
 # 5. Save the plot to the figures folder --------------------------------------
-# ggsave(here("figures", "accessibility_circular_plot.jpg"), p3, width = 10, height = 10, dpi = 300)
+ ggsave(here("figures", "accessibility_circular_plot.jpg"), p3, width = 6, height = 6, dpi = 300)
 ```
 
 
