@@ -218,8 +218,8 @@ original_count <- citations %>%
 topic_extensions <- plot_prisma_citations(
   data      = citations %>% filter(category == "PICO", duplicate == "no", year < 2025),
   join_data = bibliometric_information %>% select(study_id, PRISMA_id),
-  title     = "Yearly Citations of PRISMA Extensions based on PICO elements",
-  caption   = "Data: PRISMA Extensions based on PICO elements (2009–2024)",
+  title     = "Yearly Citations of PRISMA Extensions focused on PICO elements",
+  caption   = "Data: PRISMA Extensions focused on PICO elements (2009–2024)",
   y_limit   = 300
 )
 
@@ -227,8 +227,8 @@ topic_extensions <- plot_prisma_citations(
 method_extensions <- plot_prisma_citations(
   data      = citations %>% filter(category == "methodological", duplicate == "no", year < 2025),
   join_data = bibliometric_information %>% select(study_id, PRISMA_id),
-  title     = "Yearly Citations of PRISMA Extensions based on Methodology",
-  caption   = "Data: PRISMA Extensions based on Methodology (2009–2024)"
+  title     = "Yearly Citations of PRISMA Extensions focused on Methodology",
+  caption   = "Data: PRISMA Extensions focused on Methodology (2009–2024)"
 )
 
 # 6. Combine and show ----------------------------------------------------------
@@ -236,6 +236,7 @@ fig_combined <- original_count / topic_extensions / method_extensions +
   patchwork::plot_layout(heights = c(1, 1, 1))
 
 fig_combined
+
 # ggsave(here("figures", "citations_figure.jpg"),
 #        plot = fig_combined, width = 10, height = 14, dpi = 300)
 
@@ -476,7 +477,7 @@ p_map <- ggplot(geo_data_complete,
     na.value = "grey90",
     name     = "Authors by country"
   ) +
-  labs(title = "Geographic diversity", x = NULL, y = NULL) +
+  labs(title = "a) Geographic diversity", x = NULL, y = NULL) +
   theme_minimal(base_size = 12, base_family = "Arial") +
   guides(fill = guide_legend(
     keywidth = unit(1, "cm"),
@@ -530,23 +531,23 @@ bubble_plot <- ggplot() +
              color = "black", stroke = 0.5) +
   geom_point(data = subset(final_summary, shape_var == "Female_FL"),
              aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
-             fill = "#C06C84", color = "black", stroke = 0.5, size = 10) +
+             fill = "#F8B195", color = "black", stroke = 0.5, size = 10) +
   geom_point(data = subset(final_summary, shape_var == "Male_FL"),
              aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
              fill = "#6C5B7B", color = "black", stroke = 0.5, size = 10) +
   geom_point(data = subset(final_summary, shape_var == "Undefined_FL"),
              aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
-             fill = "#F8B195", color = "black", stroke = 0.5, size = 10) +
+             fill = "white", color = "black", stroke = 0.5, size = 10) +
   scale_shape_manual(
     name   = "Author Gender",
     values = c("Female_FL" = 24, "Male_FL" = 22, "Undefined_FL" = 23, "Other" = 21),
     breaks = c("Female_FL", "Male_FL", "Undefined_FL"),
-    labels = c("Female", "Male", "Undefined"),
+    labels = c("Woman", "Man", "Undefined"),
     guide  = guide_legend(title.position = "top", title.hjust = 0.5, override.aes = list(size = 5))
   ) +
   scale_size_continuous(guide = "none", range = c(3, 10), limits = c(0, 100)) +
   scale_fill_gradientn(colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195"),
-                       name = "% Female", limits = c(0, 100), na.value = "grey90") +
+                       name = "% Woman", limits = c(0, 100), na.value = "grey90") +
   coord_equal() +
   scale_x_discrete(limits = c("first", "last", "middle", "development group"), name = "Author Status") +
   scale_y_discrete(labels = function(x) str_replace_all(x, "_", " ")) +
@@ -582,18 +583,18 @@ bubble_plot_flipped <- ggplot() +
              colour = "black", stroke = 0.5) +
   geom_point(data = filter(final_summary, shape_var == "Female_FL"),
              aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
-             fill = "#C06C84", colour = "black", stroke = 0.5, size = 10) +
+             fill = "#F8B195", colour = "black", stroke = 0.5, size = 10) +
   geom_point(data = filter(final_summary, shape_var == "Male_FL"),
              aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
              fill = "#6C5B7B", colour = "black", stroke = 0.5, size = 10) +
   geom_point(data = filter(final_summary, shape_var == "Undefined_FL"),
              aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
-             fill = "#F8B195", colour = "black", stroke = 0.5, size = 10) +
+             fill = "white", colour = "black", stroke = 0.5, size = 10) +
   scale_shape_manual(
     name   = "Author Gender",
     values = c("Female_FL" = 24, "Male_FL" = 22, "Undefined_FL" = 23, "Other" = 21),
     breaks = c("Female_FL", "Male_FL", "Undefined_FL"),
-    labels = c("Female", "Male", "Undefined"),
+    labels = c("Woman", "Man", "Undefined"),
     guide  = guide_legend(title.position = "top", title.hjust = 0.5, override.aes = list(size = 5))
   ) +
   scale_size_continuous(guide = "none", range = c(3, 10), limits = c(0, 100)) +
@@ -611,7 +612,7 @@ bubble_plot_flipped <- ggplot() +
   ) +
   scale_y_discrete(labels = function(x) str_replace_all(x, "_", " ")) +
   coord_flip() +
-  labs(title = "Gender Diversity", x = NULL, y = NULL) +
+  labs(title = "b) Gender Diversity", x = NULL, y = NULL) +
   theme_minimal(base_size = 12, base_family = "Arial") +
   theme(
     legend.position       = "right",
@@ -773,7 +774,7 @@ p3 <- ggplot(df_fig,
 # print(p3)
 
 # 5. Save the plot to the figures folder --------------------------------------
- ggsave(here("figures", "accessibility_circular_plot.jpg"), p3, width = 6, height = 6, dpi = 300)
+# ggsave(here("figures", "accessibility_circular_plot.jpg"), p3, width = 6, height = 6, dpi = 300)
 ```
 
 
