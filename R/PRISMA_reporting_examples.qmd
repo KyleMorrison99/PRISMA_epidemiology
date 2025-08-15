@@ -1,5 +1,5 @@
 ---
-title: "Reporting template for PRISMA development items"
+title: "Examples of Reporting in PRISMA Extensions"
 author: "Kyle Morrison"
 knit: (function(inputFile, encoding) rmarkdown::render(inputFile, encoding = encoding))
 output:
@@ -12,14 +12,10 @@ output:
     df_print: paged
 ---
 
-Corresponding author email:
-<p class="lead" style="margin-top:-0.5rem;">
-  <a href="mailto:kyle.morrison@unsw.edu.au">kyle.morrison@unsw.edu.au</a>
-</p>
+## Corresponding author contact: kyle.morrison@unsw.edu.au
 
-# Description
+## Description
 This template outlines the key development items assessed in our study and provides concise, real-world examples drawn from existing PRISMA extensions. Each example is accompanied by a citation to support traceability and enable readers to locate the original guidance. Use this document as a practical checklist when planning, reporting, or appraising PRISMA extension development.
-
 
 ## Equality, Diversity & Inclusion (EDI) statement
 
