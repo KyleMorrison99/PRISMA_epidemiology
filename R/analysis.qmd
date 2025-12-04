@@ -14,8 +14,6 @@ execute:
 editor: visual
 
 ---
-
-
 # *Load Packages*
 ```{r}
 pacman::p_load(
@@ -139,7 +137,24 @@ total_languages
 # *Figure 2*
 An area plot illustrating the citation trends for a) PRISMA 2009 and PRISMA2020, b) PRISMA extensions based on PECO elements, and c) PRISMA extensions based on methodology.
 ```{r}
-# 1. Colour palette & custom theme -------------------------------------------
+# =========================================
+# Packages
+# =========================================
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(stringr)
+  library(ggplot2)
+  library(patchwork)
+  library(purrr)
+  library(tidyr)
+  library(zoo)
+  library(scales)
+  library(grid)
+})
+
+# =========================================
+# 1) Colours & Theme (larger text)
+# =========================================
 my_colors_9 <- c(
   "#6C5B7B", "#C06C84", "#F67280",
   "#F8B195", "#FBC3A4", "#F7DDC3",
@@ -147,63 +162,114 @@ my_colors_9 <- c(
 )
 
 my_theme <- function() {
-  theme_minimal(base_size = 14) %+replace%
+  theme_minimal(base_size = 16) %+replace%
     theme(
-      plot.title.position = "plot",
-      plot.title          = element_text(face = "bold", size = 16, hjust = 0,
-                                         margin = margin(b = 10)),
-      plot.caption        = element_text(size = 10, hjust = 1, color = "gray40"),
-      legend.position     = "top",
-      legend.justification= "left",
-      legend.direction    = "horizontal",
-      legend.title        = element_blank(),
-      legend.text         = element_text(size = 12),
-      legend.key.size     = unit(1, "cm"),
-      panel.grid.major    = element_line(color = "gray90", size = 0.4),
-      panel.grid.minor    = element_blank(),
-      plot.margin         = margin(t = 20, r = 15, b = 15, l = 15)
+      plot.title.position   = "plot",
+      plot.title            = element_text(face = "bold", size = 18, hjust = 0,
+                                           margin = margin(b = 10)),
+      plot.caption          = element_text(size = 12, hjust = 1, color = "gray40",
+                                           margin = margin(t = 6)),
+      legend.position       = "top",
+      legend.justification  = "left",
+      legend.direction      = "horizontal",
+      legend.title          = element_blank(),
+      legend.text           = element_text(size = 13),
+      legend.key.height     = unit(0.45, "cm"),
+      legend.key.width      = unit(1.0, "cm"),
+      legend.box.margin     = margin(b = 6),
+      axis.title            = element_text(size = 14),
+      axis.text             = element_text(size = 12),
+      panel.grid.major      = element_line(color = "gray90", size = 0.4),
+      panel.grid.minor      = element_blank(),
+      plot.margin           = margin(t = 20, r = 18, b = 16, l = 18)
     )
 }
 
-# 2. Helper to plot topical / methodological extensions -----------------------
-plot_prisma_citations <- function(data, join_data, title, caption, y_limit = NA) {
-  ordered_levels <- data %>%
+# =========================================
+# 2) Helper — add (YYYY) in legend + fit legends
+# =========================================
+plot_prisma_citations <- function(data, join_data, title, caption,
+                                  y_limit = NA, smooth_k = 1L,
+                                  x_break_by = 1L,
+                                  legend_rows = 3L) {
+
+  ordered_df <- data %>%
     left_join(join_data, by = "study_id") %>%
     filter(citations > 0) %>%
+    mutate(year = suppressWarnings(as.integer(year))) %>%
     group_by(PRISMA_id) %>%
-    summarize(earliest_year = min(year, na.rm = TRUE), .groups = "drop") %>%
-    arrange(earliest_year) %>%
-    pull(PRISMA_id)
-  
-  data %>%
+    summarise(earliest_year = suppressWarnings(min(year, na.rm = TRUE)), .groups = "drop") %>%
+    mutate(earliest_year = ifelse(is.infinite(earliest_year), NA_integer_, earliest_year)) %>%
+    arrange(earliest_year, PRISMA_id)
+
+  ordered_levels <- ordered_df$PRISMA_id
+  label_map <- setNames(
+    paste0(str_replace_all(ordered_df$PRISMA_id, "_", " "),
+           " (", ifelse(is.na(ordered_df$earliest_year), "n.d.", ordered_df$earliest_year), ")"),
+    ordered_df$PRISMA_id
+  )
+
+  df <- data %>%
     left_join(join_data, by = "study_id") %>%
-    mutate(PRISMA_id = factor(PRISMA_id, levels = ordered_levels)) %>%
+    mutate(PRISMA_id = factor(PRISMA_id, levels = ordered_levels),
+           year = as.integer(year)) %>%
     group_by(year, PRISMA_id) %>%
-    summarize(citations = sum(citations, na.rm = TRUE), .groups = "drop") %>%
-    ggplot(aes(x = as.numeric(year), y = citations, fill = PRISMA_id)) +
-    geom_area(position = "stack", alpha = 0.85, linewidth = 0.2, color = NA) +
-    scale_fill_manual(values = my_colors_9,
-                      labels = function(x) str_replace_all(x, "_", " ")) +
-    scale_x_continuous(breaks = 2009:2024, expand = c(0, 0)) +
-    scale_y_continuous(limits = c(0, y_limit),
-                       breaks = pretty_breaks(n = 6),
-                       expand = expansion(mult = c(0, 0.05))) +
+    summarise(citations = sum(citations, na.rm = TRUE), .groups = "drop")
+
+  year_seq <- seq(min(df$year, na.rm = TRUE), max(df$year, na.rm = TRUE), by = 1L)
+  df <- df %>%
+    tidyr::complete(year = year_seq, PRISMA_id, fill = list(citations = 0)) %>%
+    arrange(PRISMA_id, year)
+
+  if (!is.na(smooth_k) && smooth_k > 1L) {
+    df <- df %>%
+      group_by(PRISMA_id) %>%
+      mutate(citations = zoo::rollmean(citations, k = smooth_k, align = "right", fill = 0)) %>%
+      ungroup()
+  }
+
+  pal <- setNames(rep_len(my_colors_9, length(ordered_levels)), ordered_levels)
+  x_breaks <- seq(min(year_seq), max(year_seq), by = x_break_by)
+
+  ggplot(df, aes(x = as.numeric(year), y = citations, fill = PRISMA_id)) +
+    geom_area(position = "stack", alpha = 0.85, linewidth = 0, color = NA) +
+    scale_fill_manual(
+      values = pal,
+      breaks = ordered_levels,
+      labels = unname(label_map[ordered_levels])
+    ) +
+    scale_x_continuous(breaks = x_breaks, expand = c(0, 0)) +
+    scale_y_continuous(
+      limits = c(0, y_limit),
+      breaks = pretty_breaks(n = 6),
+      expand = expansion(mult = c(0, 0.05))
+    ) +
     labs(title = title, x = "Year", y = "Citations", caption = caption) +
-    guides(fill = guide_legend(nrow = 2, byrow = TRUE)) +
+    guides(
+      fill = guide_legend(
+        nrow        = legend_rows,
+        byrow       = TRUE,
+        keywidth    = unit(1.0, "cm"),
+        keyheight   = unit(0.45, "cm"),
+        label.hjust = 0,
+        label.theme = element_text(size = 13)
+      )
+    ) +
     my_theme()
 }
 
-# 3. Original PRISMA (2009 vs 2020) -------------------------------------------
+# =========================================
+# 3) PRISMA original (2009 vs 2020)
+# =========================================
 original_count <- citations %>%
   filter(category == "original", duplicate == "no", year < 2025) %>%
   mutate(PRISMA_version = if_else(str_detect(study_id, "^PRISMA_2009"),
                                   "PRISMA 2009", "PRISMA 2020")) %>%
   group_by(year, PRISMA_version) %>%
-  summarize(citations = sum(citations, na.rm = TRUE), .groups = "drop") %>%
+  summarise(citations = sum(citations, na.rm = TRUE), .groups = "drop") %>%
   ggplot(aes(x = as.numeric(year), y = citations, fill = PRISMA_version)) +
-  geom_area(position = "stack", alpha = 0.85, linewidth = 0.2, color = NA) +
-  scale_fill_manual(values = my_colors_9[1:2],
-                    labels = function(x) str_replace_all(x, "_", " ")) +
+  geom_area(position = "stack", alpha = 0.85, linewidth = 0, color = NA) +
+  scale_fill_manual(values = my_colors_9[1:2]) +
   scale_x_continuous(breaks = 2009:2024, expand = c(0, 0)) +
   scale_y_continuous(limits = c(0, 35000),
                      breaks = pretty_breaks(n = 6),
@@ -211,221 +277,354 @@ original_count <- citations %>%
   labs(title = "Yearly Citations of Original PRISMA Guidelines",
        x = "Year", y = "Citations",
        caption = "Data: PRISMA Original (2009–2024)") +
-  guides(fill = guide_legend(nrow = 1)) +
+  guides(
+    fill = guide_legend(
+      nrow = 1,
+      keywidth = unit(1, "cm"),
+      keyheight = unit(0.45, "cm"),
+      label.theme = element_text(size = 13)
+    )
+  ) +
   my_theme()
 
-# 4. Topical extensions --------------------------------------------------------
+# =========================================
+# 4) PICO and Methodology extensions
+# =========================================
 topic_extensions <- plot_prisma_citations(
-  data      = citations %>% filter(category == "PICO", duplicate == "no", year < 2025),
-  join_data = bibliometric_information %>% select(study_id, PRISMA_id),
-  title     = "Yearly Citations of PRISMA Extensions focused on PICO elements",
-  caption   = "Data: PRISMA Extensions focused on PICO elements (2009–2024)",
-  y_limit   = 300
+  data        = citations %>% filter(category == "PICO", duplicate == "no", year < 2025),
+  join_data   = bibliometric_information %>% select(study_id, PRISMA_id),
+  title       = "Yearly Citations of PRISMA Extensions focused on PICO elements",
+  caption     = "Data: PRISMA Extensions focused on PICO elements (2009–2024)",
+  y_limit     = 300,
+  smooth_k    = 3,
+  legend_rows = 3
 )
 
-# 5. Methodological extensions -------------------------------------------------
 method_extensions <- plot_prisma_citations(
-  data      = citations %>% filter(category == "methodological", duplicate == "no", year < 2025),
-  join_data = bibliometric_information %>% select(study_id, PRISMA_id),
-  title     = "Yearly Citations of PRISMA Extensions focused on Methodology",
-  caption   = "Data: PRISMA Extensions focused on Methodology (2009–2024)"
+  data        = citations %>% filter(category == "methodological", duplicate == "no", year < 2025),
+  join_data   = bibliometric_information %>% select(study_id, PRISMA_id),
+  title       = "Yearly Citations of PRISMA Extensions focused on Methodology",
+  caption     = "Data: PRISMA Extensions focused on Methodology (2009–2024)",
+  smooth_k    = 3,
+  legend_rows = 3
 )
 
-# 6. Combine and show ----------------------------------------------------------
+# =========================================
+# 5) Combine
+# =========================================
 fig_combined <- original_count / topic_extensions / method_extensions +
   patchwork::plot_layout(heights = c(1, 1, 1))
 
-fig_combined
+# =========================================
+# 6) Save with larger text scaling
+# =========================================
+ggsave(
+  filename = here::here("figures", "citations_figure.png"),
+  plot     = fig_combined,
+  width    = 10,    # wider for legend
+  height   = 14,    # taller for stacked panels
+  dpi      = 320,
+  bg       = "white"
+)
 
-# ggsave(here("figures", "citations_figure.jpg"),
-#        plot = fig_combined, width = 10, height = 14, dpi = 300)
-
-# 7. Duplicate-check (optional) ------------------------------------------------
-citations_by_year <- citations %>%
-  filter(duplicate != "no") %>%
-  group_by(year) %>%
-  summarize(total_citations = sum(citations, na.rm = TRUE), .groups = "drop")
 
 ```
 
 # *Author and Geographic diversity*
 ```{r}
-# 1. Define diversity ratio function ------------------------------------------
+library(dplyr)
+library(stringr)
+library(purrr)
+
+# --- Helper: standardise gender labels --------------------------------------
+std_gender <- function(x) {
+  x <- tolower(x)
+  x <- stringr::str_squish(x)
+  x <- dplyr::na_if(x, "")
+  dplyr::case_when(
+    x %in% c("female", "woman", "f") ~ "Female",
+    x %in% c("male", "man", "m")     ~ "Male",
+    TRUE                             ~ NA_character_
+  )
+}
+
+# --- Prep data: prefer web; fallback to genderize only if web "not found"/NA -
+prep_edi_author <- function(df) {
+  df %>%
+    mutate(
+      # Clean web field
+      web_raw   = str_squish(tolower(gender_diversity_web)),
+      web_clean = na_if(web_raw, ""),
+      web_clean = if_else(web_clean %in% c("not found","notfound","not-found"), NA_character_, web_clean),
+
+      # Clean fallback field
+      fb_raw   = str_squish(tolower(gender_diversity)),
+      fb_clean = na_if(fb_raw, ""),
+
+      # Did we actually fall back?
+      used_fallback = is.na(web_clean) & !is.na(fb_clean),
+
+      # Standardise
+      gender_web_std = std_gender(web_clean),
+      gender_fb_std  = std_gender(fb_clean),
+
+      # Apply >95% certainty ONLY for fallback rows
+      gender_fb_std_hiconf = case_when(
+        used_fallback & !is.na(gender_diversity_confidence) & gender_diversity_confidence > 95 ~ gender_fb_std,
+        used_fallback ~ NA_character_,
+        TRUE ~ NA_character_
+      ),
+
+      # Final gender choice
+      final_gender = coalesce(gender_web_std, gender_fb_std_hiconf)
+    )
+}
+
+# --- Ratios (unchanged except uses final_gender) ----------------------------
 compute_diversity_ratios <- function(data, global_south_countries) {
   data %>%
     group_by(PRISMA_id) %>%
     summarise(
-      female_ratio = sum(gender_diversity == "Female", na.rm = TRUE) / 
-                     sum(gender_diversity %in% c("Female", "Male"), na.rm = TRUE),
-      global_south_ratio = mean(sapply(str_split(geographic_diversity, "; "), function(countries) {
-        any(countries %in% global_south_countries)
-      }), na.rm = TRUE)
+      female_ratio = sum(final_gender == "Female", na.rm = TRUE) /
+                     sum(final_gender %in% c("Female","Male"), na.rm = TRUE),
+      global_south_ratio = mean(
+        sapply(str_split(geographic_diversity, ";\\s*"), function(countries) {
+          any(countries %in% global_south_countries)
+        }),
+        na.rm = TRUE
+      ),
+      .groups = "drop"
     )
 }
 
-# 2. Global South country list ------------------------------------------------
+# --- Global South country list (fixed a typo: "Chin" -> "China") ------------
 global_south_countries <- c(
   # Europe
-  "Albania", "Armenia", "Azerbaijan", "Belarus", "Bosnia and Herzegovina", "Georgia",
-  "Hungary", "Kosovo", "Macedonia", "Moldova", "Montenegro", "Poland", "Romania",
-  "Slovakia", "Serbia", "Turkey", "Ukraine",
-  
+  "Albania","Armenia","Azerbaijan","Belarus","Bosnia and Herzegovina","Georgia",
+  "Hungary","Kosovo","Macedonia","Moldova","Montenegro","Poland","Romania",
+  "Slovakia","Serbia","Turkey","Ukraine",
   # Africa - North of Sahara
-  "Algeria", "Egypt", "Libya", "Morocco", "Tunisia",
-  
+  "Algeria","Egypt","Libya","Morocco","Tunisia",
   # Africa - South of Sahara
-  "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cameroon", "Cabo Verde",
-  "Central African Republic", "Chad", "Comoros", "Congo", "Democratic Republic of the Congo",
-  "Cote d'Ivoire", "Djibouti", "Equatorial Guinea", "Eritrea", "Eswatini", "Ethiopia",
-  "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Kenya", "Lesotho", "Liberia",
-  "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Mozambique", "Namibia",
-  "Niger", "Nigeria", "Rwanda", "St. Helena", "Sao Tome & Principe", "Senegal",
-  "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Tanzania", "Togo",
-  "Uganda", "Zambia", "Zimbabwe",
-  
+  "Angola","Benin","Botswana","Burkina Faso","Burundi","Cameroon","Cabo Verde",
+  "Central African Republic","Chad","Comoros","Congo","Democratic Republic of the Congo",
+  "Cote d'Ivoire","Djibouti","Equatorial Guinea","Eritrea","Eswatini","Ethiopia",
+  "Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia",
+  "Madagascar","Malawi","Mali","Mauritania","Mauritius","Mozambique","Namibia",
+  "Niger","Nigeria","Rwanda","St. Helena","Sao Tome & Principe","Senegal",
+  "Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo",
+  "Uganda","Zambia","Zimbabwe",
   # America - North & Central
-  "Belize", "Costa Rica", "Cuba", "Dominica", "Dominican Republic", "El Salvador",
-  "Grenada", "Guatemala", "Haiti", "Honduras", "Jamaica", "Mexico", "Montserrat",
-  "Nicaragua", "Panama", "St. Lucia", "St. Vincent and the Grenadines",
-  
+  "Belize","Costa Rica","Cuba","Dominica","Dominican Republic","El Salvador",
+  "Grenada","Guatemala","Haiti","Honduras","Jamaica","Mexico","Montserrat",
+  "Nicaragua","Panama","St. Lucia","St. Vincent and the Grenadines",
   # America - South
-  "Argentina", "Bolivia", "Brazil", "Colombia", "Ecuador", "Guyana", "Paraguay",
-  "Peru", "Suriname", "Venezuela",
-  
+  "Argentina","Bolivia","Brazil","Colombia","Ecuador","Guyana","Paraguay",
+  "Peru","Suriname","Venezuela",
   # Asia
-  "Afghanistan", "Bangladesh", "Bhutan", "Cambodia", "Chin", "India", "Indonesia",
-  "Kazakhstan", "Korea (Democratic People’s Republic of)", "Kyrgyzstan",
-  "Lao People’s Democratic Republic", "Malaysia", "Maldives", "Mongolia", "Myanmar",
-  "Nepal", "Pakistan", "Philippines", "Sri Lanka", "Tajikistan", "Thailand",
-  "Timor Leste", "Turkmenistan", "Uzbekistan", "Vietnam",
-  
+  "Afghanistan","Bangladesh","Bhutan","Cambodia","China","India","Indonesia",
+  "Kazakhstan","Korea (Democratic People’s Republic of)","Kyrgyzstan",
+  "Lao People’s Democratic Republic","Malaysia","Maldives","Mongolia","Myanmar",
+  "Nepal","Pakistan","Philippines","Sri Lanka","Tajikistan","Thailand",
+  "Timor Leste","Turkmenistan","Uzbekistan","Vietnam",
   # Middle East
-  "Iran", "Iraq", "Jordan", "Lebanon", "Syrian Arab Republic",
-  "West Bank and Gaza Strip", "Yemen",
-  
+  "Iran","Iraq","Jordan","Lebanon","Syrian Arab Republic",
+  "West Bank and Gaza Strip","Yemen",
   # Pacific
-  "Cook Islands", "Fiji", "Kiribati", "Marshall Islands", "Micronesia", "Nauru",
-  "Niue", "Palau", "Papua New Guinea", "Samoa", "Solomon Islands", "Tokelau",
-  "Tonga", "Tuvalu", "Vanuatu", "Wallis & Futuna"
+  "Cook Islands","Fiji","Kiribati","Marshall Islands","Micronesia","Nauru",
+  "Niue","Palau","Papua New Guinea","Samoa","Solomon Islands","Tokelau",
+  "Tonga","Tuvalu","Vanuatu","Wallis & Futuna"
 )
 
-# 3. Compute diversity ratios -------------------------------------------------
-diversity_ratios <- compute_diversity_ratios(edi_author, global_south_countries)
+# --- Run --------------------------------------------------------------------
+edi_author_prepped <- prep_edi_author(edi_author)
+diversity_ratios <- compute_diversity_ratios(edi_author_prepped, global_south_countries)
 
-# 4. Recompute using only high-confidence gender ------------------------------
-diversity_ratios2 <- compute_diversity_ratios(
-  filter(edi_author, gender_diversity_confidence > 95),
-  global_south_countries
-)
-
-# 5. Replace female ratio with high-confidence version ------------------------
-diversity_ratios$female_ratio <- diversity_ratios2$female_ratio
-
-# 6. Global South average -----------------------------------------------------
+mean(diversity_ratios$female_ratio)
 overall_avg_global_south <- mean(diversity_ratios$global_south_ratio, na.rm = TRUE)
+
+
 
 ```
 
 # *Figure 3*
 A polar plot illustrating how PRISMA extensions considered equity, diversity, and inclusion (EDI). The plot presents the percentage of extensions which reported engaging diverse stakeholders, providing an EDI statement or explicitly considering EDI, ensuring country diversity, considering lingual diversity, ensuring gender diversity among authors, and adopting open access status.
 ```{r}
-# 1. Prepare input data -------------------------------------------------------
+# =========================================
+# 1. Prepare input data
+# =========================================
 edi$lingual_diversity2 <- ifelse(edi$lingual_diversity > 1, "yes", "no")
 
-df1 <- select(edi, PRISMA_id, edi_considered, lingual_diversity2, stakeholder_engagement, open_access)
-df2 <- select(transparency, PRISMA_id, guideline_adherence, delphi_feedback, preregistration,
-              consensus_meeting, consensus_meeting_feedback, external_feedback,
-              conflict_interest_statement, conflict_interest_declare, limitation_acknowledged,
-              unique_items)
-df3 <- select(accessibility, PRISMA_id, checklist_availability, checklist_fillable,
-              open_source_support, open_source_fillable, version_control,
-              elaboration_document, statement_document)
+df1 <- dplyr::select(
+  edi,
+  PRISMA_id,
+  edi_considered,
+  lingual_diversity2,
+  stakeholder_engagement,
+  open_access
+)
 
-# 2. Compute percentage of "Yes" responses ------------------------------------
+# =========================================
+# 2. Compute percentage of "Yes" responses
+# =========================================
 df_fig <- df1 %>%
-  summarise(across(c(edi_considered, 
-                     lingual_diversity2, 
-                     stakeholder_engagement,
-                     open_access), 
-                   ~ mean(. == "yes") * 100)) %>%
-  pivot_longer(cols = everything(), names_to = "variable", values_to = "percent_yes") 
+  summarise(across(
+    c(
+      edi_considered,
+      lingual_diversity2,
+      stakeholder_engagement,
+      open_access
+    ),
+    ~ mean(. == "yes", na.rm = TRUE) * 100
+  )) %>%
+  tidyr::pivot_longer(cols = everything(),
+                      names_to = "variable",
+                      values_to = "percent_yes")
 
-# 3. Add diversity ratios -----------------------------------------------------
+# =========================================
+# 3. Add diversity ratios
+# =========================================
 diversity_ratios_m <- data.frame(
   variable = c("author_diversity", "country_diversity"),
   percent_yes = c(
-    mean(diversity_ratios$female_ratio) * 100,
-    mean(diversity_ratios$global_south_ratio) * 100
+    mean(diversity_ratios$female_ratio, na.rm = TRUE) * 100,
+    mean(diversity_ratios$global_south_ratio, na.rm = TRUE) * 100
   )
 )
 
 df_fig <- rbind(df_fig, diversity_ratios_m)
 
-# 4. Clean and relabel variables ---------------------------------------------
-df_fig$variable <- c("Country Diversity", 
-                      "Lingual Diversity",
-                     "Stakeholder Engagement",
-                     "Open Access Status",
-                     "Female Representation",
-                     "EDI Considered")
+# =========================================
+# 4. Clean and relabel variables
+# =========================================
+df_fig$variable <- c(
+  "EDI Considered",
+  "Lingual Diversity",
+  "Stakeholder Engagement",
+  "Open Access Status",
+  "Female Representation",
+  "Country Diversity"
+)
 
-# 5. Create circular barplot -------------------------------------------------
-figure_3 <- ggplot(df_fig, aes(x = reorder(str_wrap(variable, 5), percent_yes), y = percent_yes, fill = percent_yes)) +
+# =========================================
+# 5. Create circular barplot
+# =========================================
+figure_3 <- ggplot(df_fig,
+                   aes(
+                     x = reorder(stringr::str_wrap(variable, 10), percent_yes),
+                     y = percent_yes,
+                     fill = percent_yes
+                   )) +
   geom_col(position = "dodge2", show.legend = TRUE, alpha = 0.9) +
-  geom_segment(aes(x = reorder(str_wrap(variable, 5), percent_yes), y = 0, 
-                   xend = reorder(str_wrap(variable, 5), percent_yes), yend = 100),
-               linetype = "dashed", color = "gray12") +
-  geom_hline(aes(yintercept = y), data.frame(y = seq(0, 100, by = 25)), color = "lightgrey") +
-  annotate(x = 6.5, y = 25, label = "25%", geom = "text", color = "gray12", size = 3) +
-  annotate(x = 6.5, y = 50, label = "50%", geom = "text", color = "gray12", size = 3) +
-  annotate(x = 6.5, y = 75, label = "75%", geom = "text", color = "gray12", size = 3) +
-  annotate(x = 6.5, y = 100, label = "100%", geom = "text", color = "gray12", size = 3) +
-  scale_y_continuous(limits = c(-10, 110), expand = c(0, 0), breaks = seq(0, 100, by = 25)) +
-  scale_fill_gradientn("Percentage of 'Yes'", colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195")) +
-  guides(fill = guide_colorsteps(barwidth = 15, barheight = 0.5, title.position = "top", title.hjust = 0.5)) +
+  geom_segment(aes(
+    x = reorder(stringr::str_wrap(variable, 10), percent_yes),
+    y = 0,
+    xend = reorder(stringr::str_wrap(variable, 10), percent_yes),
+    yend = 100
+  ),
+  linetype = "dashed", color = "gray12") +
+  geom_hline(
+    aes(yintercept = y),
+    data.frame(y = seq(0, 100, by = 25)),
+    color = "lightgrey"
+  ) +
+  annotate(
+    x = 6.5,
+    y = 25,
+    label = "25%",
+    geom = "text",
+    color = "gray12",
+    size = 3
+  ) +
+  annotate(
+    x = 6.5,
+    y = 50,
+    label = "50%",
+    geom = "text",
+    color = "gray12",
+    size = 3
+  ) +
+  annotate(
+    x = 6.5,
+    y = 75,
+    label = "75%",
+    geom = "text",
+    color = "gray12",
+    size = 3
+  ) +
+  annotate(
+    x = 6.5,
+    y = 100,
+    label = "100%",
+    geom = "text",
+    color = "gray12",
+    size = 3
+  ) +
+  scale_y_continuous(
+    limits = c(-10, 110),
+    expand = c(0, 0),
+    breaks = seq(0, 100, by = 25)
+  ) +
+  scale_fill_gradientn(
+    "Percentage of 'Yes'",
+    colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195")
+  ) +
+  guides(fill = guide_colorsteps(
+    barwidth = 15,
+    barheight = 0.5,
+    title.position = "top",
+    title.hjust = 0.5
+  )) +
   coord_polar() +
-  labs(title = "EDI consideration of the development of PRISMA checklists") +
+  labs(title = "EDI considerations in the development of PRISMA checklists") +
   theme_minimal() +
   theme(
     axis.title = element_blank(),
     axis.ticks = element_blank(),
     axis.text.y = element_blank(),
-    axis.text.x = element_text(color = "gray12", size = 8), 
+    axis.text.x = element_text(color = "gray12", size = 8),
     legend.position = "bottom",
     legend.box.spacing = unit(-10, "pt"),
     text = element_text(color = "gray12"),
     plot.title = element_text(face = "bold", size = 12, hjust = 0.5),
-    plot.subtitle = element_text(size = 12, hjust = 0.05),
-    plot.caption = element_text(size = 10, hjust = 0.5),
     panel.background = element_rect(fill = "white", color = "white"),
     panel.grid = element_blank(),
     panel.grid.major.x = element_blank()
   )
 
-# 6. Save figure (optional) ---------------------------------------------------
+# =========================================
+# 6. Save plot
+# =========================================
+
 # ggsave(here("figures", "figure_3_edi_circular_barplot.jpg"), plot = figure_3, width = 6, height = 6, dpi = 300)
 ```
 
 # *Figure 4A & B*
 A) A world map illustrating the graphical distribution of author affiliations of each PRISMA extension. Grey represents that no authors from the respective country have been involved in the development of the PRISMA extension. B) A bubble plot illustrating the gender of the first and last author, as well as the proportion of females as middle authors and in the development team. 
 ```{r}
-# 1. Prepare geo_data from edi_author -----------------------------------------
-geo_data <- edi_author %>%
-  separate_rows(geographic_diversity, sep = ";") %>%
+# ============================================================
+# 1. Prepare geo_data from edi_author_prepped
+# ============================================================
+geo_data <- edi_author_prepped %>%
+  tidyr::separate_rows(geographic_diversity, sep = ";") %>%
   mutate(geographic_diversity = trimws(geographic_diversity)) %>%
   group_by(geographic_diversity) %>%
   summarise(count = n(), .groups = "drop")
 
 colnames(geo_data) <- c("Country", "Count")
 
-# 2. Get world map data -------------------------------------------------------
+# ============================================================
+# 2. Get world map data
+# ============================================================
 world_map <- map_data("world") %>%
   filter(region != "Antarctica")
 
 geo_data$Country <- trimws(geo_data$Country)
 world_map$region <- trimws(world_map$region)
 
-# 3. Fix country name mismatches ----------------------------------------------
+# ============================================================
+# 3. Fix country name mismatches
+# ============================================================
 geo_data <- geo_data %>%
   mutate(Country = case_when(
     Country == "England"        ~ "United Kingdom",
@@ -440,7 +639,9 @@ geo_data <- geo_data %>%
     TRUE ~ Country
   ))
 
-# 4. Join map data with author counts -----------------------------------------
+# ============================================================
+# 4. Join map data with author counts
+# ============================================================
 map_data_final <- left_join(world_map, geo_data, by = c("region" = "Country"))
 
 geo_data_complete <- world_map %>%
@@ -448,27 +649,38 @@ geo_data_complete <- world_map %>%
   left_join(map_data_final, by = "region") %>%
   mutate(Count = ifelse(is.na(Count), 0, Count))
 
-# 5. Bin countries by author count --------------------------------------------
+# ============================================================
+# 5. Bin countries by author count
+# ============================================================
 geo_data_complete <- geo_data_complete %>%
   mutate(Count_bin = case_when(
-    Count == 0      ~ "0",
-    Count <= 10     ~ "1–10",
-    Count <= 20     ~ "11–20",
-    Count <= 50     ~ "21–50",
-    Count > 50      ~ "50+"
+    Count == 0       ~ "0",
+    Count <= 10      ~ "1–10",
+    Count <= 20      ~ "11–20",
+    Count <= 50      ~ "21–50",
+    Count <= 100     ~ "51–100",
+    Count > 100      ~ "100+"
   )) %>%
-  mutate(Count_bin = factor(Count_bin, levels = c("0", "1–10", "11–20", "21–50", "50+")))
+  mutate(Count_bin = factor(
+    Count_bin,
+    levels = c("0", "1–10", "11–20", "21–50", "51–100", "100+")
+  ))
 
-# 6. Define color palette -----------------------------------------------------
+# ============================================================
+# 6. Define color palette
+# ============================================================
 color_palette <- c(
-  "0"     = "#D9D9D9",
-  "1–10"  = "#6C5B7B",
-  "11–20" = "#F67280",
-  "21–50" = "#F8B195",
-  "50+"   = "#F9DCC4"
+  "0"       = "#D9D9D9",
+  "1–10"    = "#6C5B7B",
+  "11–20"   = "#C06C84",
+  "21–50"   = "#F67280",
+  "51–100"  = "#F8B195",
+  "100+"    = "#F9DCC4"
 )
 
-# 7. Plot geographic diversity map --------------------------------------------
+# ============================================================
+# 7. Plot geographic diversity map
+# ============================================================
 p_map <- ggplot(geo_data_complete,
                 aes(x = long, y = lat, group = group, fill = Count_bin)) +
   geom_polygon(colour = "white", size = 0.2) +
@@ -477,7 +689,7 @@ p_map <- ggplot(geo_data_complete,
     na.value = "grey90",
     name     = "Authors by country"
   ) +
-  labs(title = "a) Geographic diversity", x = NULL, y = NULL) +
+  labs(title = "a) Geographic Diversity", x = NULL, y = NULL) +
   theme_minimal(base_size = 12, base_family = "Arial") +
   guides(fill = guide_legend(
     keywidth = unit(1, "cm"),
@@ -494,14 +706,19 @@ p_map <- ggplot(geo_data_complete,
     plot.margin     = margin(t = 10, r = 10, b = 10, l = 10)
   )
 
-# 8. Save geographic diversity map --------------------------------------------
-# ggsave(here("figures", "geo_diversity_map.jpg"), p_map, width = 13, height = 7, dpi = 300)
+# ============================================================
+# 8. (Optional) Save plot
+# ============================================================
+ ggsave(here("figures", "geo_diversity_map.jpg"), p_map, width = 13, height = 7, dpi = 300)
 
 
-# 9. Filter and summarize gender diversity ------------------------------------
-edi_author_filter <- edi_author %>%
-  filter(gender_diversity_confidence >= 95 | author_status %in% c("first", "last")) %>%
-  mutate(is_female = if_else(gender_diversity == "Female" & gender_diversity_confidence >= 95, 1, 0))
+
+# ============================================================
+# 8. Prepare gender diversity summary (new data)
+# ============================================================
+edi_author_filter <- edi_author_prepped %>%
+  filter(author_status %in% c("first", "last", "middle", "development group")) %>%
+  mutate(is_female = if_else(final_gender == "Female", 1, 0))
 
 final_summary <- edi_author_filter %>%
   group_by(PRISMA_id, author_status) %>%
@@ -511,75 +728,26 @@ final_summary <- edi_author_filter %>%
     pct_female     = 100 * female_authors / total_authors,
     .groups        = "drop"
   ) %>%
-  left_join(
-    edi_author_filter %>% distinct(PRISMA_id, author_status, gender_diversity_confidence),
-    by = c("PRISMA_id", "author_status")
-  ) %>%
   mutate(
     shape_var = case_when(
-      author_status %in% c("first", "last") & gender_diversity_confidence < 95 ~ "Undefined_FL",
-      author_status %in% c("first", "last") & pct_female == 100                ~ "Female_FL",
-      author_status %in% c("first", "last") & pct_female == 0                  ~ "Male_FL",
-      TRUE                                                                     ~ "Other"
+      author_status %in% c("first", "last") & is.na(pct_female) ~ "Undefined_FL",
+      author_status %in% c("first", "last") & pct_female == 100 ~ "Female_FL",
+      author_status %in% c("first", "last") & pct_female == 0   ~ "Male_FL",
+      TRUE                                                      ~ "Other"
     )
   )
 
-# 10. Plot gender diversity (original bubble) ---------------------------------
-bubble_plot <- ggplot() +
-  geom_point(data = subset(final_summary, shape_var == "Other"),
-             aes(x = author_status, y = factor(PRISMA_id), fill = pct_female, shape = shape_var, size = pct_female),
-             color = "black", stroke = 0.5) +
-  geom_point(data = subset(final_summary, shape_var == "Female_FL"),
-             aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
-             fill = "#F8B195", color = "black", stroke = 0.5, size = 10) +
-  geom_point(data = subset(final_summary, shape_var == "Male_FL"),
-             aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
-             fill = "#6C5B7B", color = "black", stroke = 0.5, size = 10) +
-  geom_point(data = subset(final_summary, shape_var == "Undefined_FL"),
-             aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
-             fill = "white", color = "black", stroke = 0.5, size = 10) +
-  scale_shape_manual(
-    name   = "Author Gender",
-    values = c("Female_FL" = 24, "Male_FL" = 22, "Undefined_FL" = 23, "Other" = 21),
-    breaks = c("Female_FL", "Male_FL", "Undefined_FL"),
-    labels = c("Woman", "Man", "Undefined"),
-    guide  = guide_legend(title.position = "top", title.hjust = 0.5, override.aes = list(size = 5))
-  ) +
-  scale_size_continuous(guide = "none", range = c(3, 10), limits = c(0, 100)) +
-  scale_fill_gradientn(colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195"),
-                       name = "% Woman", limits = c(0, 100), na.value = "grey90") +
-  coord_equal() +
-  scale_x_discrete(limits = c("first", "last", "middle", "development group"), name = "Author Status") +
-  scale_y_discrete(labels = function(x) str_replace_all(x, "_", " ")) +
-  labs(title = "Gender Diversity", x = NULL, y = NULL) +
-  theme_minimal(base_size = 12, base_family = "Arial") +
-  theme(
-    axis.title.x = element_text(size = 14, face = "bold"),
-    axis.text.x  = element_text(size = 12, angle = 45, hjust = 1),
-    axis.title.y = element_blank(),
-    axis.text.y  = element_text(size = 12),
-    legend.position = "right",
-    legend.justification = "center",
-    panel.grid.major = element_line(color = "grey80"),
-    panel.grid.minor = element_blank(),
-    plot.title = element_text(size = 14, face = "bold"),
-    legend.title = element_text(size = 11, face = "bold"),
-    legend.text  = element_text(size = 10),
-    plot.margin  = margin(t = 10, r = 10, b = 10, l = 10)
-  )
-
-
-# 11. Save original bubble plot -----------------------------------------------
-# ggsave(here("figures", "bubble_plot.jpg"), bubble_plot, width = 6, height = 12, dpi = 300)
-
-
-# 12. Prepare and plot flipped bubble version ---------------------------------
+# ============================================================
+# 9. Plot flipped bubble version (gender diversity)
+# ============================================================
 final_summary <- final_summary %>%
-  mutate(author_status = factor(author_status, levels = c("first", "last", "middle", "development group")))
+  mutate(author_status = factor(author_status,
+                                levels = c("first", "last", "middle", "development group")))
 
 bubble_plot_flipped <- ggplot() +
   geom_point(data = filter(final_summary, shape_var == "Other"),
-             aes(x = author_status, y = factor(PRISMA_id), fill = pct_female, shape = shape_var, size = pct_female),
+             aes(x = author_status, y = factor(PRISMA_id),
+                 fill = pct_female, shape = shape_var, size = pct_female),
              colour = "black", stroke = 0.5) +
   geom_point(data = filter(final_summary, shape_var == "Female_FL"),
              aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
@@ -587,32 +755,49 @@ bubble_plot_flipped <- ggplot() +
   geom_point(data = filter(final_summary, shape_var == "Male_FL"),
              aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
              fill = "#6C5B7B", colour = "black", stroke = 0.5, size = 10) +
-  geom_point(data = filter(final_summary, shape_var == "Undefined_FL"),
-             aes(x = author_status, y = factor(PRISMA_id), shape = shape_var),
-             fill = "white", colour = "black", stroke = 0.5, size = 10) +
+  
+  # --- Legend setup (only for existing categories) ---
   scale_shape_manual(
     name   = "Author Gender",
-    values = c("Female_FL" = 24, "Male_FL" = 22, "Undefined_FL" = 23, "Other" = 21),
-    breaks = c("Female_FL", "Male_FL", "Undefined_FL"),
-    labels = c("Woman", "Man", "Undefined"),
-    guide  = guide_legend(title.position = "top", title.hjust = 0.5, override.aes = list(size = 5))
+    values = c("Female_FL" = 24, "Male_FL" = 22, "Other" = 21),
+    breaks = c("Female_FL", "Male_FL"),
+    labels = c("Woman", "Man"),
+    guide  = guide_legend(
+      title.position = "top",
+      title.hjust = 0.5,
+      override.aes = list(
+        fill   = c("#F8B195", "#6C5B7B"),
+        shape  = c(24, 22),
+        colour = rep("black", 2),
+        size   = rep(5, 2)
+      )
+    )
   ) +
+  
   scale_size_continuous(guide = "none", range = c(3, 10), limits = c(0, 100)) +
-  scale_fill_gradientn(
+  
+  scale_fill_gradient(
     colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195"),
     name = "% Female", limits = c(0, 100), na.value = "grey90",
-    guide = guide_colorbar(barheight = unit(6, "cm"), barwidth = unit(0.6, "cm"),
-                           title.position = "top", title.hjust = 0.5)
+    guide = guide_colorbar(
+      barheight = unit(6, "cm"),
+      barwidth = unit(0.6, "cm"),
+      title.position = "top",
+      title.hjust = 0.5
+    )
   ) +
+  
   scale_x_discrete(
     limits = c("development group", "middle", "last", "first"),
-    labels = c("development group" = "development\ngroup", "middle" = "middle",
-               "last" = "last", "first" = "first"),
+    labels = c("development group" = "development\ngroup",
+               "middle" = "middle", "last" = "last", "first" = "first"),
     name = "Author Status"
   ) +
-  scale_y_discrete(labels = function(x) str_replace_all(x, "_", " ")) +
+  scale_y_discrete(labels = function(x) stringr::str_replace_all(x, "_", " ")) +
+  
   coord_flip() +
   labs(title = "b) Gender Diversity", x = NULL, y = NULL) +
+  
   theme_minimal(base_size = 12, base_family = "Arial") +
   theme(
     legend.position       = "right",
@@ -620,10 +805,9 @@ bubble_plot_flipped <- ggplot() +
     legend.box.just       = "center",
     legend.spacing.y      = unit(0.5, "cm"),
     axis.text.x           = element_text(size = 12, angle = 45, hjust = 1),
-    axis.title.y          = element_blank(),
     axis.text.y           = element_text(size = 12),
     plot.title.position   = "plot",
-    plot.title            = element_text(size = 14, face = "bold", hjust = 0, vjust = 1),
+    plot.title            = element_text(size = 14, face = "bold", hjust = 0),
     legend.title          = element_text(size = 11, face = "bold"),
     legend.text           = element_text(size = 10),
     panel.grid.major      = element_line(color = "grey80"),
@@ -631,8 +815,9 @@ bubble_plot_flipped <- ggplot() +
     plot.margin           = margin(t = 10, r = 10, b = 10, l = 10)
   )
 
-# 13. Save flipped bubble plot ------------------------------------------------
-# ggsave(here("figures", "bubble_plot_flipped.jpg"), bubble_plot_flipped, width = 12, height = 5, dpi = 300)
+
+ # ggsave(here("figures", "bubble_plot_flipped.jpg"), bubble_plot_flipped, width = 12, height = 6, dpi = 300)
+
 ```
 
 # *Figure 5*

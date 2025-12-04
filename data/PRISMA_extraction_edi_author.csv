@@ -1,515 +1,515 @@
-PRISMA_id,author_first_name,author_surname,gender_diversity,gender_diversity_confidence,affiliation,geographic_diversity,author_status
-PRISMA_2009,Douglas,Altman,Male,100,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,last
-PRISMA_2009,Jennifer,Tetzlaff,Female,100,"Ottawa Methods Centre, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,middle
-PRISMA_2009,Peter,Gøtzsche,Male,100,"Nordic Cochrane Centre, Copenhagen, Denmark",Denmark,middle
-PRISMA_2009,John,Ioannidis,Male,100,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, Ioannina, Greece",Greece,middle
-PRISMA_2009,Mike,Clarke,Male,100,"United Kingdom Cochrane Centre, Oxford; School of Nursing and Midwifery, Trinity College, Dublin, Republic of Ireland",United Kingdom; Ireland,middle
-PRISMA_2009,David,Moher,Male,100,"Ottawa Methods Centre, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,first
-PRISMA_2009,Gerd,Antes,Male,90,"University Hospital Freiburg, Freiburg, Germany",Germany,development group
-PRISMA_2009,David,Atkins,Male,100,"Health Services Research and Development Service, Veterans Health Administration, Washington, DC, US",United States,development group
-PRISMA_2009,Virginia,Barbour,Female,100,"PLoS Medicine, Cambridge, United Kingdom",United Kingdom,development group
-PRISMA_2009,Nick,Barrowman,Male,99,"Children’s Hospital of Eastern Ontario, Ottawa, Canada",Canada,development group
-PRISMA_2009,Jesse A.,Berlin,Male,100,"Johnson & Johnson Pharmaceutical Research and Development, Titusville, New Jersey, US",United States,development group
-PRISMA_2009,Jocalyn,Clark,Female,100,"PLoS Medicine, BMJ, London, United Kingdom",United Kingdom,development group
-PRISMA_2009,Mike,Clarke,Male,100,"United Kingdom Cochrane Centre, Oxford, United Kingdom; School of Nursing and Midwifery, Trinity College, Dublin, Ireland",United Kingdom; Ireland,development group
-PRISMA_2009,Deborah,Cook,Female,100,"Departments of Medicine, Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, Canada",Canada,development group
-PRISMA_2009,Roberto,D’Amico,Male,100,"Università di Modena e Reggio Emilia, Modena, Italy; Centro Cochrane Italiano, Istituto Ricerche Farmacologiche Mario Negri, Milan, Italy",Italy; Italy,development group
-PRISMA_2009,Jonathan J.,Deeks,Male,98,"University of Birmingham, Birmingham, United Kingdom",United Kingdom,development group
-PRISMA_2009,P. J.,Devereaux,Male,100,"Departments of Medicine, Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, Canada",Canada,development group
-PRISMA_2009,Kay,Dickersin,Female,64,"Johns Hopkins Bloomberg School of Public Health, Baltimore, Maryland, US",United States,development group
-PRISMA_2009,Matthias,Egger,Male,100,"Department of Social and Preventive Medicine, University of Bern, Bern, Switzerland",Switzerland,development group
-PRISMA_2009,Edzard,Ernst,Male,100,"Peninsula Medical School, Exeter, United Kingdom",United Kingdom,development group
-PRISMA_2009,Peter C.,Gøtzsche,Male,100,"The Nordic Cochrane Centre, Copenhagen, Denmark",Denmark,development group
-PRISMA_2009,Jeremy,Grimshaw,Male,100,"Ottawa Hospital Research Institute, Ottawa, Canada",Canada,development group
-PRISMA_2009,Gordon,Guyatt,Male,100,"Departments of Medicine, Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, Canada",Canada,development group
-PRISMA_2009,Julian,Higgins,Male,99,"MRC Biostatistics Unit, Cambridge, United Kingdom",United Kingdom,development group
-PRISMA_2009,Jos,Kleijnen,Male,97,"Kleijnen Systematic Reviews Ltd, York, United Kingdom; School for Public Health and Primary Care (CAPHRI), University of Maastricht, Maastricht, Netherlands",United Kingdom; Netherlands,development group
-PRISMA_2009,Tom,Lang,Male,99,"Tom Lang Communications and Training, Davis, California, US",United States,development group
-PRISMA_2009,Alessandro,Liberati,Male,100,"Università di Modena e Reggio Emilia, Modena, Italy; Centro Cochrane Italiano, Istituto Ricerche Farmacologiche Mario Negri, Milan, Italy",Italy; Italy,development group
-PRISMA_2009,Nicola,Magrini,Male,81,"NHS Centre for the Evaluation of the Effectiveness of Health Care e CeVEAS, Modena, Italy",Italy,development group
-PRISMA_2009,David,McNamee,Male,100,"The Lancet, London, United Kingdom",United Kingdom,development group
-PRISMA_2009,Lorenzo,Moja,Male,100,"Centro Cochrane Italiano, Istituto Ricerche Farmacologiche Mario Negri, Milan, Italy",Italy,development group
-PRISMA_2009,Cynthia,Mulrow,Female,100,"Annals of Internal Medicine, Philadelphia, Pennsylvania, US",United States,development group
-PRISMA_2009,Maryann,Napoli,Female,100,"Center for Medical Consumers, New York, New York, US",United States,development group
-PRISMA_2009,Andy,Oxman,Male,96,"Norwegian Health Services Research Centre, Oslo, Norway",Norway,development group
-PRISMA_2009,Ba’,Pham,Female,54,"Toronto Health Economics and Technology Assessment Collaborative, Toronto, Canada",Canada,development group
-PRISMA_2009,Drummond,Rennie,Male,99,"University of California San Francisco, San Francisco, California, US",United States,development group
-PRISMA_2009,Margaret,Sampson,Female,100,"Children’s Hospital of Eastern Ontario, Ottawa, Canada",Canada,development group
-PRISMA_2009,Kenneth F.,Schulz,Male,100,"Family Health International, Durham, North Carolina, US",United States,development group
-PRISMA_2009,Paul G.,Shekelle,Male,98,"Southern California Evidence-Based Practice Center, Santa Monica, California, US",United States,development group
-PRISMA_2009,David,Tovey,Male,100,"The Cochrane Library, Cochrane Collaboration, Oxford, United Kingdom",United Kingdom,development group
-PRISMA_2009,Peter,Tugwell,Male,100,"Institute of Population Health, University of Ottawa, Ottawa, Canada",Canada,development group
-PRISMA_2020,Matthew,Page,Male,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,first
-PRISMA_2020,Joanne,McKenzie,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-PRISMA_2020,Patrick,Bossuyt,Male,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam University Medical Centres, University of Amsterdam, Amsterdam, Netherlands",Netherlands,middle
-PRISMA_2020,Isabelle,Boutron,Female,99,"Université de Paris, Centre of Epidemiology and Statistics (CRESS), Inserm, F 75004 Paris, France",France,middle
-PRISMA_2020,Tammy,Hoffmann,Female,99,"Institute for Evidence-Based Healthcare, Faculty of Health Sciences and Medicine, Bond University, Gold Coast, Australia",Australia,middle
-PRISMA_2020,Cynthia,Mulrow,Female,100,"University of Texas Health Science Center at San Antonio, San Antonio, Texas, United States; Annals of Internal Medicine",United States,middle
-PRISMA_2020,Larissa,Shamseer,Female,100,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, Toronto, Canada; School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Canada",Canada,middle
-PRISMA_2020,Jennifer,Tetzlaff,Female,100,"Evidence Partners, Ottawa, Canada",Canada,middle
-PRISMA_2020,Elie,Akl,Female,93,"Clinical Research Institute, American University of Beirut, Beirut, Lebanon; Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada",Lebanon; Canada,middle
-PRISMA_2020,Sue,Brennan,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-PRISMA_2020,Roger,Chou,Male,100,"Department of Medical Informatics and Clinical Epidemiology, Oregon Health & Science University, Portland, Oregon, United States",United States,middle
-PRISMA_2020,Julie,Glanville,Female,99,"York Health Economics Consortium (YHEC Ltd), University of York, York, United Kingdom",United Kingdom,middle
-PRISMA_2020,Jeremy,Grimshaw,Male,100,"Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Canada; School of Epidemiology and Public Health, University of Ottawa, Ottawa, Canada; Department of Medicine, University of Ottawa, Ottawa, Canada",Canada,middle
-PRISMA_2020,Asbjørn ,Hróbjartsson,Male,100,"Centre for Evidence-Based Medicine Odense (CEBMO) and Cochrane Denmark, Department of Clinical Research, University of Southern Denmark, Odense, Denmark; Open Patient data Exploratory Network (OPEN), Odense University Hospital, Odense, Denmark",Denmark,middle
-PRISMA_2020,Manoj,Lalu,Male,99,"Department of Anesthesiology and Pain Medicine, The Ottawa Hospital, Ottawa, Canada; Clinical Epidemiology Program, Blueprint Translational Research Group, Ottawa Hospital Research Institute, Ottawa, Canada; Regenerative Medicine Program, Ottawa Hospital Research Institute, Ottawa, Canada",Canada,middle
-PRISMA_2020,Tianjing,Li,Female,70,"Department of Ophthalmology, School of Medicine, University of Colorado Denver, Denver, Colorado, United States; Department of Epidemiology, Johns Hopkins Bloomberg School of Public Health, Baltimore, Maryland, United States",United States,middle
-PRISMA_2020,Elizabeth,Loder,Female,100,"Division of Headache, Department of Neurology, Brigham and Women's Hospital, Harvard Medical School, Boston, Massachusetts, United States; Head of Research, The BMJ, London, United Kingdom",United States; United Kingdom,middle
-PRISMA_2020,Evan,Mayo-Wilson,Male,98,"Department of Epidemiology and Biostatistics, Indiana University School of Public Health-Bloomington, Bloomington, Indiana, United States",United States,middle
-PRISMA_2020,Steve,McDonald,Male,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-PRISMA_2020,Luke,McGuinness,Male,100,"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, United Kingdom",United Kingdom,middle
-PRISMA_2020,Lesley,Stewart,Female,88,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,middle
-PRISMA_2020,James,Thomas,Male,100,"EPPI-Centre, UCL Social Research Institute, University College London, London, United Kingdom",United Kingdom,middle
-PRISMA_2020,Andrea,Tricco,Female,69,"Li Ka Shing Knowledge Institute of St. Michael's Hospital, Unity Health Toronto, Toronto, Canada; Epidemiology Division of the Dalla Lana School of Public Health and the Institute of Health Management, Policy, and Evaluation, University of Toronto, Toronto, Canada; Queen's Collaboration for Health Care Quality Joanna Briggs Institute Centre of Excellence, Queen's University, Kingston, Canada",Canada,middle
-PRISMA_2020,Vivian,Welch,Female,98,"Methods Centre, Bruyère Research Institute, Ottawa, Ontario, Canada; School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Canada",Canada,middle
-PRISMA_2020,Penny,Whiting,Female,99,"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, United Kingdom",United Kingdom,middle
-PRISMA_2020,David,Moher,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Canada; School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Canada",Canada,last
-PRISMA_abstract,Elaine,Beller,Female,100,"Centre for Research in Evidence-Based Practice, Bond University, Gold Coast, Australia",Australia,first
-PRISMA_abstract,Paul,Glasziou,Male,100,"Centre for Research in Evidence-Based Practice, Bond University, Gold Coast, Australia",Australia,middle
-PRISMA_abstract,Douglas,Altman,Male,100,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,middle
-PRISMA_abstract,Sally,Hopewell,Female,99,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom; INSERM, Paris, France",France,middle
-PRISMA_abstract,Hilda,Bastian,Female,99,"National Center for Biotechnology Information, National Library of Medicine, Washington DC, United States of America",United States of America,middle
-PRISMA_abstract,Iain,Chalmers,Male,100,"James Lind Initiative, Oxford, United Kingdom",United Kingdom,middle
-PRISMA_abstract,Peter C.,Gøtzsche,Male,100,"Nordic Cochrane Centre, Copenhagen, Denmark",Denmark,middle
-PRISMA_abstract,Toby,Lasserson,Male,91,"Cochrane Editorial Unit, London, United Kingdom",United Kingdom,middle
-PRISMA_abstract,David,Tovey,Male,100,"Cochrane Editorial Unit, London, United Kingdom",United Kingdom,last
-PRISMA_acupuncture ,Xiaoqin,Wang,Female,95,"Evidence-Based Medicine Center, School of Basic Medical Sciences, Lanzhou University, Lanzhou, China",China,first
-PRISMA_acupuncture ,Yaolong,Chen,Male,92,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle
-PRISMA_acupuncture ,Yali,Liu,Female,72,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle
-PRISMA_acupuncture ,Liang,Yao,Male,92,"Clinical Division, School of Chinese Medicine, Hong Kong Baptist University, Kowloon Tong, Hong Kong",Hong Kong,middle
-PRISMA_acupuncture ,Janne,Estill,Female,63,"Institute of Global Health, University of Geneva, Geneva, Switzerland",Switzerland,middle
-PRISMA_acupuncture ,Zhaoxiang,Bian,Male,100,"Dongzhimen Hospital of Beijing University of Chinese Medicine, Beijing, China",China,middle
-PRISMA_acupuncture ,Taixiang,Wu,Male,67,"Chinese Cochrane Centre, West China Hospital, Sichuan University, Chengdu, China",China,middle
-PRISMA_acupuncture ,Hongcai,Shang,Male,100,"Dongzhimen Hospital of Beijing University of Chinese Medicine, Beijing, China",China,middle
-PRISMA_acupuncture ,Myeong Soo,Lee,Male,100,"Korea Institute of Oriental Medicine, Daejeon, South Korea",South Korea,middle
-PRISMA_acupuncture ,Dang,Wei,Male,53,"Department of Public Health Sciences, Karolinska Institute, Stockholm, Sweden",Sweden,middle
-PRISMA_acupuncture ,Jinhui,Tian,Male,69,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle
-PRISMA_acupuncture ,Bin,Ma,Male,95,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle
-PRISMA_acupuncture ,Yongfeng,Wang,Male,95,"Gansu University of Chinese Medicine, Lanzhou, China",China,middle
-PRISMA_acupuncture ,Guihua,Tian,Female,75,"Dongzhimen Hospital of Beijing University of Chinese Medicine, Beijing, China",China,middle
-PRISMA_acupuncture ,Kehu,Yang,Male,83,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,last
-PRISMA_CHM,Xuan,Zhang,Female,61,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,first
-PRISMA_CHM,Ran,Tan,Male,61,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Wai Ching,Lam,Female,79,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Liang,Yao,Male,92,"School of Chinese Medicine, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Xiaoqin,Wang,Female,95,"Evidence-Based Medicine Center, School of Basic Medical Sciences, Lanzhou University, Lanzhou, China",China,middle
-PRISMA_CHM,Chung Wah,Cheng,Male,86,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Fan,Liu,Female,76,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Jacky CP,Chan,Male,68,"Department of Computer Science, HKBU Faculty of Science, Hong Kong Baptist University, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Qiying,Aixinjueluo,Male,80,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Chung Tai,Lau,Male,67,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Yaolong,Chen,Male,92,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle
-PRISMA_CHM,Kehu,Yang,Male,83,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle
-PRISMA_CHM,Taixiang,Wu,Male,67,"Chinese Cochrane Centre, West China Hospital, Sichuan University, Chengdu, Sichuan, China",China,middle
-PRISMA_CHM,Aiping,Lyu,Female,84,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle
-PRISMA_CHM,Zhaoxiang,Bian,Male,100,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,last
-PRISMA_complex,Jeanne-Marie,Guise,Female,100,"Department of Obstetrics & Gynecology, Oregon Health & Science University School of Medicine, Portland, OR, United States",United States,first
-PRISMA_complex,Mary,Butler,Female,99,"University of Minnesota School of Public Health, Minneapolis, MN, United States",United States,middle
-PRISMA_complex,Christine,Chang,Female,100,"Agency for Healthcare Research & Quality, Rockville, MD, United States",United States,middle
-PRISMA_complex,Meera,Viswanathan,Female,96,"RTI International, Research Triangle Park, NC, United States",United States,middle
-PRISMA_complex,Terri,Pigott,Female,100,"School of Education, Loyola University Chicago, Chicago, IL, United States",United States,middle
-PRISMA_complex,Peter,Tugwell,Male,100,"Department of Medicine, University of Ottawa, Ottawa, Ontario, Canada",Canada,last
-PRISMA_COSMIN,Ellen,Elsman,Female,100,"Child Health Evaluative Sciences, The Hospital for Sick Children Research Institute, Toronto, ON, Canada; Amsterdam UMC, Amsterdam, Netherlands",Netherlands,first
-PRISMA_COSMIN,Maureen,Smith,Female,100,"Patient Partner, Cochrane Consumer Network, Ottawa, ON, Canada",Canada,middle
-PRISMA_COSMIN,Catherine,Hofstetter,Female,100,"Patient and Public Contributor/Advisor, OMERACT Patient Research Partner, Toronto, ON, Canada",Canada,middle
-PRISMA_COSMIN,Frank,Gavin,Male,100,"Patient and Public Contributor, Chair of the Public Advisory Council of The Health Data Research Network (Canada), Toronto, ON, Canada",Canada,middle
-PRISMA_COSMIN,Estelle,Jobson,Female,99,"Patient and Public Contributor, EUPATI Fellow, Nyon, Switzerland",Switzerland,middle
-PRISMA_COSMIN,Sarah,Markham,Female,99,"Patient and Public Contributor, King’s College London, London, United Kingdom",United Kingdom,middle
-PRISMA_COSMIN,Juanna,Ricketts,Female,98,"Patient and Public Contributor, Halifax, NS, Canada",Canada,middle
-PRISMA_COSMIN,Ami,Baba,Female,56,"Child Health Evaluative Sciences, The Hospital for Sick Children Research Institute, Toronto, ON, Canada",Canada,middle
-PRISMA_COSMIN,Nancy,Butcher,Female,100,"Department of Psychiatry, University of Toronto, Toronto, ON, Canada",Canada,middle
-PRISMA_COSMIN,Martin,Offringa,Male,99,"Child Health Evaluative Sciences, The Hospital for Sick Children Research Institute; University of Toronto, Toronto, ON, Canada",Canada,middle
-PRISMA_COSMIN,Lidwine B.,Mokkink,Female,97,"Department of Epidemiology and Data Science, Amsterdam UMC, Vrije Universiteit Amsterdam, Amsterdam Public Health Institute",Netherlands,middle
-PRISMA_COSMIN,Caroline B.,Terwee,Female,100,"Amsterdam Public Health Research Institute, Amsterdam, Netherlands",Netherlands,middle
-PRISMA_COSMIN,Dorcas,Beaton,Female,99,"Institute of Work and Health, Toronto, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,Joel J.,Gagnier,Male,100,"Department of Epidemiology & Biostatistics, Western University, London, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,Andrea C.,Tricco,Female,96,"Li Ka Shing Knowledge Institute, St. Michael’s Hospital, Unity Health Toronto, Toronto, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,Maureen,Smith,Female,100,"Cochrane Consumer Network, London, United Kingdom",United Kingdom,middle
-PRISMA_COSMIN,Catherine,Hofstetter,Female,100,"OMERACT Patient Research Partner, Toronto, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,Olalekan Lee,Aiyegbusi,Male,97,"Centre for Patient Reported Outcomes Research, University of Birmingham, Birmingham, United Kingdom",United Kingdom,middle
-PRISMA_COSMIN,Anna,Berardi,Female,99,"Department of Human Neurosciences, Sapienza University of Rome, Rome, Italy",Italy,middle
-PRISMA_COSMIN,Julie,Farmer,Female,99,"Faculty of Dentistry, University of Toronto, Toronto, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,Kirstie L.,Haywood,Female,100,"Warwick Research in Nursing, Warwick Medical School, University of Warwick, Coventry, United Kingdom",United Kingdom,middle
-PRISMA_COSMIN,Karolin R.,Krause,Female,98,"Cundill Centre for Child and Youth Depression, University of Toronto, Toronto, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,Sarah,Markham,Female,99,"Department of Biostatistics & Health Informatics, King’s College London, London, United Kingdom",United Kingdom,middle
-PRISMA_COSMIN,Evan,Mayo-Wilson,Male,98,"Department of Epidemiology, UNC Gillings School of Global Public Health, Chapel Hill, NC, United States",United States,middle
-PRISMA_COSMIN,Ava,Mehdipour,Female,97,"School of Rehabilitation Science, McMaster University, Hamilton, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,Peter,Szatmari,Male,100,"Division of Rheumatology, Schroeder Arthritis Institute, University of Toronto, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,Zahi,Touma,Male,90,"Division of Rheumatology, Schroeder Arthritis Institute, University of Toronto, Toronto, Ontario, Canada",Canada,middle
-PRISMA_COSMIN,David,Moher,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,last
-PRISMA_DTA,Jérémie F.,Cohen,Male,99,"Necker - Enfants Malades Hospital, Assistance Publique - Hôpitaux de Paris, Université de Paris",France,first
-PRISMA_DTA,Jonathan J.,Deeks,Male,98,"University of Birmingham, Institute of Health Policy, Management, and Evaluation, United Kingdom",United Kingdom,middle
-PRISMA_DTA,Lotty,Hooft,Female,91,"Amsterdam UMC, Vrije Universiteit Amsterdam, Amsterdam Public Health Research Institute",Netherlands,middle
-PRISMA_DTA,Jean-Paul,Salameh,Male,100,Not provided (likely affiliated with French institutions),France,middle
-PRISMA_DTA,Daniël A.,Korevaar,Male,93,"Amsterdam UMC, Department of Epidemiology and Data Science, Netherlands",Netherlands,middle
-PRISMA_DTA,Constantine,Gatsonis,Male,96,"Brown University, United States",United States,middle
-PRISMA_DTA,Sally,Hopewell,Female,99,"University of York, United Kingdom",United Kingdom,middle
-PRISMA_DTA,Harriet A.,Hunt,Female,100,"King's College London, Department of Biostatistics & Health Informatics, United Kingdom",United Kingdom,middle
-PRISMA_DTA,Chris J.,Hyde,Male,100,"King's College London, Department of Biostatistics & Health Informatics, United Kingdom",United Kingdom,middle
-PRISMA_DTA,Mariska M.,Leeflang,Female,100,"Amsterdam UMC, Vrije Universiteit Amsterdam, Amsterdam Public Health Research Institute",Netherlands,middle
-PRISMA_DTA,Petra,Macaskill,Female,99,"Monash University, Melbourne, Australia",Australia,middle
-PRISMA_DTA,Trevor A.,McGrath,Male,100,"St. Michael’s Hospital, Unity Health Toronto, Canada",Canada,middle
-PRISMA_DTA,David,Moher,Male,100,"Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,middle
-PRISMA_DTA,Johannes B.,Reitsma,Male,100,"Department of Epidemiology, Vrije Universiteit Amsterdam, Netherlands",Netherlands,middle
-PRISMA_DTA,Anne W. S.,Rutjes,Female,99,"Maastricht University, Faculty of Health Medicine and Life Sciences, Netherlands",Netherlands,middle
-PRISMA_DTA,Yemisi,Takwoingi,Female,98,"University of York, United Kingdom",United Kingdom,middle
-PRISMA_DTA,Marcello,Tonelli,Male,100,"University of Calgary, Calgary, Canada",Canada,middle
-PRISMA_DTA,Penny,Whiting,Female,99,"University of York, United Kingdom",United Kingdom,middle
-PRISMA_DTA,Brian H.,Willis,Male,100,"University of Calgary, Calgary, Canada",Canada,middle
-PRISMA_DTA,Brett,Thombs,Male,100,"McGill University, Montreal, Canada",Canada,middle
-PRISMA_DTA,Patrick M.,Bossuyt,Male,100,"Amsterdam UMC, Vrije Universiteit Amsterdam, Netherlands",Netherlands,middle
-PRISMA_DTA,Matthew D. F.,McInnes,Male,100,"University of Ottawa, Ottawa, Canada",Canada,last
-PRISMA_DTA,Tammy,Clifford,Female,99,"Canadian Agency for Drugs and Technologies in Health, Ottawa, Ontario, Canada",Canada,middle
-PRISMA_DTA,Robert A.,Frank,Male,97,"University of Ottawa, Department of Radiology, Ottawa, ON, Canada",Canada,middle
-PRISMA_DTA,Brooke,Levis,Female,100,"Lady Davis Institute of the Jewish General Hospital and Department of Epidemiology, McGill University, Montréal, QC, Canada",Canada,middle
-PRISMA_DTA,Rachel,Rodin,Female,100,"Public Health Agency of Canada, Ottawa, Ontario, Canada",Canada,middle
-PRISMA_DTA,Adrienne,Stevens,Female,100,"Ottawa Hospital Research Institute, Ottawa, Ontario, Canada; Translational Research in Biomedicine Program, School of Medicine, University of Split, Croatia",Croatia,middle
-PRISMA_DTA,Laura,Weeks,Female,99,"Canadian Agency for Drugs and Technologies in Health, Ottawa, Ontario, Canada",Canada,middle
-PRISMA_DTA,Brian H.,Willis,Male,100,"University of Birmingham, Birmingham, England",England,middle
-PRISMA_DTA_abstarct,Jérémie F.,Cohen,Male,99,"Necker - Enfants Malades Hospital, Assistance Publique - Hôpitaux de Paris, Université de Paris",France,first
-PRISMA_DTA_abstarct,Jonathan J,Deeks,Male,98,"1) Institute of Applied Health Research, University of Birmingham, Birmingham, UK
-2) NIHR Birmingham Biomedical Research Centre, University Hospitals Birmingham NHS Foundation Trust and University of Birmingham, Birmingham, UK",UK,middle
-PRISMA_DTA_abstarct,Lotty,Hooft,Female,91,"Cochrane Netherlands, Julius Center for Health Sciences and Primary Care, Utrecht University, University Medical Center Utrecht, Utrecht, Netherlands",Netherlands,middle
-PRISMA_DTA_abstarct,Jean-Paul,Salameh,Male,100,"1) The Ottawa Hospital Research Institute Clinical Epidemiology Program, Ottawa, ON, Canada
-2) Faculty of Medicine, Queenâ€™s University, Kingston, ON, Canada",Canada,middle
-PRISMA_DTA_abstarct,DaniÃ«l A,Korevaar,Male,93,"Department of Respiratory Medicine, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle
-PRISMA_DTA_abstarct,Constantine,Gatsonis,Male,96,"Brown University, Providence, RI, USA",USA,middle
-PRISMA_DTA_abstarct,Sally,Hopewell,Female,99,"Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, UK",UK,middle
-PRISMA_DTA_abstarct,Harriet A,Hunt,Female,100,"Exeter Test Group, College of Medicine and Health, University of Exeter, Exeter, UK",UK,middle
-PRISMA_DTA_abstarct,Chris J,Hyde,Male,100,"Exeter Test Group, College of Medicine and Health, University of Exeter, Exeter, UK",UK,middle
-PRISMA_DTA_abstarct,Mariska M,Leeflang,Female,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam Public Health, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle
-PRISMA_DTA_abstarct,Petra,Macaskill,Female,99,"University of Sydney, Sydney, NSW, Australia",Australia,middle
-PRISMA_DTA_abstarct,Trevor A,McGrath,Male,100,"Department of Radiology, University of Ottawa, Ottawa, ON, Canada",Canada,middle
-PRISMA_DTA_abstarct,David,Moher,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,middle
-PRISMA_DTA_abstarct,Johannes B,Reitsma,Male,100,"Cochrane Netherlands, Julius Center for Health Sciences and Primary Care, Utrecht University, University Medical Center Utrecht, Utrecht, Netherlands",Netherlands,middle
-PRISMA_DTA_abstarct,Anne W S,Rutjes,Female,99,"Institute of Social and Preventive Medicine, University of Bern, Bern, Switzerland",Switzerland,middle
-PRISMA_DTA_abstarct,Yemisi,Takwoingi,Female,98,"1) Institute of Applied Health Research, University of Birmingham, Birmingham, UK
-2) NIHR Birmingham Biomedical Research Centre, University Hospitals Birmingham NHS Foundation Trust and University of Birmingham, Birmingham, UK",UK,middle
-PRISMA_DTA_abstarct,Marcello,Tonelli,Male,100,"Department of Medicine, University of Calgary, Calgary, AB, Canada",Canada,middle
-PRISMA_DTA_abstarct,Penny,Whiting,Female,99,"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, UK",UK,middle
-PRISMA_DTA_abstarct,Brian H,Willis,Male,100,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK",UK,middle
-PRISMA_DTA_abstarct,Brett,Thombs,Male,100,"Lady Davis Institute of the Jewish General Hospital and Department of Psychiatry, McGill University, MontrÃ©al, QC, Canada",Canada,middle
-PRISMA_DTA_abstarct,Patrick M,Bossuyt,Male,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam Public Health, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle
-PRISMA_DTA_abstarct,Matthew D F,McInnes,Male,100,"University of Ottawa, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,last
-PRISMA_ecoevo,Rose,O'Dea,Female,98,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,first
-PRISMA_ecoevo,Malgorzata,Lagisz,Female,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,middle
-PRISMA_ecoevo,Michael,Jennions,Male,100,"Research School of Biology, Australian National University, 46 Sullivans Creek Road, Canberra, 2600, Australia",Australia,middle
-PRISMA_ecoevo,Julia,Koricheva,Female,99,"Department of Biological Sciences, Royal Holloway University of London, Egham, Surrey, TW20 0EX, U.K.",United Kingdom,middle
-PRISMA_ecoevo,Daniel,Noble,Male,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia; Research School of Biology, Australian National University, 46 Sullivans Creek Road, Canberra, 2600, Australia",Australia,middle
-PRISMA_ecoevo,Timothy,Parker,Male,100,"Department of Biology, Whitman College, Walla Walla, WA, 99362, U.S.A.",United States,middle
-PRISMA_ecoevo,Jessica,Gurevitch,Female,100,"Department of Ecology and Evolution, Stony Brook University, Stony Brook, NY, 11794-5245, U.S.A.",United States,middle
-PRISMA_ecoevo,Matthew,Page,Male,100,"School of Public Health and Preventative Medicine, Monash University, Melbourne, VIC, 3004, Australia",Australia,middle
-PRISMA_ecoevo,Gavin,Stewart,Male,100,"School of Natural and Environmental Sciences, Newcastle University, Newcastle upon Tyne, NE1 7RU, U.K.",United Kingdom,middle
-PRISMA_ecoevo,David,Moher,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, General Campus, 501 Smyth Road, Room L1288, Ottawa, ON, K1H 8L6, Canada",Canada,middle
-PRISMA_ecoevo,Shinichi,Nakagawa,Male,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,last
-PRISMA_equity,Vivian,Welch,Female,98,"Bruyere Research Institute, Ottawa, Ontario, Canada",Canada,first
-PRISMA_equity,Mark,Petticrew,Male,100,"LSHTM, London, United Kingdom",United Kingdom,middle
-PRISMA_equity,Jennifer,Petkovic,Female,100,"Research Associate, Bruyere Research Institute, Ottawa, Ontario, Canada",Canada,middle
-PRISMA_equity,David,Moher,Male,100,"Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,middle
-PRISMA_equity,Elizabeth,Waters,Female,100,"School of Population and Global Health, University of Melbourne, Australia",Australia,middle
-PRISMA_equity,Howard,White,Male,100,"International Initiative for Impact Evaluation (3ie), Global Development Network, New Delhi, India",India,last
-PRISMA_equity,Mark,Petticrew,Male,100,"Department of Social and Environmental Health Research, London School of Hygiene and Tropical Medicine, London, United Kingdom",United Kingdom,development group
-PRISMA_equity,Jennifer,Petkovic,Female,100,"Research Associate, Bruyere Research Institute, Ottawa, Ontario, Canada",Canada,development group
-PRISMA_equity,David,Moher,Male,100,"Senior Scientist, Ottawa Methods Centre, Ottawa Hospital Research Institute",Canada,development group
-PRISMA_equity,Elizabeth,Waters,Female,100,"Professor, Jack Brockhoff Child Health and Wellbeing Program, University of Melbourne, Australia",Australia,development group
-PRISMA_equity,Howard,White,Male,100,"Executive Director, International Initiative for Impact Evaluation (3ie), Global Development Network, New Delhi, India",India,development group
-PRISMA_equity,Peter,Tugwell,Male,100,"Professor, Department of Medicine, University of Ottawa",Canada,development group
-PRISMA_equity,Jennifer,O'Neill,Female,100,"University of Melbourne, McCaughey Centre, Melbourne School of Population Health",Austalia,development group
-PRISMA_harms,Liliane,Zorzela,Female,99,"Faculty of Medicine and Dentistry, and Integrative Health Institute, University of Alberta, Edmonton, T6G 2C8, AB, Canada",Canada,first
-PRISMA_harms,Yoon,Loke,Male,52,"Norwich Medical School, Norwich, United Kingdom",United Kingdom,middle
-PRISMA_harms,John,Ioannidis,Male,100,"Stanford University School of Medicine, Stanford University School of Humanities and Sciences, Stanford, CA, United States",United States,middle
-PRISMA_harms,Su,Golder,Female,75,"Department of Health Sciences, University of York, Heslington, United Kingdom",United Kingdom,middle
-PRISMA_harms,Pasqualina,Santaguida,Female,99,"Department of Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, ON, Canada",Canada,middle
-PRISMA_harms,Douglas,Altman,Male,100,"Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology, and Musculoskeletal Sciences, Botnar Research Centre, University of Oxford, Oxford, United Kingdom",United Kingdom,middle
-PRISMA_harms,David,Moher,Male,100,"Ottawa Methods Centre, Ottawa Hospital Research Institute, Ottawa Hospital, Ottawa, ON, Canada",Canada,middle
-PRISMA_harms,Sunita,Vohra,Female,98,"Faculty of Medicine and Dentistry, and Integrative Health Institute, University of Alberta, Edmonton, T6G 2C8, AB, Canada",Canada,last
-PRISMA_harms,Heather,Boon,Female,100,University of Toronto,Canada,development group
-PRISMA_harms,Jocalyn,Clark,Female,100,"University of Toronto (at the time of work on PRISMA harms, senior editor, PLOS Medicine)",Canada,development group
-PRISMA_harms,Sheena,Derry,Female,100,University of Oxford,United Kingdom,development group
-PRISMA_harms,Jim,Gallivan,Male,100,Health Canada,Canada,development group
-PRISMA_harms,Paula,Gardiner,Female,99,Boston University School of Medicine,United States,development group
-PRISMA_harms,Peter,Gøtzsche,Male,100,Nordic Cochrane Center,NA ,development group
-PRISMA_harms,Elizabeth,Loder,Female,100,"Acting head of research, The BMJ",United Kingdom ,development group
-PRISMA_harms,Maryann,Napoli,Female,100,Center for Medical Consumers,NA,development group
-PRISMA_harms,Karen,Pilkington,Female,99,University of Westminster,United Kingdom,development group
-PRISMA_harms,Paul,Shekelle,Male,100,Veterans Affairs Greater Los Angeles Health Care System,United States,development group
-PRISMA_harms,Sonal,Singh,Female,99,Johns Hopkins University School of Medicine,United States,development group
-PRISMA_harms,Claudia,Witt,Female,99,University Zurich,Switzerland,development group
-PRISMA_harms,Toby,Lasserson,Male,91,Cochrane Editorial Unit,NA,development group
-PRISMA_harms,Taixiang,Wu,Male,67,"Chinese Clinical Trial Registry, Chinese Cochrane Center",China,development group
-PRISMA_harms,Larissa,Shamseer,Female,100,Ottawa Hospital Research Institute; University of Ottawa,Canada,development group
-PRISMA_harms,Cynthia,Mulrow,Female,100,"Senior deputy editor, Annals of Internal Medicine",NA,development group
-PRISMA_IPD,Lesley,Stewart,Female,88,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,first
-PRISMA_IPD,Mike,Clarke,Male,100,"All-Ireland Hub for Trials Methodology Research, Queen’s University Belfast, Belfast, United Kingdom",United Kingdom,middle
-PRISMA_IPD,Maroeska,Rovers,Female,100,"Radboud Institute of Health Sciences, Radboudumc, Nijmegen, the Netherlands",Netherlands,middle
-PRISMA_IPD,Richard D.,Riley,Male,100,"Research Institute of Primary Care and Health Sciences, Keele University, Keele, United Kingdom",United Kingdom,middle
-PRISMA_IPD,Mark,Simmonds,Male,100,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,middle
-PRISMA_IPD,Gavin,Stewart,Male,100,"Centre for Rural Economy, School of Agriculture, Food, and Rural Development, Newcastle University, Newcastle, United Kingdom",United Kingdom,middle
-PRISMA_IPD,Jayne F.,Tierney,Female,100,"MRC Clinical Trials Unit at UCL, London, United Kingdom",United Kingdom,last
-PRISMA_IPD,Douglas,Altman,Male,100,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Lisa,Askie,Female,100,"NHMRC Clinical Trials Centre, University of Sydney, Australia",Australia,development group
-PRISMA_IPD,Sarah,Burdett,Female,99,"MRC Clinical Trials Unit, UCL, London, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Lelia,Duley,Female,99,"University of Nottingham, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Jonathan,Emberson,Male,100,"Clinical Trial Service Unit & Epidemiological Studies Unit, Nuffield Department of Population Health, University of Oxford, Oxford, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Francois,Gueffier,Male,99,"Faculty of Medicine, University of Lyon, Lyon, France",France,development group
-PRISMA_IPD,Amanda,Kerr,Female,100,"Clinical Trial Service Unit & Epidemiological Studies Unit, Nuffield Department of Population Health, Oxford University, Oxford, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Karmela,Krleža-Jeri?,Female,99,"Ottawa Group, IMPACT, and Department of Research in Biomedicine and Health, University of Split School of Medicine, Split, Croatia",Croatia,development group
-PRISMA_IPD,Toby,Lasserson,Male,91,"Cochrane Editorial Unit, Cochrane Collaboration, London, United Kingdom",United Kingdom,development group
-PRISMA_IPD,David,Moher,Male,100,"Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,development group
-PRISMA_IPD,Karel,Moons,Male,96,"Julius Center for Health Sciences and Primary Care, UMC Utrecht, the Netherlands",Netherlands,development group
-PRISMA_IPD,Bob,Phillips,Male,99,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Pascal,Piedbois,Male,99,"Centre Paul Strauss, Strasbourg, France",France,development group
-PRISMA_IPD,Jean-Pierre,Pignon,Male,100,"Meta-analysis unit, Gustave Roussy, Villejuif, France",France,development group
-PRISMA_IPD,Christopher H.,Schmid,Male,100,"Department of Biostatistics and Center for Evidence-Based Medicine, Brown University School of Public Health, Providence, Rhode Island",Rhode Island,development group
-PRISMA_IPD,Catrin,Tudur Smith,Female,98,"Department of Biostatistics and North West Hub for Trials Methodology Research, University of Liverpool, Liverpool, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Claire,Vale,Female,100,"MRC Clinical Trials Unit, UCL, London, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Emma,Veitch,Female,97,"PLOS ONE, Cambridge, United Kingdom",United Kingdom,development group
-PRISMA_IPD,Keith,Wheatley,Male,100,"Cancer Research United Kingdom Clinical Trials Unit, University of Birmingham, Birmingham, United Kingdom",United Kingdom,development group
-PRISMA_2020_living,Elie,Akl,Male,93,"Department of Internal Medicine, American University of Beirut, Beirut, Lebanon",Lebanon,first
-PRISMA_2020_living,Joanne,Khabsa,Female,100,"Clinical Research Institute, American University of Beirut Medical Center, Beirut, Lebanon",Lebanon,middle
-PRISMA_2020_living,Claire,Iannizzi,Female,100,"Institute of Public Health, Faculty of Medicine and University Hospital Cologne, University of Cologne, Cologne, Germany",Germany,middle
-PRISMA_2020_living,Vanessa,Piechotta,Female,99,"Immunization Unit, Department of Infectious Disease Epidemiology, Robert Koch Institut, Berlin, Germany",Germany,middle
-PRISMA_2020_living,Lara A,Kahale,Female,83,"Infectious Disease Society of America, Arlington, VA, United States",United States,middle
-PRISMA_2020_living,James M,Barker,Male,99,"F1000 Research, London, United Kingdom",United Kingdom,middle
-PRISMA_2020_living,Joanne E,McKenzie,Female,100,"Methods in Evidence Synthesis Unit, School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-PRISMA_2020_living,Matthew J,Page,Male,100,"Methods in Evidence Synthesis Unit, School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-PRISMA_2020_living,Nicole,Skoetz,Female,100,"Institute of Public Health, Faculty of Medicine and University Hospital Cologne, University of Cologne, Cologne, Germany",Germany,last
-PRISMA_2020_living,Tony,Aburrow,Male,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Lisa,Askie,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Vivienne C,Bachelet,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Asma,Ben Brahem,Female,96,Affiliation not provided,NA,development group
-PRISMA_2020_living,Lex,Bouter,Male,93,Affiliation not provided,NA,development group
-PRISMA_2020_living,Romina,Brignardello-Petersen,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Jacob,Burns,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Anna,Chaimani,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Christine,Chang,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Stephanie,Chang,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Mike,Clarke,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Kerry,Dwan,Female,79,Affiliation not provided,NA,development group
-PRISMA_2020_living,Markus,Follmann,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Christian,Gluud,Male,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Gordon,Guyatt,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Lotty,Hooft,Female,91,Affiliation not provided,NA,development group
-PRISMA_2020_living,Anna,Jacobs,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Svenja,Krebs,Female,98,Affiliation not provided,NA,development group
-PRISMA_2020_living,Tamara,Kredo,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Toby,Lasserson,Male,91,Affiliation not provided,NA,development group
-PRISMA_2020_living,Helen,Macdonald,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Iain,Marshall,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Steve,McDonald,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Matthew DF,McInnes,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Joerg,Meerpohl,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Maria Inti,Metzendorf,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,David,Moher,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Lorenzo,Moja,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Karel GM,Moons,Male,96,Affiliation not provided,NA,development group
-PRISMA_2020_living,Mohammad Hassan,Murad,Male,98,Affiliation not provided,NA,development group
-PRISMA_2020_living,Reem,Mustafa,Female,97,Affiliation not provided,NA,development group
-PRISMA_2020_living,Stefano,Negrini,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Robby,Nieuwlaat,Male,97,Affiliation not provided,NA,development group
-PRISMA_2020_living,Adriani,Nikolakopoulou,Female,74,Affiliation not provided,NA,development group
-PRISMA_2020_living,Monika,Nothacker,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Amir,Qaseem,Male,97,Affiliation not provided,NA,development group
-PRISMA_2020_living,Gabriel,Rada,Male,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Melissa L,Rethlefsen,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Ludovic,Reveiz,Male,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Maria Ximena,Rojas-Reyes,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Jean Paul,Salameh,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Georgia,Salanti,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Ian J,Saldanha,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Jochen,Schmitt,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Holger J,Schünemann,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Richard,Sever,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Mark,Simmonds,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Bhagteshwar,Singh,,,Affiliation not provided,NA,development group
-PRISMA_2020_living,Anneliese,Synnot,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Britta Tendal,Jeppesen,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,James,Thomas,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,David,Tovey,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Andrea,Tricco,Female,69,Affiliation not provided,NA,development group
-PRISMA_2020_living,Tari,Turner,Female,55,Affiliation not provided,NA,development group
-PRISMA_2020_living,Per Olav,Vandvik,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Helen,Wakeford,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Stephanie,Weibel,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Vivian,Welch,Female,98,Affiliation not provided,NA,development group
-PRISMA_2020_living,Wojtek,Wiercioch,Male,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Sabina,Alam,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Isabelle,Boutron,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Tammy,Clifford,Female,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Julian,Elliott,Male,99,Affiliation not provided,NA,development group
-PRISMA_2020_living,Robin,Featherstone,Male,77,Affiliation not provided,NA,development group
-PRISMA_2020_living,Elizabeth,Loder,Female,100,Affiliation not provided,NA,development group
-PRISMA_2020_living,Rose,O'Dea,Female,98,Affiliation not provided,NA,development group
-PRISMA_2020_living,Ashrita,Saran,Female,100,Affiliation not provided,NA,development group
-PRISMA_moxibustion,Xuan,Zhang,Female,61,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,first
-PRISMA_moxibustion,Ran,Tan,Male,61,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle
-PRISMA_moxibustion,Wai Ching,Lam,Female,79,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle
-PRISMA_moxibustion,Chung Wah,Cheng,Male,86,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle
-PRISMA_moxibustion,Liang,Yao,Male,92,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle
-PRISMA_moxibustion,Xiao Qin,Wang,Female,100,"Evidence-Based Medicine Center, School of Basic Medical Sciences, Lanzhou University, China",China,middle
-PRISMA_moxibustion,Si Yao,Li,Female,78,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle
-PRISMA_moxibustion,Qi Ying,Aixinjueluo,Female,100,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle
-PRISMA_moxibustion,Ke Hu,Yang,Male,100,"Evidence-Based Medicine Center, School of Basic Medical Sciences, Lanzhou University, China",China,middle
-PRISMA_moxibustion,Hong Cai,Shang,Female,100,"Key Laboratory of Chinese Internal Medicine, Dongzhimen Hospital, Beijing University of Chinese Medicine, Beijing, China",China,middle
-PRISMA_moxibustion,Tai Xiang,Wu,Male,100,"Chinese Cochrane Centre, Sichuan University, Chengdu, Sichuan, China",China,middle
-PRISMA_moxibustion,Ai Ping,Lyu,Female,100,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle
-PRISMA_moxibustion,Zhao Xiang,Bian,Male,100,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,last
-PRISMA_NMA ,Brian,Hutton,Male,100,"Ottawa Hospital Research Institute, Center for Practice Changing Research, The Ottawa Hospitalâ€“General Campus, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,first
-PRISMA_NMA ,Georgia,Salanti,Female,99,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, University Campus Ioannina 45110, Ioannina, Greece.",Greece,middle
-PRISMA_NMA ,Deborah M.,Caldwell,Female,100,"School of Social and Community Medicine, Canynge Hall, 39 Whately Road, Bristol BS8 2PS, United Kingdom.",United Kingdom,middle
-PRISMA_NMA ,Anna,Chaimani,Female,99,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, University Campus Ioannina 45110, Ioannina, Greece.",Greece,middle
-PRISMA_NMA ,Christopher H.,Schmid,Male,100,"Center for Evidence-Based Medicine, Brown University School of Public Health, Box G-S121-8, Providence, RI 02912.",United States,middle
-PRISMA_NMA ,Chris,Cameron,Male,91,"Ottawa Hospital Research Institute, Center for Practice Changing Research, The Ottawa Hospitalâ€“General Campus, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,middle
-PRISMA_NMA ,John P.A.,Ioannidis,Male,100,"Stanford Prevention Research Center, Stanford University School of Medicine, Medical School Office Building, 1265 Welch Road, Mail Code 5411, Stanford, CA 94305-5411.",United States,middle
-PRISMA_NMA ,Sharon,Straus,Female,99,"Li Ka Shing Knowledge Institute, St. Michael's Hospital, 30 Bond Street, Toronto, Ontario M5B 1W8, Canada.",Canada,middle
-PRISMA_NMA ,Kristian,Thorlund,Male,97,"1505 West Second Avenue, Suite 302, Vancouver, British Columbia V6H 3Y4, Canada.",Canada,middle
-PRISMA_NMA ,Jeroen P.,Jansen,Male,100,"1505 West Second Avenue, Suite 302, Vancouver, British Columbia V6H 3Y4, Canada.",Canada,middle
-PRISMA_NMA ,Cynthia,Mulrow,Female,100,"American College of Physicians, 190 N. Independence Mall West, Philadelphia, PA 19106.",United States,middle
-PRISMA_NMA ,Ferrán,Catalá-López,Male,100,"Division of Pharmacoepidemiology and Pharmacovigilance, Spanish Medicines and Healthcare Products Agency, Campezo 1, 28022 Madrid, Spain.",Spain,middle
-PRISMA_NMA ,Peter C.,Gøtzsche,Male,100,"Nordic Cochrane Centre, Rigshospitalet, Department 7811, Blegdamsvej 9, DK-2100 Copenhagen, Denmark.",Denmark,middle
-PRISMA_NMA ,Kay,Dickersin,Female,64,"Johns Hopkins Bloomberg School of Public Health, 615 North Wolfe Street, Room E6152, Baltimore, MD 21205.",United States,middle
-PRISMA_NMA ,Isabelle,Boutron,Female,99,"Centre d'EpidÃ©miologie Clinique, L'UniversitÃ© Paris Descartes Centre de recherche EpidÃ©miologies et Statistique, INSERM U1153, Equipe: MÃ©thodes en Ã©valuation thÃ©rapeutique des maladies chroniques, HÃ³pital HÃ´tel Dieu, Aile A2 1er Ã©tage, 1 Place du parvis Notre Dame, 75181 Paris, Cedex 4, France.",France,middle
-PRISMA_NMA ,Douglas G.,Altman,Male,100,"Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Botnar Research Centre, Windmill Road, Oxford OX3 7LD, United Kingdom.",United Kingdom,middle
-PRISMA_NMA ,David,Moher,Male,100,"Ottawa Hospital Research Institute, Center for Practice Changing Research, The Ottawa Hospitalâ€“General Campus, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,last
-PRISMA_protocol,Larissa,Shamseer,Female,100,"Ottawa Hospital Research Institute and University of Ottawa, Canada",Canada,first
-PRISMA_protocol,David,Moher,Male,100,"Ottawa Hospital Research Institute and University of Ottawa, Canada",Canada,middle
-PRISMA_protocol,Mike,Clarke,Male,100,"Queen’s University Belfast, Northern Ireland",United Kingdom,middle
-PRISMA_protocol,Davina,Ghersi,Female,99,"National Health and Medical Research Council, Australia",Australia,middle
-PRISMA_protocol,Alessandro,Liberati,Male,100,"University of Modena, Italy",Italy,middle
-PRISMA_protocol,Mark,Petticrew,Male,100,"London School of Hygiene and Tropical Medicine, United Kingdom",United Kingdom,middle
-PRISMA_protocol,Paul,Shekelle,Male,100,"Southern California Evidence-based Practice Center, United States",United States,middle
-PRISMA_protocol,Lesley A.,Stewart,Female,50,"Centre for Reviews and Dissemination, University of York, United Kingdom",United Kingdom,last
-PRISMA_protocol,Douglas G.,Altman,Male,100,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,development group
-PRISMA_protocol,Alison,Booth,Female,98,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,development group
-PRISMA_protocol,An Wen,Chan,Male,67,"Women's College Research Institute, University of Toronto, Toronto, Canada",Canada,development group
-PRISMA_protocol,Stephanie,Chang,Female,100,"Agency for Healthcare Research and Quality, Rockville, United States",United States,development group
-PRISMA_protocol,Tammy,Clifford,Female,99,"Canadian Agency for Drugs and Technologies in Health (CADTH), Ottawa, Canada",Canada,development group
-PRISMA_protocol,Kay,Dickersin,Female,64,Johns Hopkins Bloomberg School of Public Health,United States,development group
-PRISMA_protocol,Matthias,Egger,Male,100,Institut für Sozial-und Präventivmedizin,Switzerland,development group
-PRISMA_protocol,Peter C.,Gøtzsche,Male,100,"Nordic Cochrane Centre, Copenhagen, Denmark",Denmark,development group
-PRISMA_protocol,Jeremy M.,Grimshaw,Male,100,"Canadian Cochrane Centre and Ottawa Hospital Research Institute, Ottawa, Canada",Canada,development group
-PRISMA_protocol,Trish,Groves,Female,100,"The BMJ, London, United Kingdom",United Kingdom,development group
-PRISMA_protocol,Mark,Helfand,Male,100,"AHRQ EPC Scientific Resource Center, Portland VA Research Foundation, Portland, United States",United States,development group
-PRISMA_protocol,Julian,Higgins,Male,99,"School of Social and Community Medicine, Bristol, United Kingdom",united Kingdom,development group
-PRISMA_protocol,Toby,Lasserson,Male,91,"Cochrane Editorial Unit, London, United Kingdom",United Kingdom,development group
-PRISMA_protocol,Joseph,Lau,Male,99,"Center for Evidence-based Medicine, Brown University, Providence, United States",United States,development group
-PRISMA_protocol,Kathleen,Lohr,Female,100,"Research Triangle Institute-University of North Carolina EPC, Research Triangle Park, United States",United States,development group
-PRISMA_protocol,Jessie,McGowan,Female,79,"University of Ottawa, Ottawa, Canada",Canada,development group
-PRISMA_protocol,Cynthia,Mulrow,Female,100,"Annals of Internal Medicine, San Antonio, United States",United States,development group
-PRISMA_protocol,Melissa,Norton,Female,100,"PLoS Medicine, London, United Kingdom",united Kingdom,development group
-PRISMA_protocol,Matthew,Page,Male,100,"Monash University, Australia",Australia,development group
-PRISMA_protocol,Margaret,Sampson,Female,100,"Children’s Hospital of Eastern Ontario, Ottawa, Canada",Canada,development group
-PRISMA_protocol,Holger,Schünemann,Male,100,"McMaster University, Hamilton, Canada",Canada,development group
-PRISMA_protocol,Iveta,Simera,Female,99,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,development group
-PRISMA_protocol,William,Summerskill,Male,100,"The Lancet, London, United Kingdom",United Kingdom,development group
-PRISMA_protocol,Jennifer,Tetzlaff,Female,100,"Clinical Epidemiology Program, OHRI, Ottawa, Canada",Canada,development group
-PRISMA_protocol,Thomas A.,Trikalinos,Male,100,"Center for Evidence-based Medicine, Brown University, Providence, United States",United States,development group
-PRISMA_protocol,David,Tovey,Male,100,"The Cochrane Library, London, United Kingdom",United Kingdom,development group
-PRISMA_protocol,Lucy,Turner,Female,99,"Clinical Epidemiology Program, OHRI, Ottawa, Canada",Canada,development group
-PRISMA_protocol,Evelyn,Whitlock,Female,100,"Kaiser Permanente Research Affiliates EPC, Portland, Oregon, United States",United States,development group
-PRISMA_scoping,Andrea C.,Tricco,Female,96,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, St. Michael's Hospital, 209 Victoria Street, East Building, Toronto, Ontario M5B 1T8, Canada.",Canada,first
-PRISMA_scoping,Erin,Lillie,Female,99,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, St. Michael's Hospital, 209 Victoria Street, East Building, Toronto, Ontario M5B 1T8, Canada.",Canada,middle
-PRISMA_scoping,Wasifa,Zarin,Female,93,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, St. Michael's Hospital, 209 Victoria Street, East Building, Toronto, Ontario M5B 1T8, Canada.",Canada,middle
-PRISMA_scoping,Kelly K.,O’Brien,Female,79,"Department of Physical Therapy, University of Toronto, 160-500 University Avenue, Toronto, Ontario M5G 1V7, Canada.",Canada,middle
-PRISMA_scoping,Heather,Colquhoun,Female,100,"Department of Occupational Science and Occupational Therapy, University of Toronto, 160-500 University Avenue, Toronto, Ontario M5G 1V7, Canada.",Canada,middle
-PRISMA_scoping,Danielle,Levac,Female,100,"Department of Physical Therapy, Movement and Rehabilitation Science, BouvÃ© College of Health Sciences, Northeastern University, 360 Huntington Avenue, Boston, MA 02115.",United States,middle
-PRISMA_scoping,David,Moher,Male,100,"Centre for Journalology, Ottawa Hospital Research Institute, The Ottawa Hospital, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,middle
-PRISMA_scoping,Micah D.J.,Peters,Male,84,"Rosemary Bryant AO Research Centre, Sansom Institute for Health Research, Division of Health Sciences, University of South Australia, Adelaide, South Australia 5000, Australia.",Australia,middle
-PRISMA_scoping,Tanya,Horsley,Female,100,"The Royal College of Physicians and Surgeons, 774 Echo Drive, Ottawa, Ontario K1S 5N8, Canada.",Canada,middle
-PRISMA_scoping,Laura,Weeks,Female,99,"CADTH (Canadian Agency for Drugs and Technologies in Health), 865 Carling Avenue, Suite 600, Ottawa, Ontario K1S 5S8, Canada.",Canada,middle
-PRISMA_scoping,SUnited Statesnne,Hempel,Female,100,"RAND Corporation, 1776 Main Street, Santa Monica, CA 90401.",United States,middle
-PRISMA_scoping,Elie A.,Akl,Male,100,"Department of Internal Medicine, Faculty of Medicine, Gefinor Center, Block B, 4th Floor, American University of Beirut, Riad El-Solh, Beirut, Lebanon.",Lebanon,middle
-PRISMA_scoping,Christine,Chang,Female,100,"Agency for Healthcare Research and Quality, 5600 Fishers Lane, Rockville, MD 20857.",United States,middle
-PRISMA_scoping,Jessie,McGowan,Female,79,"Department of Medicine, University of Ottawa, Roger Guindon Hall, 451 Smyth Road, Ottawa, Ontario K1H 8M5, Canada.",Canada,middle
-PRISMA_scoping,Lesley,Stewart,Female,88,"Centre for Reviews and Dissemination, University of York, Heslington, York YO10 5DD, United Kingdom.",United Kingdom,middle
-PRISMA_scoping,Lisa,Hartling,Female,100,"Department of Pediatrics, Faculty of Medicine and Dentistry, University of Alberta, 11405-87 Avenue, Edmonton, Alberta T6G 1C9, Canada.",Canada,middle
-PRISMA_scoping,Adrian,Aldcroft,Male,99,"BMJ Open Editorial Office, BMA House, Tavistock Square, London WC1H 9JR, United Kingdom.",United Kingdom,middle
-PRISMA_scoping,Michael G.,Wilson,Male,100,"Department of Health Research Methods, Evidence, and Impact, McMaster University, 1280 Main Street West, Hamilton, Ontario L8S 4K1, Canada.",Canada,middle
-PRISMA_scoping,Chantelle,Garritty,Female,100,"Centre for Journalology, Ottawa Hospital Research Institute, The Ottawa Hospital, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,middle
-PRISMA_scoping,Simon,Lewin,Male,99,"Norwegian Institute of Public Health, PO Box 4404 Nydalen, N-0403 Oslo, Norway.",Norway,middle
-PRISMA_scoping,Christina M.,Godfrey,Female,100,"Queen's Collaboration for Health Care Quality: A JBI Centre of Excellence, Queen's University School of Nursing, 992 University Avenue, Barrie Street, Kingston, Ontario K7L 3N6, Canada.",Canada,middle
-PRISMA_scoping,Marilyn T.,Macdonald,Female,100,"School of Nursing, Dalhousie University, PO Box 15000, 5869 University Avenue, Halifax, Nova Scotia B3H 4R2, Canada.",Canada,middle
-PRISMA_scoping,Etienne V.,Langlois,Male,98,"Alliance for Health Policy and Systems Research, World Health Organization, Avenue Appia 20, 1211 Geneva, Switzerland.",Switzerland,middle
-PRISMA_scoping,Karla,Soares-Weiser,Female,99,"Cochrane Editorial Unit, Cochrane, St. Albans House, 57-59 Haymarket, London SW1Y 4QX, United Kingdom.",United Kingdom,middle
-PRISMA_scoping,Jo,Moriarty,Female,76,"Social Care Workforce Research Unit, King's College London, Strand, London WC2R 2LS, United Kingdom.",United Kingdom,middle
-PRISMA_scoping,Tammy,Clifford,Female,99,"CADTH (Canadian Agency for Drugs and Technologies in Health), 865 Carling Avenue, Suite 600, Ottawa, Ontario K1S 5S8, Canada.",Canada,middle
-PRISMA_scoping,Özge,Tunçalp,Female,98,"Department of Reproductive Health and Research, World Health Organization, Avenue Appia 20, 1211 Geneva, Switzerland.",Switzerland,middle
-PRISMA_scoping,Sharon E.,Straus,Female,91,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, St. Michael's Hospital, 209 Victoria Street, East Building, Toronto, Ontario M5B 1T8, Canada.",Canada,last
-PRISMA_search,Melissa L.,Rethlefsen,Female,100,"Health Science Center Libraries, University of Florida, Gainesville, United States",United States,first
-PRISMA_search,Matthew J.,Page,Male,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-PRISMA_search,Shona,Kirtley,Female,98,"United Kingdom EQUATOR Centre, University of Oxford, United Kingdom",United Kingdom,middle
-PRISMA_search,Jonathan B.,Koffel,Male,88,"University of Minnesota, Minneapolis, United States",United States,last
-PRISMA_search,Siw,Waffenschmidt,Female,93,"Institute for Quality and Efficiency in Health Care, Cologne, Germany",Germany,middle
-PRISMA_search,Ana Patricia,Ayala,Female,99,"Gerstein Science Information Centre, University of Toronto, Toronto, Canada",Canada,middle
-PRISMA_search,David,Moher,Male,100,"Centre for Journalology, Ottawa Hospital Research Institute, Ottawa, Canada",Canada,middle
-PRISMA_search,Heather,Blunt,Female,100,Dartmouth College,United States,development group
-PRISMA_search,Tara,Brigham,Female,97,"Mayo Clinic, Florida",United States,development group
-PRISMA_search,Steven,Chang,Male,100,La Trobe University,Australia,development group
-PRISMA_search,Justin,Clark,Male,99,Bond University,Australia,development group
-PRISMA_search,Aislinn,Conway,Female,100,BORN Ontario and CHEO Research Institute,Canada,development group
-PRISMA_search,Rachel,Couban,Female,100,McMaster University,Canada,development group
-PRISMA_search,Shelley,de Kock,Female,100,Kleijnen Systematic Reviews Ltd,United Kingdom,development group
-PRISMA_search,Kelly,Farrah,Female,91,Canadian Agency for Drugs and Technologies in Health (CADTH),Canada,development group
-PRISMA_search,Paul,Fehrmann,Male,100,Kent State University,United States,development group
-PRISMA_search,Margaret,Foster,Female,100,Texas A & M University,United States,development group
-PRISMA_search,SUnited Statesn A.,Fowler,Female,100,Washington University in St. Louis,United States,development group
-PRISMA_search,Julie,Glanville,Female,99,University of York,United Kingdom,development group
-PRISMA_search,Elizabeth,Harris,Female,100,La Trobe University,Australia,development group
-PRISMA_search,Lilian,Hoffecker,Female,93,University of Colorado Denver,United States,development group
-PRISMA_search,Jaana,Isojarvi,Female,99,Tampere University,Finland,development group
-PRISMA_search,David,Kaunelis,Male,100,Canadian Agency for Drugs and Technologies in Health (CADTH),Canada,development group
-PRISMA_search,Hans,Ket,Male,99,VU Amsterdam,Netherlands,development group
-PRISMA_search,Paul,Levay,Male,100,National Institute for Health and Care Excellence (NICE),United Kingdom,development group
-PRISMA_search,Jennifer,Lyon,Female,100,Affiliation not provided,NA,development group
-PRISMA_search,Jessie,McGowan,Female,79,University of Ottawa,Canada,development group
-PRISMA_search,M. Hassan,Murad,Male,100,Mayo Clinic,United States,development group
-PRISMA_search,Joey,Nicholson,Male,80,NYU Langone Health,United States,development group
-PRISMA_search,Virginia,Pannabecker,Female,100,Virginia Tech,United States,development group
-PRISMA_search,Robin,Paynter,Female,77,VA Portland Health Care System,United States,development group
-PRISMA_search,Rachel,Pinotti,Female,100,Icahn School of Medicine at Mount Sinai,United States,development group
-PRISMA_search,Amanda,Ross-White,Female,100,Queens University,Canada,development group
-PRISMA_search,Margaret,Sampson,Female,100,"Childrenâ€™s Hospital of Eastern Ontario, Ottawa, Canada",Canada,development group
-PRISMA_search,Tracy,Shields,Female,94,Naval Medical Center Portsmouth,United Kingdom,development group
-PRISMA_search,Adrienne,Stevens,Female,100,Ottawa Hospital Research Institute,Canada,development group
-PRISMA_search,Anthea,Sutton,Female,100,University of Sheffield,United Kingdom,development group
-PRISMA_search,Elizabeth,Weinfurter,Female,100,University of Minnesota,United States,development group
-PRISMA_search,Kath,Wright,Female,99,University of York,United Kingdom,development group
-PRISMA_search,Sarah,Young,Female,99,Carnegie Mellon University,United States,development group
-PRISMA_search,Kate,Nyhan,Female,99,Yale University,United States,development group
-PRISMA_search,Katharina,Gronostay,Female,99,Affiliation not provided,NA,development group
-PRISMA_search,Elizabeth,Weinfurter,Female,100,University of Minnesota,United States,development group
-PRISMA_search,Kath,Wright,Female,99,University of York,United Kingdom,development group
-PRISMA_search,Sarah,Young,Female,99,Carnegie Mellon University,United States,development group
-PRISMA_search,Kate,Nyhan,Female,99,Yale University,United States,development group
-PRISMA_search,Katharina,Gronostay,Female,99,IQWiG,NA,development group
-PRISMA_search,Anthea,Sutton,Female,100,University of Sheffield,United Kingdom,development group
-SWIM,Mhairi,Campbell,Female,99,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, United Kingdom",United Kingdom,first
-SWIM,Joanne E,McKenzie,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-SWIM,Amanda,Sowden,Female,100,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,middle
-SWIM,Srinivasa,Vittal Katikireddi,Male,99,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, United Kingdom",United Kingdom,middle
-SWIM,Sue E,Brennan,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-SWIM,Simon,Ellis,Male,99,"Centre for Guidelines, National Institute for Health and Care Excellence, London, United Kingdom",United Kingdom,middle
-SWIM,Jamie,Hartmann-Boyce,Female,66,"Nuffield Department of Primary Care Health Sciences, University of Oxford, Oxford, United Kingdom",United Kingdom ,middle
-SWIM,Rebecca,Ryan,Female,100,"School of Psychology and Public Health, La Trobe University, Melbourne, Australia",Australia,middle
-SWIM,Sasha,Shepperd,Female,59,"Nuffield Department of Population Health, University of Oxford, Oxford, United Kingdom",United Kingdom,middle
-SWIM,James,Thomas,Male,100,"Evidence for Policy and Practice Information and Coordinating Centre, University College London, United Kingdom",United Kingdom,middle
-SWIM,Vivian,Welch,Female,98,"Bruyere Research Institute, Ottawa, Canada",Canada,middle
-SWIM,Hilary,Thomson,Female,85,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, United Kingdom",United Kingdom,middle
-SWIM,Mhairi,Campbell,Female,99,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, UK",United Kingdom,middle
-SWIM,Joanne E,McKenzie,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-SWIM,Amanda,Sowden,Female,100,"Centre for Reviews and Dissemination, University of York, York, UK",United Kingdom,middle
-SWIM,Srinivasa,Vittal Katikireddi,Male,99,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, UK",United Kingdom,middle
-SWIM,Sue E,Brennan,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle
-SWIM,Simon,Ellis,Male,99,"Centre for Guidelines, National Institute for Health and Care Excellence, London, UK",United Kingdom,middle
-SWIM,Jamie,Hartmann-Boyce,Female,66,"Nuffield Department of Primary Care Health Sciences, University of Oxford, Oxford, UK",United Kingdom ,middle
-SWIM,Rebecca,Ryan,Female,100,"School of Psychology and Public Health, La Trobe University, Melbourne, Australia",Australia,middle
-SWIM,Sasha,Shepperd,Female,59,"Nuffield Department of Population Health, University of Oxford, Oxford, UK",United Kingdom,middle
-SWIM,James,Thomas,Male,100,"Evidence for Policy and Practice Information and Coordinating Centre, University College London, UK",United Kingdom,middle
-SWIM,Vivian,Welch,Female,98,"Bruyere Research Institute, Ottawa, Canada",Canada,middle
-SWIM,Hilary,Thomson,Female,85,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, UK",United Kingdom,last
-PRIO_harms,Konstantinos,Bougioukas,Male,100,"Department of Hygiene and Epidemiology, Medical School, Aristotle University of Thessaloniki, University Campus, 54124 Thessaloniki, Greece",Greece,first
-PRIO_harms,Aris,Liakos,Male,83,"Second Medical Department, Clinical Research and Evidence-Based Medicine Unit, Aristotle University of Thessaloniki, Konstantinoupoleos 49, 54642 Thessaloniki, Greece",Greece,middle
-PRIO_harms,Apostolos,Tsapas,Male,100,"Second Medical Department, Clinical Research and Evidence-Based Medicine Unit, Aristotle University of Thessaloniki, Konstantinoupoleos 49, 54642 Thessaloniki, Greece;Harris Manchester College, University of Oxford, Mansfield Rd, Oxford, OX1 3TD, UK",Greece; United Kingdom,middle
-PRIO_harms,Evangelia,Ntzani,Female,100,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, University Campus, Stavros Niarchos Av., Ioannina, Greece; Center for Evidence Synthesis in Health, Department of Health Services, Policy and Practice, School of Public Health, Brown University, 121 South Main Street, Providence, RI 02903, USA",Greece; United Kingdom,middle
-PRIO_harms,Anna,Haidich,Female,99,"Department of Hygiene and Epidemiology, Medical School, Aristotle University of Thessaloniki, University Campus, 54124 Thessaloniki, Greece",Greece,last
+PRISMA_id,author_first_name,author_surname,gender_diversity_web,gender_diversity,gender_diversity_confidence,affiliation,geographic_diversity,author_status,career_stage_publication
+PRISMA_2009,Ba’,Pham,not found,Female,54,"Toronto Health Economics and Technology Assessment Collaborative, Toronto, Canada",Canada,development group,
+PRISMA_2009,Deborah,Cook,Female,Female,100,"Departments of Medicine, Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, Canada",Canada,development group,
+PRISMA_2009,Gordon,Guyatt,Male,Male,100,"Departments of Medicine, Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, Canada",Canada,development group,
+PRISMA_2009,Jeremy,Grimshaw,Male,Male,100,"Ottawa Hospital Research Institute, Ottawa, Canada",Canada,development group,
+PRISMA_2009,Margaret,Sampson,Female,Female,100,"Children’s Hospital of Eastern Ontario, Ottawa, Canada",Canada,development group,
+PRISMA_2009,Nick,Barrowman,Male,Male,99,"Children’s Hospital of Eastern Ontario, Ottawa, Canada",Canada,development group,
+PRISMA_2009,P. J.,Devereaux,Male,Male,100,"Departments of Medicine, Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, Canada",Canada,development group,
+PRISMA_2009,Peter,Tugwell,Male,Male,100,"Institute of Population Health, University of Ottawa, Ottawa, Canada",Canada,development group,
+PRISMA_2009,Peter C.,Gøtzsche,Male,Male,100,"The Nordic Cochrane Centre, Copenhagen, Denmark",Denmark,development group,
+PRISMA_2009,Gerd,Antes,Male,Male,90,"University Hospital Freiburg, Freiburg, Germany",Germany,development group,
+PRISMA_2009,Lorenzo,Moja,Male,Male,100,"Centro Cochrane Italiano, Istituto Ricerche Farmacologiche Mario Negri, Milan, Italy",Italy,development group,
+PRISMA_2009,Nicola,Magrini,Male,Male,81,"NHS Centre for the Evaluation of the Effectiveness of Health Care e CeVEAS, Modena, Italy",Italy,development group,
+PRISMA_2009,Alessandro,Liberati,Male,Male,100,"Università di Modena e Reggio Emilia, Modena, Italy; Centro Cochrane Italiano, Istituto Ricerche Farmacologiche Mario Negri, Milan, Italy",Italy; Italy,development group,
+PRISMA_2009,Roberto,D’Amico,Male,Male,100,"Università di Modena e Reggio Emilia, Modena, Italy; Centro Cochrane Italiano, Istituto Ricerche Farmacologiche Mario Negri, Milan, Italy",Italy; Italy,development group,
+PRISMA_2009,Andy,Oxman,Male,Male,96,"Norwegian Health Services Research Centre, Oslo, Norway",Norway,development group,
+PRISMA_2009,Matthias,Egger,Male,Male,100,"Department of Social and Preventive Medicine, University of Bern, Bern, Switzerland",Switzerland,development group,
+PRISMA_2009,David,Tovey,Male,Male,100,"The Cochrane Library, Cochrane Collaboration, Oxford, United Kingdom",United Kingdom,development group,
+PRISMA_2009,David,McNamee,Male,Male,100,"The Lancet, London, United Kingdom",United Kingdom,development group,
+PRISMA_2009,Edzard,Ernst,Male,Male,100,"Peninsula Medical School, Exeter, United Kingdom",United Kingdom,development group,
+PRISMA_2009,Jocalyn,Clark,Female,Female,100,"PLoS Medicine, BMJ, London, United Kingdom",United Kingdom,development group,
+PRISMA_2009,Jonathan J.,Deeks,Male,Male,98,"University of Birmingham, Birmingham, United Kingdom",United Kingdom,development group,
+PRISMA_2009,Julian,Higgins,Male,Male,99,"MRC Biostatistics Unit, Cambridge, United Kingdom",United Kingdom,development group,
+PRISMA_2009,Virginia,Barbour,Female,Female,100,"PLoS Medicine, Cambridge, United Kingdom",United Kingdom,development group,
+PRISMA_2009,Mike,Clarke,Male,Male,100,"United Kingdom Cochrane Centre, Oxford, United Kingdom; School of Nursing and Midwifery, Trinity College, Dublin, Ireland",United Kingdom; Ireland,development group,
+PRISMA_2009,Jos,Kleijnen,Male,Male,97,"Kleijnen Systematic Reviews Ltd, York, United Kingdom; School for Public Health and Primary Care (CAPHRI), University of Maastricht, Maastricht, Netherlands",United Kingdom; Netherlands,development group,
+PRISMA_2009,Cynthia,Mulrow,Female,Female,100,"Annals of Internal Medicine, Philadelphia, Pennsylvania, US",United States,development group,
+PRISMA_2009,David,Atkins,Male,Male,100,"Health Services Research and Development Service, Veterans Health Administration, Washington, DC, US",United States,development group,
+PRISMA_2009,Drummond,Rennie,Male,Male,99,"University of California San Francisco, San Francisco, California, US",United States,development group,
+PRISMA_2009,Jesse A.,Berlin,Male,Male,100,"Johnson & Johnson Pharmaceutical Research and Development, Titusville, New Jersey, US",United States,development group,
+PRISMA_2009,Kay,Dickersin,Female,Female,64,"Johns Hopkins Bloomberg School of Public Health, Baltimore, Maryland, US",United States,development group,
+PRISMA_2009,Kenneth F.,Schulz,Male,Male,100,"Family Health International, Durham, North Carolina, US",United States,development group,
+PRISMA_2009,Maryann,Napoli,Female,Female,100,"Center for Medical Consumers, New York, New York, US",United States,development group,
+PRISMA_2009,Paul G.,Shekelle,Male,Male,98,"Southern California Evidence-Based Practice Center, Santa Monica, California, US",United States,development group,
+PRISMA_2009,Tom,Lang,Male,Male,99,"Tom Lang Communications and Training, Davis, California, US",United States,development group,
+PRISMA_2020_living,Rose,O'Dea,Female,Female,98,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,development group,
+PRISMA_2020_living,Steve,McDonald,Male,Male,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,development group,
+PRISMA_2020_living,Tari,Turner,Female,Female,55,Monash University,Australia,development group,
+PRISMA_2020_living,David,Moher,Male,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, General Campus, 501 Smyth Road, Room L1288, Ottawa, ON, K1H 8L6, Canada",Canada,development group,
+PRISMA_2020_living,Gordon,Guyatt,Male,Male,100,McMaster university,Canada,development group,
+PRISMA_2020_living,Holger J,Schünemann,Male,Male,100,"McMaster University, Hamilton, Canada",Canada,development group,
+PRISMA_2020_living,Jean Paul,Salameh,Male,Male,100,Diagnostic Radiology Resident at University of Ottawa ,Canada,development group,
+PRISMA_2020_living,Matthew DF,McInnes,Male,Male,100,"University of Ottawa, Ottawa, Canada",Canada,development group,
+PRISMA_2020_living,Robby,Nieuwlaat,Male,Male,97,Mcmaster University,Canada,development group,
+PRISMA_2020_living,Robin,Featherstone,Female,Male,77,"Information Specialist, Cochrane Editorial and Methods Department",Canada,development group,
+PRISMA_2020_living,Romina,Brignardello-Petersen,Female,Female,99,Mcmaster University ,Canada,development group,
+PRISMA_2020_living,Stephanie,Chang,Female,Female,100,University of British Columbia ,Canada,development group,
+PRISMA_2020_living,Vivian,Welch,Female,Female,98,"Bruyere Research Institute, Ottawa, Canada",Canada,development group,
+PRISMA_2020_living,Wojtek,Wiercioch,Male,Male,100,Mcmaster University,Canada,development group,
+PRISMA_2020_living,Gabriel,Rada,Male,Male,99,Epistemonikos Foundation,Chile,development group,
+PRISMA_2020_living,Vivienne C,Bachelet,Female,Female,100,University of Santiago ,Chile,development group,
+PRISMA_2020_living,Christian,Gluud,Male,Male,99,"The Copenhagen Trial Unit, Centre for Clinical Intervention Research",Denmark,development group,
+PRISMA_2020_living,Isabelle,Boutron,Female,Female,99,"Centre d'EpidÃ©miologie Clinique, L'UniversitÃ© Paris Descartes Centre de recherche EpidÃ©miologies et Statistique, INSERM U1153, Equipe: MÃ©thodes en Ã©valuation thÃ©rapeutique des maladies chroniques, HÃ³pital HÃ´tel Dieu, Aile A2 1er Ã©tage, 1 Place du parvis Notre Dame, 75181 Paris, Cedex 4, France.",France,development group,
+PRISMA_2020_living,Jacob,Burns,Male,Male,100,University of Munich ,Germany,development group,
+PRISMA_2020_living,Jochen,Schmitt,Male,Male,100,"Professor for social medicine and health services research, Center for Evidence-based Healthcare",Germany,development group,
+PRISMA_2020_living,Joerg,Meerpohl,Male,Male,100,Institute for Evidence in Medicine,Germany,development group,
+PRISMA_2020_living,Maria Inti,Metzendorf,Female,Female,99,Medical Faculty of the Heinrich-Heine-University,Germany,development group,
+PRISMA_2020_living,Markus,Follmann,Male,Male,100,Evidence based Medicine and Guidelines at the German Cancer Society ,Germany,development group,
+PRISMA_2020_living,Monika,Nothacker,Female,Female,99,erman Association of the Scientific Medical Societies´ Institute for Medical Knowledge-Management,Germany,development group,
+PRISMA_2020_living,Svenja,Krebs,Female,Female,98,Ruhr University Bochum,Germany,development group,
+PRISMA_2020_living,Georgia,Salanti,Female,Female,99,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, University Campus Ioannina 45110, Ioannina, Greece.",Greece,development group,
+PRISMA_2020_living,Stefano,Negrini,Male,Male,100,"University of Pavia, Italy",Italy ,development group,
+PRISMA_2020_living,Adriani,Nikolakopoulou,not found,Female,74,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Amir,Qaseem,Male,Male,97,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Andrea,Tricco,Female,Female,69,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Anna,Jacobs,Female,Female,99,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Anneliese,Synnot,Female,Female,99,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Ashrita,Saran,Female,Female,100,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Bhagteshwar,Singh,Male,Male,83,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Britta Tendal,Jeppesen,Female,Female,99,Affiliation not provided,NA,development group,
+PRISMA_2020_living,David,Tovey,Male,Male,100,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Helen,Wakeford,Female,Female,100,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Julian,Elliott,Male,Male,99,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Karel GM,Moons,Male,Male,96,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Lorenzo,Moja,Male,Male,100,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Ludovic,Reveiz,Male,Male,99,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Per Olav,Vandvik,Male,Male,100,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Stephanie,Weibel,Female,Female,100,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Tamara,Kredo,Female,Female,99,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Tammy,Clifford,Female,Female,99,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Tony,Aburrow,not found,Male,99,Affiliation not provided,NA,development group,
+PRISMA_2020_living,Lex,Bouter,Male,Male,93,Utrecht University ,Netherlands,development group,
+PRISMA_2020_living,Lotty,Hooft,Female,Female,91,"Amsterdam UMC, Vrije Universiteit Amsterdam, Amsterdam Public Health Research Institute",Netherlands,development group,
+PRISMA_2020_living,Anna,Chaimani,Female,Female,99,University of Oslo,Norway,development group,
+PRISMA_2020_living,Maria Ximena,Rojas-Reyes,Female,Female,99,Institut d'Recerca Hospital Sant Pau,Spain,development group,
+PRISMA_2020_living,Lisa,Askie,Female,Female,100,WHO geneva,Switzerland,development group,
+PRISMA_2020_living,Asma,Ben Brahem,Female,Female,96,Head of Department at National authority for assessment and accreditation in healthcare,Tunisia,development group,
+PRISMA_2020_living,Elizabeth,Loder,Female,Female,100,"Acting head of research, The BMJ",United Kingdom,development group,
+PRISMA_2020_living,Helen,Macdonald,Female,Female,100,University of Bath,United Kingdom,development group,
+PRISMA_2020_living,Iain,Marshall,Male,Male,100,King's College London -,United Kingdom,development group,
+PRISMA_2020_living,James,Thomas,Male,Male,100,"EPPI-Centre, UCL Social Research Institute, University College London, London, United Kingdom",United Kingdom,development group,
+PRISMA_2020_living,Kerry,Dwan,Female,Female,79,Liverpool of Tropical Medicine ,United Kingdom,development group,
+PRISMA_2020_living,Mark,Simmonds,Male,Male,100,Nottingham Univeristy Hospitals NHS Trust,United Kingdom,development group,
+PRISMA_2020_living,Mike,Clarke,Male,Male,100,Queen's University Belfast,United Kingdom,development group,
+PRISMA_2020_living,Richard,Sever,Male,Male,100,University of Oxford,United Kingdom,development group,
+PRISMA_2020_living,Sabina,Alam,Female,Female,99,"Associate Editorial Director, Medicine and Health Journals",United Kingdom,development group,
+PRISMA_2020_living,Toby,Lasserson,Male,Male,91,"Cochrane Editorial Unit, Cochrane Collaboration, London, United Kingdom",United Kingdom,development group,
+PRISMA_2020_living,Christine,Chang,not found,Female,100,"Agency for Healthcare Research & Quality, Rockville, MD, United States",United States,development group,
+PRISMA_2020_living,Ian J,Saldanha,Male,Male,100,Johns Hopkins Center for Clinical Trials and Evidence Synthesis,United States,development group,
+PRISMA_2020_living,Melissa L,Rethlefsen,Female,Female,100,"Health Science Center Libraries, University of Florida, Gainesville, United States",United States,development group,
+PRISMA_2020_living,Mohammad Hassan,Murad,Male,Male,98,Mayo Clinic,United States,development group,
+PRISMA_2020_living,Reem,Mustafa,Female,Female,97,University of Kansas ,United States,development group,
+PRISMA_equity,Elizabeth,Waters,Female,Female,100,"Professor, Jack Brockhoff Child Health and Wellbeing Program, University of Melbourne, Australia",Australia,development group,
+PRISMA_equity,Jennifer,O'Neill,Female,Female,100,"University of Melbourne, McCaughey Centre, Melbourne School of Population Health",Australia,development group,
+PRISMA_equity,David,Moher,Male,Male,100,"Senior Scientist, Ottawa Methods Centre, Ottawa Hospital Research Institute",Canada,development group,
+PRISMA_equity,Jennifer,Petkovic,Female,Female,100,"Research Associate, Bruyere Research Institute, Ottawa, Ontario, Canada",Canada,development group,
+PRISMA_equity,Peter,Tugwell,Male,Male,100,"Professor, Department of Medicine, University of Ottawa",Canada,development group,
+PRISMA_equity,Howard,White,Male,Male,100,"Executive Director, International Initiative for Impact Evaluation (3ie), Global Development Network, New Delhi, India",India,development group,
+PRISMA_equity,Mark,Petticrew,Male,Male,100,"Department of Social and Environmental Health Research, London School of Hygiene and Tropical Medicine, London, United Kingdom",United Kingdom,development group,
+PRISMA_harms,Heather,Boon,Female,Female,100,University of Toronto,Canada,development group,
+PRISMA_harms,Jim,Gallivan,Male,Male,100,Health Canada,Canada,development group,
+PRISMA_harms,Jocalyn,Clark,Female,Female,100,"University of Toronto (at the time of work on PRISMA harms, senior editor, PLOS Medicine)",Canada,development group,
+PRISMA_harms,Larissa,Shamseer,Female,Female,100,Ottawa Hospital Research Institute; University of Ottawa,Canada,development group,
+PRISMA_harms,Taixiang,Wu,not found,Male,67,"Chinese Clinical Trial Registry, Chinese Cochrane Center",China,development group,
+PRISMA_harms,Peter,Gøtzsche,Male,Male,100,Nordic Cochrane Center,NA ,development group,
+PRISMA_harms,Claudia,Witt,Female,Female,99,University Zurich,Switzerland,development group,
+PRISMA_harms,Elizabeth,Loder,Female,Female,100,"Acting head of research, The BMJ",United Kingdom,development group,
+PRISMA_harms,Karen,Pilkington,Female,Female,99,University of Westminster,United Kingdom,development group,
+PRISMA_harms,Sheena,Derry,Female,Female,100,University of Oxford,United Kingdom,development group,
+PRISMA_harms,Toby,Lasserson,Male,Male,91,"Cochrane Editorial Unit, Cochrane Collaboration, London, United Kingdom",United Kingdom,development group,
+PRISMA_harms,Cynthia,Mulrow,Female,Female,100,"Senior deputy editor, Annals of Internal Medicine",United States,development group,
+PRISMA_harms,Maryann,Napoli,Female,Female,100,"Center for Medical Consumers, New York, New York, US",United States,development group,
+PRISMA_harms,Paul,Shekelle,Male,Male,100,Veterans Affairs Greater Los Angeles Health Care System,United States,development group,
+PRISMA_harms,Paula,Gardiner,Female,Female,99,Boston University School of Medicine,United States,development group,
+PRISMA_harms,Sonal,Singh,Female,Female,99,Johns Hopkins University School of Medicine,United States,development group,
+PRISMA_IPD,Lisa,Askie,Female,Female,100,"NHMRC Clinical Trials Centre, University of Sydney, Australia",Australia,development group,
+PRISMA_IPD,David,Moher,Male,Male,100,"Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,development group,
+PRISMA_IPD,Karmela,Krleža-Jeri?,Female,Female,99,"Ottawa Group, IMPACT, and Department of Research in Biomedicine and Health, University of Split School of Medicine, Split, Croatia",Croatia,development group,
+PRISMA_IPD,Francois,Gueffier,Male,Male,99,"Faculty of Medicine, University of Lyon, Lyon, France",France,development group,
+PRISMA_IPD,Jean-Pierre,Pignon,Male,Male,100,"Meta-analysis unit, Gustave Roussy, Villejuif, France",France,development group,
+PRISMA_IPD,Pascal,Piedbois,Male,Male,99,"Centre Paul Strauss, Strasbourg, France",France,development group,
+PRISMA_IPD,Karel,Moons,Male,Male,96,"Julius Center for Health Sciences and Primary Care, UMC Utrecht, the Netherlands",Netherlands,development group,
+PRISMA_IPD,Amanda,Kerr,Female,Female,100,"Clinical Trial Service Unit & Epidemiological Studies Unit, Nuffield Department of Population Health, Oxford University, Oxford, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Bob,Phillips,Male,Male,99,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Catrin,Tudur Smith,Female,Female,98,"Department of Biostatistics and North West Hub for Trials Methodology Research, University of Liverpool, Liverpool, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Christopher H.,Schmid,Male,Male,100,"Department of Biostatistics and Center for Evidence-Based Medicine, Brown University School of Public Health, Providence, Rhode Island",United Kingdom,development group,
+PRISMA_IPD,Claire,Vale,Female,Female,100,"MRC Clinical Trials Unit, UCL, London, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Douglas,Altman,Male,Male,100,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Emma,Veitch,Female,Female,97,"PLOS ONE, Cambridge, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Jonathan,Emberson,Male,Male,100,"Clinical Trial Service Unit & Epidemiological Studies Unit, Nuffield Department of Population Health, University of Oxford, Oxford, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Keith,Wheatley,Male,Male,100,"Cancer Research United Kingdom Clinical Trials Unit, University of Birmingham, Birmingham, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Lelia,Duley,Female,Female,99,"University of Nottingham, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Sarah,Burdett,Female,Female,99,"MRC Clinical Trials Unit, UCL, London, United Kingdom",United Kingdom,development group,
+PRISMA_IPD,Toby,Lasserson,Male,Male,91,"Cochrane Editorial Unit, Cochrane Collaboration, London, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,Matthew,Page,Male,Male,100,"Monash University, Australia",Australia,development group,
+PRISMA_protocol,An Wen,Chan,Male,Male,67,"Women's College Research Institute, University of Toronto, Toronto, Canada",Canada,development group,
+PRISMA_protocol,Holger,Schünemann,Male,Male,100,"McMaster University, Hamilton, Canada",Canada,development group,
+PRISMA_protocol,Jennifer,Tetzlaff,Female,Female,100,"Clinical Epidemiology Program, OHRI, Ottawa, Canada",Canada,development group,
+PRISMA_protocol,Jeremy M.,Grimshaw,Male,Male,100,"Canadian Cochrane Centre and Ottawa Hospital Research Institute, Ottawa, Canada",Canada,development group,
+PRISMA_protocol,Jessie,McGowan,Female,Female,79,"University of Ottawa, Ottawa, Canada",Canada,development group,
+PRISMA_protocol,Lucy,Turner,Female,Female,99,"Clinical Epidemiology Program, OHRI, Ottawa, Canada",Canada,development group,
+PRISMA_protocol,Margaret,Sampson,Female,Female,100,"Children’s Hospital of Eastern Ontario, Ottawa, Canada",Canada,development group,
+PRISMA_protocol,Tammy,Clifford,Female,Female,99,"Canadian Agency for Drugs and Technologies in Health (CADTH), Ottawa, Canada",Canada,development group,
+PRISMA_protocol,Peter C.,Gøtzsche,Male,Male,100,"Nordic Cochrane Centre, Copenhagen, Denmark",Denmark,development group,
+PRISMA_protocol,Matthias,Egger,Male,Male,100,Institut für Sozial-und Präventivmedizin,Switzerland,development group,
+PRISMA_protocol,Alison,Booth,Female,Female,98,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,David,Tovey,Male,Male,100,"The Cochrane Library, London, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,Douglas G.,Altman,Male,Male,100,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,Iveta,Simera,Female,Female,99,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,Julian,Higgins,Male,Male,99,"School of Social and Community Medicine, Bristol, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,Melissa,Norton,Female,Female,100,"PLoS Medicine, London, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,Toby,Lasserson,Male,Male,91,"Cochrane Editorial Unit, London, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,Trish,Groves,Female,Female,100,"The BMJ, London, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,William,Summerskill,Male,Male,100,"The Lancet, London, United Kingdom",United Kingdom,development group,
+PRISMA_protocol,Cynthia,Mulrow,Female,Female,100,"Annals of Internal Medicine, San Antonio, United States",United States,development group,
+PRISMA_protocol,Evelyn,Whitlock,Female,Female,100,"Kaiser Permanente Research Affiliates EPC, Portland, Oregon, United States",United States,development group,
+PRISMA_protocol,Joseph,Lau,Male,Male,99,"Center for Evidence-based Medicine, Brown University, Providence, United States",United States,development group,
+PRISMA_protocol,Kathleen,Lohr,Female,Female,100,"Research Triangle Institute-University of North Carolina EPC, Research Triangle Park, United States",United States,development group,
+PRISMA_protocol,Kay,Dickersin,Female,Female,64,Johns Hopkins Bloomberg School of Public Health,United States,development group,
+PRISMA_protocol,Mark,Helfand,Male,Male,100,"AHRQ EPC Scientific Resource Center, Portland VA Research Foundation, Portland, United States",United States,development group,
+PRISMA_protocol,Stephanie,Chang,Female,Female,100,"Agency for Healthcare Research and Quality, Rockville, United States",United States,development group,
+PRISMA_protocol,Thomas A.,Trikalinos,Male,Male,100,"Center for Evidence-based Medicine, Brown University, Providence, United States",United States,development group,
+PRISMA_search,Elizabeth,Harris,Female,Female,100,La Trobe University,Australia,development group,
+PRISMA_search,Justin,Clark,Male,Male,99,Bond University,Australia,development group,
+PRISMA_search,Steven,Chang,Male,Male,100,La Trobe University,Australia,development group,
+PRISMA_search,Adrienne,Stevens,Female,Female,100,Ottawa Hospital Research Institute,Canada,development group,
+PRISMA_search,Aislinn,Conway,Female,Female,100,BORN Ontario and CHEO Research Institute,Canada,development group,
+PRISMA_search,Amanda,Ross-White,Female,Female,100,Queens University,Canada,development group,
+PRISMA_search,David,Kaunelis,Male,Male,100,Canadian Agency for Drugs and Technologies in Health (CADTH),Canada,development group,
+PRISMA_search,Jessie,McGowan,Female,Female,79,University of Ottawa,Canada,development group,
+PRISMA_search,Kelly,Farrah,Female,Female,91,Canadian Agency for Drugs and Technologies in Health (CADTH),Canada,development group,
+PRISMA_search,Margaret,Sampson,Female,Female,100,"Childrenâ€™s Hospital of Eastern Ontario, Ottawa, Canada",Canada,development group,
+PRISMA_search,Rachel,Couban,Female,Female,100,McMaster University,Canada,development group,
+PRISMA_search,Jaana,Isojarvi,Female,Female,99,Tampere University,Finland,development group,
+PRISMA_search,Jennifer,Lyon,Female,Female,100,Affiliation not provided,NA,development group,
+PRISMA_search,Katharina,Gronostay,Female,Female,99,IQWiG,NA,development group,
+PRISMA_search,Katharina,Gronostay,Female,Female,99,IQWiG,NA,development group,
+PRISMA_search,Hans,Ket,Male,Male,99,VU Amsterdam,Netherlands,development group,
+PRISMA_search,Anthea,Sutton,Female,Female,100,University of Sheffield,United Kingdom,development group,
+PRISMA_search,Anthea,Sutton,Female,Female,100,University of Sheffield,United Kingdom,development group,
+PRISMA_search,Julie,Glanville,Female,Female,99,University of York,United Kingdom,development group,
+PRISMA_search,Kath,Wright,Female,Female,99,University of York,United Kingdom,development group,
+PRISMA_search,Kath,Wright,Female,Female,99,University of York,United Kingdom,development group,
+PRISMA_search,Paul,Levay,Male,Male,100,National Institute for Health and Care Excellence (NICE),United Kingdom,development group,
+PRISMA_search,Shelley,de Kock,Female,Female,100,Kleijnen Systematic Reviews Ltd,United Kingdom,development group,
+PRISMA_search,Tracy,Shields,Female,Female,94,Naval Medical Center Portsmouth,United Kingdom,development group,
+PRISMA_search,Elizabeth,Weinfurter,Female,Female,100,University of Minnesota,United States,development group,
+PRISMA_search,Elizabeth,Weinfurter,Female,Female,100,University of Minnesota,United States,development group,
+PRISMA_search,Heather,Blunt,Female,Female,100,Dartmouth College,United States,development group,
+PRISMA_search,Joey,Nicholson,Male,Male,80,NYU Langone Health,United States,development group,
+PRISMA_search,Kate,Nyhan,Female,Female,99,Yale University,United States,development group,
+PRISMA_search,Kate,Nyhan,Female,Female,99,Yale University,United States,development group,
+PRISMA_search,Lilian,Hoffecker,Female,Female,93,University of Colorado Denver,United States,development group,
+PRISMA_search,M. Hassan,Murad,Male,Male,100,Mayo Clinic,United States,development group,
+PRISMA_search,Margaret,Foster,Female,Female,100,Texas A & M University,United States,development group,
+PRISMA_search,Paul,Fehrmann,Male,Male,100,Kent State University,United States,development group,
+PRISMA_search,Rachel,Pinotti,Female,Female,100,Icahn School of Medicine at Mount Sinai,United States,development group,
+PRISMA_search,Robin,Paynter,Female,Female,77,VA Portland Health Care System,United States,development group,
+PRISMA_search,Sarah,Young,Female,Female,99,Carnegie Mellon University,United States,development group,
+PRISMA_search,Sarah,Young,Female,Female,99,Carnegie Mellon University,United States,development group,
+PRISMA_search,SUnited Statesn A.,Fowler,Female,Female,100,Washington University in St. Louis,United States,development group,
+PRISMA_search,Tara,Brigham,Female,Female,97,"Mayo Clinic, Florida",United States,development group,
+PRISMA_search,Virginia,Pannabecker,Female,Female,100,Virginia Tech,United States,development group,
+PRIO_harms,Konstantinos,Bougioukas,Male,Male,100,"Department of Hygiene and Epidemiology, Medical School, Aristotle University of Thessaloniki, University Campus, 54124 Thessaloniki, Greece",Greece,first,doctoral student
+PRISMA_2009,David,Moher,Male,Male,100,"Ottawa Methods Centre, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,first,associate professor
+PRISMA_2020,Matthew,Page,Male,Male,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,first,post doctoral researcher
+PRISMA_2020_living,Elie,Akl,Male,Male,93,"Department of Internal Medicine, American University of Beirut, Beirut, Lebanon",Lebanon,first,professor
+PRISMA_abstract,Elaine,Beller,Female,Female,100,"Centre for Research in Evidence-Based Practice, Bond University, Gold Coast, Australia",Australia,first,professor
+PRISMA_acupuncture ,Xiaoqin,Wang,Female,Female,95,"Evidence-Based Medicine Center, School of Basic Medical Sciences, Lanzhou University, Lanzhou, China",China,first,cannot find
+PRISMA_CHM,Xuan,Zhang,Female,Female,61,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,first,post doctoral researcher
+PRISMA_complex,Jeanne-Marie,Guise,Female,Female,100,"Department of Obstetrics & Gynecology, Oregon Health & Science University School of Medicine, Portland, OR, United States",United States,first,profesor
+PRISMA_COSMIN,Ellen,Elsman,Female,Female,100,"Child Health Evaluative Sciences, The Hospital for Sick Children Research Institute, Toronto, ON, Canada; Amsterdam UMC, Amsterdam, Netherlands",Netherlands,first,associate professor
+PRISMA_DTA,Matthew D. F.,McInnes,Male,Male,100,"University of Ottawa, Ottawa, Canada",Canada,first,professor
+PRISMA_ecoevo,Rose,O'Dea,Female,Female,98,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,first,doctoral student
+PRISMA_equity,Vivian,Welch,Female,Female,98,"Bruyere Research Institute, Ottawa, Ontario, Canada",Canada,first,senior investigator
+PRISMA_harms,Liliane,Zorzela,Female,Female,99,"Faculty of Medicine and Dentistry, and Integrative Health Institute, University of Alberta, Edmonton, T6G 2C8, AB, Canada",Canada,first,assistant professor
+PRISMA_IPD,Lesley,Stewart,Female,Female,88,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,first,professor
+PRISMA_moxibustion,Xuan,Zhang,Female,Female,61,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,first,cannot find
+PRISMA_NMA ,Brian,Hutton,Male,Male,100,"Ottawa Hospital Research Institute, Center for Practice Changing Research, The Ottawa Hospitalâ€“General Campus, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,first,associate professor
+PRISMA_protocol,David,Moher,Male,Male,100,"Ottawa Hospital Research Institute and University of Ottawa, Canada",Canada,first,professor
+PRISMA_scoping,Andrea C.,Tricco,Female,Female,96,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, St. Michael's Hospital, 209 Victoria Street, East Building, Toronto, Ontario M5B 1T8, Canada.",Canada,first,associate professor
+PRISMA_search,Melissa L.,Rethlefsen,Female,Female,100,"Health Science Center Libraries, University of Florida, Gainesville, United States",United States,first,professor
+SWIM,Mhairi,Campbell,Female,Female,99,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, United Kingdom",United Kingdom,first,post doctoral researcher
+PRIO_harms,Anna,Haidich,Female,Female,99,"Department of Hygiene and Epidemiology, Medical School, Aristotle University of Thessaloniki, University Campus, 54124 Thessaloniki, Greece",Greece,last,associate professor
+PRISMA_2009,Douglas,Altman,Male,Male,100,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,last,professor
+PRISMA_2020,David,Moher,Male,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Canada; School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Canada",Canada,last,professor
+PRISMA_2020_living,Nicole,Skoetz,Female,Female,100,"Institute of Public Health, Faculty of Medicine and University Hospital Cologne, University of Cologne, Cologne, Germany",Germany,last,professor
+PRISMA_abstract,David,Tovey,Male,Male,100,"Cochrane Editorial Unit, London, United Kingdom",United Kingdom,last,cannot find
+PRISMA_acupuncture ,Kehu,Yang,Male,Male,83,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,last,professor
+PRISMA_CHM,Zhaoxiang,Bian,Male,Male,100,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,last,professor
+PRISMA_complex,Peter,Tugwell,Male,Male,100,"Department of Medicine, University of Ottawa, Ottawa, Ontario, Canada",Canada,last,professor
+PRISMA_COSMIN,David,Moher,Male,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,last,professor
+PRISMA_DTA_abstarct,Matthew D F,McInnes,Male,Male,100,"University of Ottawa, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,last,professor
+PRISMA_ecoevo,Shinichi,Nakagawa,Male,Male,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,last,professor
+PRISMA_equity,Howard,White,Male,Male,100,"International Initiative for Impact Evaluation (3ie), Global Development Network, New Delhi, India",India,last,cannot find
+PRISMA_harms,Sunita,Vohra,Female,Female,98,"Faculty of Medicine and Dentistry, and Integrative Health Institute, University of Alberta, Edmonton, T6G 2C8, AB, Canada",Canada,last,professor
+PRISMA_IPD,Jayne F.,Tierney,Female,Female,100,"MRC Clinical Trials Unit at UCL, London, United Kingdom",United Kingdom,last,professor
+PRISMA_moxibustion,Zhaoxiang,Bian,Male,Male,100,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,last,professor
+PRISMA_NMA ,David,Moher,Male,Male,100,"Ottawa Hospital Research Institute, Center for Practice Changing Research, The Ottawa Hospitalâ€“General Campus, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,last,professor
+PRISMA_protocol,Lesley A.,Stewart,Female,Female,50,"Centre for Reviews and Dissemination, University of York, United Kingdom",United Kingdom,last,professor
+PRISMA_scoping,Sharon E.,Straus,Female,Female,91,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, St. Michael's Hospital, 209 Victoria Street, East Building, Toronto, Ontario M5B 1T8, Canada.",Canada,last,professor
+PRISMA_search,Jonathan B.,Koffel,Male,Male,88,"University of Minnesota, Minneapolis, United States",United States,last,cannot find
+SWIM,Hilary,Thomson,Female,Female,85,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, UK",United Kingdom,last,senior research fellow
+PRIO_harms,Aris,Liakos,Male,Male,83,"Second Medical Department, Clinical Research and Evidence-Based Medicine Unit, Aristotle University of Thessaloniki, Konstantinoupoleos 49, 54642 Thessaloniki, Greece",Greece,middle,
+PRIO_harms,Apostolos,Tsapas,Male,Male,100,"Second Medical Department, Clinical Research and Evidence-Based Medicine Unit, Aristotle University of Thessaloniki, Konstantinoupoleos 49, 54642 Thessaloniki, Greece;Harris Manchester College, University of Oxford, Mansfield Rd, Oxford, OX1 3TD, UK",Greece; United Kingdom,middle,
+PRIO_harms,Evangelia,Ntzani,Female,Female,100,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, University Campus, Stavros Niarchos Av., Ioannina, Greece; Center for Evidence Synthesis in Health, Department of Health Services, Policy and Practice, School of Public Health, Brown University, 121 South Main Street, Providence, RI 02903, USA",Greece; United Kingdom,middle,
+PRISMA_2009,Jennifer,Tetzlaff,Female,Female,100,"Ottawa Methods Centre, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,middle,
+PRISMA_2009,Peter,Gøtzsche,Male,Male,100,"Nordic Cochrane Centre, Copenhagen, Denmark",Denmark,middle,
+PRISMA_2009,John,Ioannidis,Male,Male,100,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, Ioannina, Greece",Greece,middle,
+PRISMA_2009,Mike,Clarke,Male,Male,100,"United Kingdom Cochrane Centre, Oxford; School of Nursing and Midwifery, Trinity College, Dublin, Republic of Ireland",United Kingdom; Ireland,middle,
+PRISMA_2020,Joanne,McKenzie,Female,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+PRISMA_2020,Steve,McDonald,Male,Male,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+PRISMA_2020,Sue,Brennan,Female,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+PRISMA_2020,Tammy,Hoffmann,Female,Female,99,"Institute for Evidence-Based Healthcare, Faculty of Health Sciences and Medicine, Bond University, Gold Coast, Australia",Australia,middle,
+PRISMA_2020,Andrea,Tricco,Female,Female,69,"Li Ka Shing Knowledge Institute of St. Michael's Hospital, Unity Health Toronto, Toronto, Canada; Epidemiology Division of the Dalla Lana School of Public Health and the Institute of Health Management, Policy, and Evaluation, University of Toronto, Toronto, Canada; Queen's Collaboration for Health Care Quality Joanna Briggs Institute Centre of Excellence, Queen's University, Kingston, Canada",Canada,middle,
+PRISMA_2020,Jennifer,Tetzlaff,Female,Female,100,"Evidence Partners, Ottawa, Canada",Canada,middle,
+PRISMA_2020,Jeremy,Grimshaw,Male,Male,100,"Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Canada; School of Epidemiology and Public Health, University of Ottawa, Ottawa, Canada; Department of Medicine, University of Ottawa, Ottawa, Canada",Canada,middle,
+PRISMA_2020,Larissa,Shamseer,Female,Female,100,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, Toronto, Canada; School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Canada",Canada,middle,
+PRISMA_2020,Manoj,Lalu,Male,Male,99,"Department of Anesthesiology and Pain Medicine, The Ottawa Hospital, Ottawa, Canada; Clinical Epidemiology Program, Blueprint Translational Research Group, Ottawa Hospital Research Institute, Ottawa, Canada; Regenerative Medicine Program, Ottawa Hospital Research Institute, Ottawa, Canada",Canada,middle,
+PRISMA_2020,Vivian,Welch,Female,Female,98,"Methods Centre, Bruyère Research Institute, Ottawa, Ontario, Canada; School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Canada",Canada,middle,
+PRISMA_2020,Asbjørn ,Hróbjartsson,Male,Male,100,"Centre for Evidence-Based Medicine Odense (CEBMO) and Cochrane Denmark, Department of Clinical Research, University of Southern Denmark, Odense, Denmark; Open Patient data Exploratory Network (OPEN), Odense University Hospital, Odense, Denmark",Denmark,middle,
+PRISMA_2020,Isabelle,Boutron,Female,Female,99,"Université de Paris, Centre of Epidemiology and Statistics (CRESS), Inserm, F 75004 Paris, France",France,middle,
+PRISMA_2020,Elie,Akl,Male,Female,93,"Clinical Research Institute, American University of Beirut, Beirut, Lebanon; Department of Health Research Methods, Evidence, and Impact, McMaster University, Hamilton, Ontario, Canada",Lebanon; Canada,middle,
+PRISMA_2020,Patrick,Bossuyt,Male,Male,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam University Medical Centres, University of Amsterdam, Amsterdam, Netherlands",Netherlands,middle,
+PRISMA_2020,James,Thomas,Male,Male,100,"EPPI-Centre, UCL Social Research Institute, University College London, London, United Kingdom",United Kingdom,middle,
+PRISMA_2020,Julie,Glanville,Female,Female,99,"York Health Economics Consortium (YHEC Ltd), University of York, York, United Kingdom",United Kingdom,middle,
+PRISMA_2020,Lesley,Stewart,Female,Female,88,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,middle,
+PRISMA_2020,Luke,McGuinness,Male,Male,100,"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, United Kingdom",United Kingdom,middle,
+PRISMA_2020,Penny,Whiting,Female,Female,99,"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, United Kingdom",United Kingdom,middle,
+PRISMA_2020,Cynthia,Mulrow,Female,Female,100,"University of Texas Health Science Center at San Antonio, San Antonio, Texas, United States; Annals of Internal Medicine",United States,middle,
+PRISMA_2020,Evan,Mayo-Wilson,Male,Male,98,"Department of Epidemiology and Biostatistics, Indiana University School of Public Health-Bloomington, Bloomington, Indiana, United States",United States,middle,
+PRISMA_2020,Roger,Chou,Male,Male,100,"Department of Medical Informatics and Clinical Epidemiology, Oregon Health & Science University, Portland, Oregon, United States",United States,middle,
+PRISMA_2020,Tianjing,Li,Female,Female,70,"Department of Ophthalmology, School of Medicine, University of Colorado Denver, Denver, Colorado, United States; Department of Epidemiology, Johns Hopkins Bloomberg School of Public Health, Baltimore, Maryland, United States",United States,middle,
+PRISMA_2020,Elizabeth,Loder,Female,Female,100,"Division of Headache, Department of Neurology, Brigham and Women's Hospital, Harvard Medical School, Boston, Massachusetts, United States; Head of Research, The BMJ, London, United Kingdom",United States; United Kingdom,middle,
+PRISMA_2020_living,Joanne E,McKenzie,Female,Female,100,"Methods in Evidence Synthesis Unit, School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+PRISMA_2020_living,Matthew J,Page,Male,Male,100,"Methods in Evidence Synthesis Unit, School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+PRISMA_2020_living,Claire,Iannizzi,Female,Female,100,"Institute of Public Health, Faculty of Medicine and University Hospital Cologne, University of Cologne, Cologne, Germany",Germany,middle,
+PRISMA_2020_living,Vanessa,Piechotta,Female,Female,99,"Immunization Unit, Department of Infectious Disease Epidemiology, Robert Koch Institut, Berlin, Germany",Germany,middle,
+PRISMA_2020_living,Joanne,Khabsa,Female,Female,100,"Clinical Research Institute, American University of Beirut Medical Center, Beirut, Lebanon",Lebanon,middle,
+PRISMA_2020_living,James M,Barker,Male,Male,99,"F1000 Research, London, United Kingdom",United Kingdom,middle,
+PRISMA_2020_living,Lara A,Kahale,Female,Female,83,"Infectious Disease Society of America, Arlington, VA, United States",United States,middle,
+PRISMA_abstract,Paul,Glasziou,Male,Male,100,"Centre for Research in Evidence-Based Practice, Bond University, Gold Coast, Australia",Australia,middle,
+PRISMA_abstract,Peter C.,Gøtzsche,Male,Male,100,"Nordic Cochrane Centre, Copenhagen, Denmark",Denmark,middle,
+PRISMA_abstract,Sally,Hopewell,Female,Female,99,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom; INSERM, Paris, France",France,middle,
+PRISMA_abstract,Douglas,Altman,Male,Male,100,"Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom",United Kingdom,middle,
+PRISMA_abstract,Iain,Chalmers,Male,Male,100,"James Lind Initiative, Oxford, United Kingdom",United Kingdom,middle,
+PRISMA_abstract,Toby,Lasserson,Male,Male,91,"Cochrane Editorial Unit, London, United Kingdom",United Kingdom,middle,
+PRISMA_abstract,Hilda,Bastian,Female,Female,99,"National Center for Biotechnology Information, National Library of Medicine, Washington DC, United States of America",United States,middle,
+PRISMA_acupuncture ,Bin,Ma,Male,Male,95,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle,
+PRISMA_acupuncture ,Guihua,Tian,Female,Female,75,"Dongzhimen Hospital of Beijing University of Chinese Medicine, Beijing, China",China,middle,
+PRISMA_acupuncture ,Hongcai,Shang,Male,Male,100,"Dongzhimen Hospital of Beijing University of Chinese Medicine, Beijing, China",China,middle,
+PRISMA_acupuncture ,Jinhui,Tian,Male,Male,69,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle,
+PRISMA_acupuncture ,Taixiang,Wu,not found,Male,67,"Chinese Cochrane Centre, West China Hospital, Sichuan University, Chengdu, China",China,middle,
+PRISMA_acupuncture ,Yali,Liu,not found,Female,72,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle,
+PRISMA_acupuncture ,Yaolong,Chen,Male,Male,92,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle,
+PRISMA_acupuncture ,Yongfeng,Wang,Male,Male,95,"Gansu University of Chinese Medicine, Lanzhou, China",China,middle,
+PRISMA_acupuncture ,Zhaoxiang,Bian,Male,Male,100,"Dongzhimen Hospital of Beijing University of Chinese Medicine, Beijing, China",China,middle,
+PRISMA_acupuncture ,Liang,Yao,Male,Male,92,"Clinical Division, School of Chinese Medicine, Hong Kong Baptist University, Kowloon Tong, Hong Kong",Hong Kong,middle,
+PRISMA_acupuncture ,Myeong Soo,Lee,Male,Male,100,"Korea Institute of Oriental Medicine, Daejeon, South Korea",South Korea,middle,
+PRISMA_acupuncture ,Dang,Wei,Male,Male,53,"Department of Public Health Sciences, Karolinska Institute, Stockholm, Sweden",Sweden,middle,
+PRISMA_acupuncture ,Janne,Estill,Male,Female,63,"Institute of Global Health, University of Geneva, Geneva, Switzerland",Switzerland,middle,
+PRISMA_CHM,Kehu,Yang,Male,Male,83,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle,
+PRISMA_CHM,Taixiang,Wu,Male,Male,67,"Chinese Cochrane Centre, West China Hospital, Sichuan University, Chengdu, Sichuan, China",China,middle,
+PRISMA_CHM,Xiaoqin,Wang,Female,Female,95,"Evidence-Based Medicine Center, School of Basic Medical Sciences, Lanzhou University, Lanzhou, China",China,middle,
+PRISMA_CHM,Yaolong,Chen,Male,Male,92,"Evidence-Based Medicine Center, Lanzhou University, Lanzhou, China",China,middle,
+PRISMA_CHM,Aiping,Lyu,Male,Female,84,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle,
+PRISMA_CHM,Chung Tai,Lau,Male,Male,67,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle,
+PRISMA_CHM,Chung Wah,Cheng,Male,Male,86,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle,
+PRISMA_CHM,Fan,Liu,Female,Female,76,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle,
+PRISMA_CHM,Jacky CP,Chan,Male,Male,68,"Department of Computer Science, HKBU Faculty of Science, Hong Kong Baptist University, Hong Kong",Hong Kong,middle,
+PRISMA_CHM,Liang,Yao,Male,Male,92,"School of Chinese Medicine, Hong Kong",Hong Kong,middle,
+PRISMA_CHM,Qiying,Aixinjueluo,Male,Male,80,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle,
+PRISMA_CHM,Ran,Tan,not found,Male,61,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle,
+PRISMA_CHM,Wai Ching,Lam,not found,Female,79,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,middle,
+PRISMA_complex,Christine,Chang,Female,Female,100,"Agency for Healthcare Research & Quality, Rockville, MD, United States",United States,middle,
+PRISMA_complex,Mary,Butler,Female,Female,99,"University of Minnesota School of Public Health, Minneapolis, MN, United States",United States,middle,
+PRISMA_complex,Meera,Viswanathan,Female,Female,96,"RTI International, Research Triangle Park, NC, United States",United States,middle,
+PRISMA_complex,Terri,Pigott,Female,Female,100,"School of Education, Loyola University Chicago, Chicago, IL, United States",United States,middle,
+PRISMA_COSMIN,Ami,Baba,Female,Female,56,"Child Health Evaluative Sciences, The Hospital for Sick Children Research Institute, Toronto, ON, Canada",Canada,middle,
+PRISMA_COSMIN,Andrea C.,Tricco,Female,Female,96,"Li Ka Shing Knowledge Institute, St. Michael’s Hospital, Unity Health Toronto, Toronto, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Ava,Mehdipour,Female,Female,97,"School of Rehabilitation Science, McMaster University, Hamilton, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Catherine,Hofstetter,Female,Female,100,"OMERACT Patient Research Partner, Toronto, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Catherine,Hofstetter,Female,Female,100,"Patient and Public Contributor/Advisor, OMERACT Patient Research Partner, Toronto, ON, Canada",Canada,middle,
+PRISMA_COSMIN,Dorcas,Beaton,Female,Female,99,"Institute of Work and Health, Toronto, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Frank,Gavin,Male,Male,100,"Patient and Public Contributor, Chair of the Public Advisory Council of The Health Data Research Network (Canada), Toronto, ON, Canada",Canada,middle,
+PRISMA_COSMIN,Joel J.,Gagnier,Male,Male,100,"Department of Epidemiology & Biostatistics, Western University, London, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Juanna,Ricketts,Female,Female,98,"Patient and Public Contributor, Halifax, NS, Canada",Canada,middle,
+PRISMA_COSMIN,Julie,Farmer,Female,Female,99,"Faculty of Dentistry, University of Toronto, Toronto, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Karolin R.,Krause,Female,Female,98,"Cundill Centre for Child and Youth Depression, University of Toronto, Toronto, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Martin,Offringa,Male,Male,99,"Child Health Evaluative Sciences, The Hospital for Sick Children Research Institute; University of Toronto, Toronto, ON, Canada",Canada,middle,
+PRISMA_COSMIN,Maureen,Smith,Female,Female,100,"Patient Partner, Cochrane Consumer Network, Ottawa, ON, Canada",Canada,middle,
+PRISMA_COSMIN,Nancy,Butcher,Female,Female,100,"Department of Psychiatry, University of Toronto, Toronto, ON, Canada",Canada,middle,
+PRISMA_COSMIN,Peter,Szatmari,Male,Male,100,"Division of Rheumatology, Schroeder Arthritis Institute, University of Toronto, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Zahi,Touma,Male,Male,90,"Division of Rheumatology, Schroeder Arthritis Institute, University of Toronto, Toronto, Ontario, Canada",Canada,middle,
+PRISMA_COSMIN,Anna,Berardi,Female,Female,99,"Department of Human Neurosciences, Sapienza University of Rome, Rome, Italy",Italy,middle,
+PRISMA_COSMIN,Caroline B.,Terwee,Female,Female,100,"Amsterdam Public Health Research Institute, Amsterdam, Netherlands",Netherlands,middle,
+PRISMA_COSMIN,Lidwine B.,Mokkink,Female,Female,97,"Department of Epidemiology and Data Science, Amsterdam UMC, Vrije Universiteit Amsterdam, Amsterdam Public Health Institute",Netherlands,middle,
+PRISMA_COSMIN,Estelle,Jobson,Female,Female,99,"Patient and Public Contributor, EUPATI Fellow, Nyon, Switzerland",Switzerland,middle,
+PRISMA_COSMIN,Kirstie L.,Haywood,Female,Female,100,"Warwick Research in Nursing, Warwick Medical School, University of Warwick, Coventry, United Kingdom",United Kingdom,middle,
+PRISMA_COSMIN,Maureen,Smith,Female,Female,100,"Cochrane Consumer Network, London, United Kingdom",United Kingdom,middle,
+PRISMA_COSMIN,Olalekan Lee,Aiyegbusi,Male,Male,97,"Centre for Patient Reported Outcomes Research, University of Birmingham, Birmingham, United Kingdom",United Kingdom,middle,
+PRISMA_COSMIN,Sarah,Markham,Female,Female,99,"Department of Biostatistics & Health Informatics, King’s College London, London, United Kingdom",United Kingdom,middle,
+PRISMA_COSMIN,Sarah,Markham,Female,Female,99,"Patient and Public Contributor, King’s College London, London, United Kingdom",United Kingdom,middle,
+PRISMA_COSMIN,Evan,Mayo-Wilson,Male,Male,98,"Department of Epidemiology, UNC Gillings School of Global Public Health, Chapel Hill, NC, United States",United States,middle,
+PRISMA_DTA,Petra,Macaskill,Female,Female,99,"Monash University, Melbourne, Australia",Australia,middle,
+PRISMA_DTA,Brett,Thombs,Male,Male,100,"McGill University, Montreal, Canada",Canada,middle,
+PRISMA_DTA,Brian H.,Willis,Male,Male,100,"University of Calgary, Calgary, Canada",Canada,middle,
+PRISMA_DTA,Brooke,Levis,Female,Female,100,"Lady Davis Institute of the Jewish General Hospital and Department of Epidemiology, McGill University, Montréal, QC, Canada",Canada,middle,
+PRISMA_DTA,David,Moher,Male,Male,100,"Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,middle,
+PRISMA_DTA,Laura,Weeks,Female,Female,99,"Canadian Agency for Drugs and Technologies in Health, Ottawa, Ontario, Canada",Canada,middle,
+PRISMA_DTA,Marcello,Tonelli,Male,Male,100,"University of Calgary, Calgary, Canada",Canada,middle,
+PRISMA_DTA,Rachel,Rodin,Female,Female,100,"Public Health Agency of Canada, Ottawa, Ontario, Canada",Canada,middle,
+PRISMA_DTA,Robert A.,Frank,Male,Male,97,"University of Ottawa, Department of Radiology, Ottawa, ON, Canada",Canada,middle,
+PRISMA_DTA,Tammy,Clifford,Female,Female,99,"Canadian Agency for Drugs and Technologies in Health, Ottawa, Ontario, Canada",Canada,middle,
+PRISMA_DTA,Trevor A.,McGrath,Male,Male,100,"St. Michael’s Hospital, Unity Health Toronto, Canada",Canada,middle,
+PRISMA_DTA,Adrienne,Stevens,Female,Female,100,"Ottawa Hospital Research Institute, Ottawa, Ontario, Canada; Translational Research in Biomedicine Program, School of Medicine, University of Split, Croatia",Croatia,middle,
+PRISMA_DTA,Jérémie F.,Cohen,Male,Male,99,"Necker - Enfants Malades Hospital, Assistance Publique - Hôpitaux de Paris, Université de Paris",France,middle,
+PRISMA_DTA,Jean-Paul,Salameh,Male,Male,100,Not provided (likely affiliated with French institutions),France,middle,
+PRISMA_DTA,Anne W. S.,Rutjes,Female,Female,99,"Maastricht University, Faculty of Health Medicine and Life Sciences, Netherlands",Netherlands,middle,
+PRISMA_DTA,Daniël A.,Korevaar,Male,Male,93,"Amsterdam UMC, Department of Epidemiology and Data Science, Netherlands",Netherlands,middle,
+PRISMA_DTA,Johannes B.,Reitsma,Male,Male,100,"Department of Epidemiology, Vrije Universiteit Amsterdam, Netherlands",Netherlands,middle,
+PRISMA_DTA,Lotty,Hooft,Female,Female,91,"Amsterdam UMC, Vrije Universiteit Amsterdam, Amsterdam Public Health Research Institute",Netherlands,middle,
+PRISMA_DTA,Mariska M.,Leeflang,Female,Female,100,"Amsterdam UMC, Vrije Universiteit Amsterdam, Amsterdam Public Health Research Institute",Netherlands,middle,
+PRISMA_DTA,Patrick M.,Bossuyt,Male,Male,100,"Amsterdam UMC, Vrije Universiteit Amsterdam, Netherlands",Netherlands,middle,
+PRISMA_DTA,Brian H.,Willis,Male,Male,100,"University of Birmingham, Birmingham, England",United Kingdom,middle,
+PRISMA_DTA,Chris J.,Hyde,Male,Male,100,"King's College London, Department of Biostatistics & Health Informatics, United Kingdom",United Kingdom,middle,
+PRISMA_DTA,Harriet A.,Hunt,Female,Female,100,"King's College London, Department of Biostatistics & Health Informatics, United Kingdom",United Kingdom,middle,
+PRISMA_DTA,Jonathan J.,Deeks,Male,Male,98,"University of Birmingham, Institute of Health Policy, Management, and Evaluation, United Kingdom",United Kingdom,middle,
+PRISMA_DTA,Penny,Whiting,Female,Female,99,"University of York, United Kingdom",United Kingdom,middle,
+PRISMA_DTA,Sally,Hopewell,Female,Female,99,"University of York, United Kingdom",United Kingdom,middle,
+PRISMA_DTA,Yemisi,Takwoingi,Female,Female,98,"University of York, United Kingdom",United Kingdom,middle,
+PRISMA_DTA,Constantine,Gatsonis,Male,Male,96,"Brown University, United States",United States,middle,
+PRISMA_DTA_abstarct,Petra,Macaskill,Female,Female,99,"University of Sydney, Sydney, NSW, Australia",Australia,middle,
+PRISMA_DTA_abstarct,Brett,Thombs,Male,Male,100,"Lady Davis Institute of the Jewish General Hospital and Department of Psychiatry, McGill University, MontrÃ©al, QC, Canada",Canada,middle,
+PRISMA_DTA_abstarct,David,Moher,Male,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,middle,
+PRISMA_DTA_abstarct,Jean-Paul,Salameh,Male,Male,100,"The Ottawa Hospital Research Institute Clinical Epidemiology Program, Ottawa, ON, Canada
+2) Faculty of Medicine, Queenâ€™s University, Kingston, ON, Canada",Canada,middle,
+PRISMA_DTA_abstarct,Marcello,Tonelli,Male,Male,100,"Department of Medicine, University of Calgary, Calgary, AB, Canada",Canada,middle,
+PRISMA_DTA_abstarct,Trevor A,McGrath,Male,Male,100,"Department of Radiology, University of Ottawa, Ottawa, ON, Canada",Canada,middle,
+PRISMA_DTA_abstarct,Jérémie F.,Cohen,Male,Male,99,"Necker - Enfants Malades Hospital, Assistance Publique - Hôpitaux de Paris, Université de Paris",France,middle,
+PRISMA_DTA_abstarct,DaniÃ«l A,Korevaar,Male,Male,93,"Department of Respiratory Medicine, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,
+PRISMA_DTA_abstarct,Johannes B,Reitsma,Male,Male,100,"Cochrane Netherlands, Julius Center for Health Sciences and Primary Care, Utrecht University, University Medical Center Utrecht, Utrecht, Netherlands",Netherlands,middle,
+PRISMA_DTA_abstarct,Lotty,Hooft,Female,Female,91,"Cochrane Netherlands, Julius Center for Health Sciences and Primary Care, Utrecht University, University Medical Center Utrecht, Utrecht, Netherlands",Netherlands,middle,
+PRISMA_DTA_abstarct,Mariska M,Leeflang,Female,Female,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam Public Health, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,
+PRISMA_DTA_abstarct,Patrick M,Bossuyt,Male,Male,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam Public Health, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,
+PRISMA_DTA_abstarct,Anne W S,Rutjes,Female,Female,99,"Institute of Social and Preventive Medicine, University of Bern, Bern, Switzerland",Switzerland,middle,
+PRISMA_DTA_abstarct,Brian H,Willis,Male,Male,100,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK",United Kingdom,middle,
+PRISMA_DTA_abstarct,Chris J,Hyde,Male,Male,100,"Exeter Test Group, College of Medicine and Health, University of Exeter, Exeter, UK",United Kingdom,middle,
+PRISMA_DTA_abstarct,Harriet A,Hunt,Female,Female,100,"Exeter Test Group, College of Medicine and Health, University of Exeter, Exeter, UK",United Kingdom,middle,
+PRISMA_DTA_abstarct,Jonathan J,Deeks,Male,Male,98,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK
+2) NIHR Birmingham Biomedical Research Centre, University Hospitals Birmingham NHS Foundation Trust and University of Birmingham, Birmingham, UK",United Kingdom,middle,
+PRISMA_DTA_abstarct,Penny,Whiting,Female,Female,99,"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, UK",United Kingdom,middle,
+PRISMA_DTA_abstarct,Sally,Hopewell,Female,Female,99,"Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, UK",United Kingdom,middle,
+PRISMA_DTA_abstarct,Yemisi,Takwoingi,Female,Female,98,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK
+2) NIHR Birmingham Biomedical Research Centre, University Hospitals Birmingham NHS Foundation Trust and University of Birmingham, Birmingham, UK",United Kingdom,middle,
+PRISMA_DTA_abstarct,Constantine,Gatsonis,Male,Male,96,"Brown University, Providence, RI, USA",United States,middle,
+PRISMA_ecoevo,Daniel,Noble,Male,Male,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia; Research School of Biology, Australian National University, 46 Sullivans Creek Road, Canberra, 2600, Australia",Australia,middle,
+PRISMA_ecoevo,Malgorzata,Lagisz,Female,Female,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,middle,
+PRISMA_ecoevo,Matthew,Page,Male,Male,100,"School of Public Health and Preventative Medicine, Monash University, Melbourne, VIC, 3004, Australia",Australia,middle,
+PRISMA_ecoevo,Michael,Jennions,Male,Male,100,"Research School of Biology, Australian National University, 46 Sullivans Creek Road, Canberra, 2600, Australia",Australia,middle,
+PRISMA_ecoevo,David,Moher,Male,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, General Campus, 501 Smyth Road, Room L1288, Ottawa, ON, K1H 8L6, Canada",Canada,middle,
+PRISMA_ecoevo,Gavin,Stewart,Male,Male,100,"School of Natural and Environmental Sciences, Newcastle University, Newcastle upon Tyne, NE1 7RU, U.K.",United Kingdom,middle,
+PRISMA_ecoevo,Julia,Koricheva,Female,Female,99,"Department of Biological Sciences, Royal Holloway University of London, Egham, Surrey, TW20 0EX, U.K.",United Kingdom,middle,
+PRISMA_ecoevo,Jessica,Gurevitch,Female,Female,100,"Department of Ecology and Evolution, Stony Brook University, Stony Brook, NY, 11794-5245, U.S.A.",United States,middle,
+PRISMA_ecoevo,Timothy,Parker,Male,Male,100,"Department of Biology, Whitman College, Walla Walla, WA, 99362, U.S.A.",United States,middle,
+PRISMA_equity,Elizabeth,Waters,Female,Female,100,"School of Population and Global Health, University of Melbourne, Australia",Australia,middle,
+PRISMA_equity,David,Moher,Male,Male,100,"Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,middle,
+PRISMA_equity,Jennifer,Petkovic,Female,Female,100,"Research Associate, Bruyere Research Institute, Ottawa, Ontario, Canada",Canada,middle,
+PRISMA_equity,Mark,Petticrew,Male,Male,100,"LSHTM, London, United Kingdom",United Kingdom,middle,
+PRISMA_harms,David,Moher,Male,Male,100,"Ottawa Methods Centre, Ottawa Hospital Research Institute, Ottawa Hospital, Ottawa, ON, Canada",Canada,middle,
+PRISMA_harms,Pasqualina,Santaguida,Female,Female,99,"Department of Clinical Epidemiology and Biostatistics, McMaster University, Hamilton, ON, Canada",Canada,middle,
+PRISMA_harms,Douglas,Altman,Male,Male,100,"Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology, and Musculoskeletal Sciences, Botnar Research Centre, University of Oxford, Oxford, United Kingdom",United Kingdom,middle,
+PRISMA_harms,Su,Golder,Female,Female,75,"Department of Health Sciences, University of York, Heslington, United Kingdom",United Kingdom,middle,
+PRISMA_harms,Yoon,Loke,Male,Male,52,"Norwich Medical School, Norwich, United Kingdom",United Kingdom,middle,
+PRISMA_harms,John,Ioannidis,Male,Male,100,"Stanford University School of Medicine, Stanford University School of Humanities and Sciences, Stanford, CA, United States",United States,middle,
+PRISMA_IPD,Maroeska,Rovers,Female,Female,100,"Radboud Institute of Health Sciences, Radboudumc, Nijmegen, the Netherlands",Netherlands,middle,
+PRISMA_IPD,Gavin,Stewart,Male,Male,100,"Centre for Rural Economy, School of Agriculture, Food, and Rural Development, Newcastle University, Newcastle, United Kingdom",United Kingdom,middle,
+PRISMA_IPD,Mark,Simmonds,Male,Male,100,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,middle,
+PRISMA_IPD,Mike,Clarke,Male,Male,100,"All-Ireland Hub for Trials Methodology Research, Queen’s University Belfast, Belfast, United Kingdom",United Kingdom,middle,
+PRISMA_IPD,Richard D.,Riley,Male,Male,100,"Research Institute of Primary Care and Health Sciences, Keele University, Keele, United Kingdom",United Kingdom,middle,
+PRISMA_moxibustion,Ai Ping,Lyu,Female,Female,100,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle,
+PRISMA_moxibustion,Chung Wah,Cheng,Male,Male,86,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle,
+PRISMA_moxibustion,Hong Cai,Shang,Female,Female,100,"Key Laboratory of Chinese Internal Medicine, Dongzhimen Hospital, Beijing University of Chinese Medicine, Beijing, China",China,middle,
+PRISMA_moxibustion,Ke Hu,Yang,Male,Male,100,"Evidence-Based Medicine Center, School of Basic Medical Sciences, Lanzhou University, China",China,middle,
+PRISMA_moxibustion,Liang,Yao,Male,Male,92,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle,
+PRISMA_moxibustion,Qi Ying,Aixinjueluo,Female,Female,100,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle,
+PRISMA_moxibustion,Ran,Tan,Male,Male,61,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle,
+PRISMA_moxibustion,Si Yao,Li,Female,Female,78,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle,
+PRISMA_moxibustion,Tai Xiang,Wu,Male,Male,100,"Chinese Cochrane Centre, Sichuan University, Chengdu, Sichuan, China",China,middle,
+PRISMA_moxibustion,Wai Ching,Lam,Female,Female,79,"Chinese Clinical Trial Registry, Hong Kong; Hong Kong Baptist University, Hong Kong, China",China,middle,
+PRISMA_moxibustion,Xiao Qin,Wang,Female,Female,100,"Evidence-Based Medicine Center, School of Basic Medical Sciences, Lanzhou University, China",China,middle,
+PRISMA_NMA ,Chris,Cameron,Male,Male,91,"Ottawa Hospital Research Institute, Center for Practice Changing Research, The Ottawa Hospitalâ€“General Campus, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,middle,
+PRISMA_NMA ,Jeroen P.,Jansen,Male,Male,100,"1505 West Second Avenue, Suite 302, Vancouver, British Columbia V6H 3Y4, Canada.",Canada,middle,
+PRISMA_NMA ,Kristian,Thorlund,Male,Male,97,"1505 West Second Avenue, Suite 302, Vancouver, British Columbia V6H 3Y4, Canada.",Canada,middle,
+PRISMA_NMA ,Sharon,Straus,Female,Female,99,"Li Ka Shing Knowledge Institute, St. Michael's Hospital, 30 Bond Street, Toronto, Ontario M5B 1W8, Canada.",Canada,middle,
+PRISMA_NMA ,Peter C.,Gøtzsche,Male,Male,100,"Nordic Cochrane Centre, Rigshospitalet, Department 7811, Blegdamsvej 9, DK-2100 Copenhagen, Denmark.",Denmark,middle,
+PRISMA_NMA ,Isabelle,Boutron,Female,Female,99,"Centre d'EpidÃ©miologie Clinique, L'UniversitÃ© Paris Descartes Centre de recherche EpidÃ©miologies et Statistique, INSERM U1153, Equipe: MÃ©thodes en Ã©valuation thÃ©rapeutique des maladies chroniques, HÃ³pital HÃ´tel Dieu, Aile A2 1er Ã©tage, 1 Place du parvis Notre Dame, 75181 Paris, Cedex 4, France.",France,middle,
+PRISMA_NMA ,Anna,Chaimani,Female,Female,99,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, University Campus Ioannina 45110, Ioannina, Greece.",Greece,middle,
+PRISMA_NMA ,Georgia,Salanti,Female,Female,99,"Department of Hygiene and Epidemiology, University of Ioannina School of Medicine, University Campus Ioannina 45110, Ioannina, Greece.",Greece,middle,
+PRISMA_NMA ,Ferrán,Catalá-López,Male,Male,100,"Division of Pharmacoepidemiology and Pharmacovigilance, Spanish Medicines and Healthcare Products Agency, Campezo 1, 28022 Madrid, Spain.",Spain,middle,
+PRISMA_NMA ,Deborah M.,Caldwell,Female,Female,100,"School of Social and Community Medicine, Canynge Hall, 39 Whately Road, Bristol BS8 2PS, United Kingdom.",United Kingdom,middle,
+PRISMA_NMA ,Douglas G.,Altman,Male,Male,100,"Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Botnar Research Centre, Windmill Road, Oxford OX3 7LD, United Kingdom.",United Kingdom,middle,
+PRISMA_NMA ,Christopher H.,Schmid,Male,Male,100,"Center for Evidence-Based Medicine, Brown University School of Public Health, Box G-S121-8, Providence, RI 02912.",United States,middle,
+PRISMA_NMA ,Cynthia,Mulrow,Female,Female,100,"American College of Physicians, 190 N. Independence Mall West, Philadelphia, PA 19106.",United States,middle,
+PRISMA_NMA ,John P.A.,Ioannidis,Male,Male,100,"Stanford Prevention Research Center, Stanford University School of Medicine, Medical School Office Building, 1265 Welch Road, Mail Code 5411, Stanford, CA 94305-5411.",United States,middle,
+PRISMA_NMA ,Kay,Dickersin,Female,Female,64,"Johns Hopkins Bloomberg School of Public Health, 615 North Wolfe Street, Room E6152, Baltimore, MD 21205.",United States,middle,
+PRISMA_protocol,Larissa,Shamseer,Female,Female,100,"Ottawa Hospital Research Institute and University of Ottawa, Canada",Canada,middle,
+PRISMA_protocol,Davina,Ghersi,Female,Female,99,"National Health and Medical Research Council, Australia",Australia,middle,
+PRISMA_protocol,Alessandro,Liberati,Male,Male,100,"University of Modena, Italy",Italy,middle,
+PRISMA_protocol,Mark,Petticrew,Male,Male,100,"London School of Hygiene and Tropical Medicine, United Kingdom",United Kingdom,middle,
+PRISMA_protocol,Mike,Clarke,Male,Male,100,"Queen’s University Belfast, Northern Ireland",United Kingdom,middle,
+PRISMA_protocol,Paul,Shekelle,Male,Male,100,"Southern California Evidence-based Practice Center, United States",United States,middle,
+PRISMA_scoping,Micah D.J.,Peters,Male,Male,84,"Rosemary Bryant AO Research Centre, Sansom Institute for Health Research, Division of Health Sciences, University of South Australia, Adelaide, South Australia 5000, Australia.",Australia,middle,
+PRISMA_scoping,Chantelle,Garritty,Female,Female,100,"Centre for Journalology, Ottawa Hospital Research Institute, The Ottawa Hospital, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,middle,
+PRISMA_scoping,Christina M.,Godfrey,Female,Female,100,"Queen's Collaboration for Health Care Quality: A JBI Centre of Excellence, Queen's University School of Nursing, 992 University Avenue, Barrie Street, Kingston, Ontario K7L 3N6, Canada.",Canada,middle,
+PRISMA_scoping,David,Moher,Male,Male,100,"Centre for Journalology, Ottawa Hospital Research Institute, The Ottawa Hospital, 501 Smyth Road, PO Box 201B, Ottawa, Ontario K1H 8L6, Canada.",Canada,middle,
+PRISMA_scoping,Erin,Lillie,Female,Female,99,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, St. Michael's Hospital, 209 Victoria Street, East Building, Toronto, Ontario M5B 1T8, Canada.",Canada,middle,
+PRISMA_scoping,Heather,Colquhoun,Female,Female,100,"Department of Occupational Science and Occupational Therapy, University of Toronto, 160-500 University Avenue, Toronto, Ontario M5G 1V7, Canada.",Canada,middle,
+PRISMA_scoping,Jessie,McGowan,Female,Female,79,"Department of Medicine, University of Ottawa, Roger Guindon Hall, 451 Smyth Road, Ottawa, Ontario K1H 8M5, Canada.",Canada,middle,
+PRISMA_scoping,Kelly K.,O’Brien,Female,Female,79,"Department of Physical Therapy, University of Toronto, 160-500 University Avenue, Toronto, Ontario M5G 1V7, Canada.",Canada,middle,
+PRISMA_scoping,Laura,Weeks,Female,Female,99,"CADTH (Canadian Agency for Drugs and Technologies in Health), 865 Carling Avenue, Suite 600, Ottawa, Ontario K1S 5S8, Canada.",Canada,middle,
+PRISMA_scoping,Lisa,Hartling,Female,Female,100,"Department of Pediatrics, Faculty of Medicine and Dentistry, University of Alberta, 11405-87 Avenue, Edmonton, Alberta T6G 1C9, Canada.",Canada,middle,
+PRISMA_scoping,Marilyn T.,Macdonald,Female,Female,100,"School of Nursing, Dalhousie University, PO Box 15000, 5869 University Avenue, Halifax, Nova Scotia B3H 4R2, Canada.",Canada,middle,
+PRISMA_scoping,Michael G.,Wilson,Male,Male,100,"Department of Health Research Methods, Evidence, and Impact, McMaster University, 1280 Main Street West, Hamilton, Ontario L8S 4K1, Canada.",Canada,middle,
+PRISMA_scoping,Tammy,Clifford,Female,Female,99,"CADTH (Canadian Agency for Drugs and Technologies in Health), 865 Carling Avenue, Suite 600, Ottawa, Ontario K1S 5S8, Canada.",Canada,middle,
+PRISMA_scoping,Tanya,Horsley,Female,Female,100,"The Royal College of Physicians and Surgeons, 774 Echo Drive, Ottawa, Ontario K1S 5N8, Canada.",Canada,middle,
+PRISMA_scoping,Wasifa,Zarin,Female,Female,93,"Knowledge Translation Program, Li Ka Shing Knowledge Institute, St. Michael's Hospital, 209 Victoria Street, East Building, Toronto, Ontario M5B 1T8, Canada.",Canada,middle,
+PRISMA_scoping,Elie A.,Akl,Male,Male,100,"Department of Internal Medicine, Faculty of Medicine, Gefinor Center, Block B, 4th Floor, American University of Beirut, Riad El-Solh, Beirut, Lebanon.",Lebanon,middle,
+PRISMA_scoping,Simon,Lewin,Male,Male,99,"Norwegian Institute of Public Health, PO Box 4404 Nydalen, N-0403 Oslo, Norway.",Norway,middle,
+PRISMA_scoping,Etienne V.,Langlois,Male,Male,98,"Alliance for Health Policy and Systems Research, World Health Organization, Avenue Appia 20, 1211 Geneva, Switzerland.",Switzerland,middle,
+PRISMA_scoping,Özge,Tunçalp,Female,Female,98,"Department of Reproductive Health and Research, World Health Organization, Avenue Appia 20, 1211 Geneva, Switzerland.",Switzerland,middle,
+PRISMA_scoping,Adrian,Aldcroft,Male,Male,99,"BMJ Open Editorial Office, BMA House, Tavistock Square, London WC1H 9JR, United Kingdom.",United Kingdom,middle,
+PRISMA_scoping,Jo,Moriarty,Female,Female,76,"Social Care Workforce Research Unit, King's College London, Strand, London WC2R 2LS, United Kingdom.",United Kingdom,middle,
+PRISMA_scoping,Karla,Soares-Weiser,Female,Female,99,"Cochrane Editorial Unit, Cochrane, St. Albans House, 57-59 Haymarket, London SW1Y 4QX, United Kingdom.",United Kingdom,middle,
+PRISMA_scoping,Lesley,Stewart,Female,Female,88,"Centre for Reviews and Dissemination, University of York, Heslington, York YO10 5DD, United Kingdom.",United Kingdom,middle,
+PRISMA_scoping,Christine,Chang,Female,Female,100,"Agency for Healthcare Research and Quality, 5600 Fishers Lane, Rockville, MD 20857.",United States,middle,
+PRISMA_scoping,Danielle,Levac,Female,Female,100,"Department of Physical Therapy, Movement and Rehabilitation Science, BouvÃ© College of Health Sciences, Northeastern University, 360 Huntington Avenue, Boston, MA 02115.",United States,middle,
+PRISMA_scoping,SUnited Statesnne,Hempel,Female,Female,100,"RAND Corporation, 1776 Main Street, Santa Monica, CA 90401.",United States,middle,
+PRISMA_search,Matthew J.,Page,Male,Male,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+PRISMA_search,Ana Patricia,Ayala,Female,Female,99,"Gerstein Science Information Centre, University of Toronto, Toronto, Canada",Canada,middle,
+PRISMA_search,David,Moher,Male,Male,100,"Centre for Journalology, Ottawa Hospital Research Institute, Ottawa, Canada",Canada,middle,
+PRISMA_search,Siw,Waffenschmidt,Female,Female,93,"Institute for Quality and Efficiency in Health Care, Cologne, Germany",Germany,middle,
+PRISMA_search,Shona,Kirtley,Female,Female,98,"United Kingdom EQUATOR Centre, University of Oxford, United Kingdom",United Kingdom,middle,
+SWIM,Joanne E,McKenzie,Female,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+SWIM,Joanne E,McKenzie,Female,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+SWIM,Rebecca,Ryan,Female,Female,100,"School of Psychology and Public Health, La Trobe University, Melbourne, Australia",Australia,middle,
+SWIM,Rebecca,Ryan,Female,Female,100,"School of Psychology and Public Health, La Trobe University, Melbourne, Australia",Australia,middle,
+SWIM,Sue E,Brennan,Female,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+SWIM,Sue E,Brennan,Female,Female,100,"School of Public Health and Preventive Medicine, Monash University, Melbourne, Australia",Australia,middle,
+SWIM,Vivian,Welch,Female,Female,98,"Bruyere Research Institute, Ottawa, Canada",Canada,middle,
+SWIM,Vivian,Welch,Female,Female,98,"Bruyere Research Institute, Ottawa, Canada",Canada,middle,
+SWIM,Amanda,Sowden,Female,Female,100,"Centre for Reviews and Dissemination, University of York, York, UK",United Kingdom,middle,
+SWIM,Amanda,Sowden,Female,Female,100,"Centre for Reviews and Dissemination, University of York, York, United Kingdom",United Kingdom,middle,
+SWIM,Hilary,Thomson,Female,Female,85,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, United Kingdom",United Kingdom,middle,
+SWIM,James,Thomas,Male,Male,100,"Evidence for Policy and Practice Information and Coordinating Centre, University College London, UK",United Kingdom,middle,
+SWIM,James,Thomas,Male,Male,100,"Evidence for Policy and Practice Information and Coordinating Centre, University College London, United Kingdom",United Kingdom,middle,
+SWIM,Jamie,Hartmann-Boyce,Female,Female,66,"Nuffield Department of Primary Care Health Sciences, University of Oxford, Oxford, UK",United Kingdom,middle,
+SWIM,Jamie,Hartmann-Boyce,Female,Female,66,"Nuffield Department of Primary Care Health Sciences, University of Oxford, Oxford, United Kingdom",United Kingdom,middle,
+SWIM,Mhairi,Campbell,Female,Female,99,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, UK",United Kingdom,middle,
+SWIM,Sasha,Shepperd,not found,Female,59,"Nuffield Department of Population Health, University of Oxford, Oxford, UK",United Kingdom,middle,
+SWIM,Sasha,Shepperd,Female,Female,59,"Nuffield Department of Population Health, University of Oxford, Oxford, United Kingdom",United Kingdom,middle,
+SWIM,Simon,Ellis,Male,Male,99,"Centre for Guidelines, National Institute for Health and Care Excellence, London, UK",United Kingdom,middle,
+SWIM,Simon,Ellis,Male,Male,99,"Centre for Guidelines, National Institute for Health and Care Excellence, London, United Kingdom",United Kingdom,middle,
+SWIM,Srinivasa,Vittal Katikireddi,Male,Male,99,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, UK",United Kingdom,middle,
+SWIM,Srinivasa,Vittal Katikireddi,Male,Male,99,"MRC/CSO Social and Public Health Sciences Unit, University of Glasgow, United Kingdom",United Kingdom,middle,
