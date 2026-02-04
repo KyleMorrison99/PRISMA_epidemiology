@@ -137,20 +137,6 @@ total_languages
 # *Figure 2*
 An area plot illustrating the citation trends for a) PRISMA 2009 and PRISMA2020, b) PRISMA extensions based on PECO elements, and c) PRISMA extensions based on methodology.
 ```{r}
-# =========================================
-# Packages
-# =========================================
-suppressPackageStartupMessages({
-  library(dplyr)
-  library(stringr)
-  library(ggplot2)
-  library(patchwork)
-  library(purrr)
-  library(tidyr)
-  library(zoo)
-  library(scales)
-  library(grid)
-})
 
 # =========================================
 # 1) Colours & Theme (larger text)
@@ -312,8 +298,8 @@ method_extensions <- plot_prisma_citations(
 # =========================================
 # 5) Combine
 # =========================================
-fig_combined <- original_count / topic_extensions / method_extensions +
-  patchwork::plot_layout(heights = c(1, 1, 1))
+(fig_combined <- original_count / topic_extensions / method_extensions +
+  patchwork::plot_layout(heights = c(1, 1, 1)))
 
 # =========================================
 # 6) Save with larger text scaling
@@ -331,10 +317,10 @@ ggsave(
 ```
 
 # *Author and Geographic diversity*
+
 ```{r}
 library(dplyr)
 library(stringr)
-library(purrr)
 
 # --- Helper: standardise gender labels --------------------------------------
 std_gender <- function(x) {
@@ -348,14 +334,21 @@ std_gender <- function(x) {
   )
 }
 
-# --- Prep data: prefer web; fallback to genderize only if web "not found"/NA -
+# --- Helper: standardise nationality (optional but recommended) -------------
+std_country <- function(x) {
+  x <- stringr::str_squish(x)
+  dplyr::na_if(x, "")
+}
+
+# --- Prep data: prefer web; fallback to genderize only if web NA -----------
 prep_edi_author <- function(df) {
   df %>%
     mutate(
       # Clean web field
       web_raw   = str_squish(tolower(gender_diversity_web)),
       web_clean = na_if(web_raw, ""),
-      web_clean = if_else(web_clean %in% c("not found","notfound","not-found"), NA_character_, web_clean),
+      web_clean = if_else(web_clean %in% c("not found","notfound","not-found"),
+                          NA_character_, web_clean),
 
       # Clean fallback field
       fb_raw   = str_squish(tolower(gender_diversity)),
@@ -370,7 +363,9 @@ prep_edi_author <- function(df) {
 
       # Apply >95% certainty ONLY for fallback rows
       gender_fb_std_hiconf = case_when(
-        used_fallback & !is.na(gender_diversity_confidence) & gender_diversity_confidence > 95 ~ gender_fb_std,
+        used_fallback &
+          !is.na(gender_diversity_confidence) &
+          gender_diversity_confidence > 95 ~ gender_fb_std,
         used_fallback ~ NA_character_,
         TRUE ~ NA_character_
       ),
@@ -380,24 +375,7 @@ prep_edi_author <- function(df) {
     )
 }
 
-# --- Ratios (unchanged except uses final_gender) ----------------------------
-compute_diversity_ratios <- function(data, global_south_countries) {
-  data %>%
-    group_by(PRISMA_id) %>%
-    summarise(
-      female_ratio = sum(final_gender == "Female", na.rm = TRUE) /
-                     sum(final_gender %in% c("Female","Male"), na.rm = TRUE),
-      global_south_ratio = mean(
-        sapply(str_split(geographic_diversity, ";\\s*"), function(countries) {
-          any(countries %in% global_south_countries)
-        }),
-        na.rm = TRUE
-      ),
-      .groups = "drop"
-    )
-}
-
-# --- Global South country list (fixed a typo: "Chin" -> "China") ------------
+# --- Global South country list (with China fixed) ---------------------------
 global_south_countries <- c(
   # Europe
   "Albania","Armenia","Azerbaijan","Belarus","Bosnia and Herzegovina","Georgia",
@@ -436,14 +414,52 @@ global_south_countries <- c(
   "Tonga","Tuvalu","Vanuatu","Wallis & Futuna"
 )
 
+# --- Ratios, including nationality-based global south -----------------------
+compute_diversity_ratios <- function(data, global_south_countries) {
+  data %>%
+    mutate(
+      nationality_clean        = std_country(nationality),
+      nationality_global_south = nationality_clean %in% global_south_countries
+    ) %>%
+    group_by(PRISMA_id) %>%
+    summarise(
+      female_ratio = sum(final_gender == "Female", na.rm = TRUE) /
+                     sum(final_gender %in% c("Female","Male"), na.rm = TRUE),
+
+      # Existing: proportion of author-rows whose geographic_diversity
+      # string includes at least one global South country
+      global_south_ratio = mean(
+        sapply(str_split(geographic_diversity, ";\\s*"), function(countries) {
+          any(countries %in% global_south_countries)
+        }),
+        na.rm = TRUE
+      ),
+
+      # New: proportion of authors whose nationality is global South
+      global_south_nationality_ratio =
+        mean(nationality_global_south, na.rm = TRUE),
+
+      .groups = "drop"
+    )
+}
+
 # --- Run --------------------------------------------------------------------
 edi_author_prepped <- prep_edi_author(edi_author)
-diversity_ratios <- compute_diversity_ratios(edi_author_prepped, global_south_countries)
 
-mean(diversity_ratios$female_ratio)
-overall_avg_global_south <- mean(diversity_ratios$global_south_ratio, na.rm = TRUE)
+diversity_ratios <- compute_diversity_ratios(
+  edi_author_prepped,
+  global_south_countries
+)
 
+# Overall averages
+overall_avg_female              <- mean(diversity_ratios$female_ratio, na.rm = TRUE)
+overall_avg_global_south_geo    <- mean(diversity_ratios$global_south_ratio, na.rm = TRUE)
+overall_avg_global_south_nat    <- mean(diversity_ratios$global_south_nationality_ratio, na.rm = TRUE)
 
+# Percentages (0–100 scale)
+overall_percent_female           <- overall_avg_female * 100
+overall_percent_global_south_geo <- overall_avg_global_south_geo * 100
+overall_percent_global_south_nat <- overall_avg_global_south_nat * 100
 
 ```
 
@@ -451,10 +467,58 @@ overall_avg_global_south <- mean(diversity_ratios$global_south_ratio, na.rm = TR
 A polar plot illustrating how PRISMA extensions considered equity, diversity, and inclusion (EDI). The plot presents the percentage of extensions which reported engaging diverse stakeholders, providing an EDI statement or explicitly considering EDI, ensuring country diversity, considering lingual diversity, ensuring gender diversity among authors, and adopting open access status.
 ```{r}
 # =========================================
-# 1. Prepare input data
+# 0. ECR flag in edi_author (ECR = NOT tenured)
 # =========================================
-edi$lingual_diversity2 <- ifelse(edi$lingual_diversity > 1, "yes", "no")
+edi_author <- edi_author %>%
+  mutate(
+    author_status_clean = str_to_lower(str_squish(author_status)),
+    position_clean      = str_to_lower(str_squish(career_stage_publication)),
+    position_clean      = na_if(position_clean, "cannot find"),
+    
+    # tenure: "yes" = professor / research fellow, otherwise "no"
+    tenure = case_when(
+      !author_status_clean %in% c("first", "last") ~ NA_character_,
+      is.na(position_clean)                        ~ NA_character_,
+      str_detect(position_clean, "profes")         ~ "yes",
+      str_detect(position_clean, "research fellow")~ "yes",
+      TRUE                                         ~ "no"
+    ),
+    
+    # ECR flag: complement of tenure for first/last authors
+    ecr = case_when(
+      is.na(tenure)   ~ NA_character_,
+      tenure == "no"  ~ "yes",  # ECR
+      tenure == "yes" ~ "no"    # not ECR
+    )
+  )
 
+# Get BOTH total count AND % ECR for FIRST authors
+first_ecr_summary <- edi_author %>%
+  filter(author_status_clean == "first", !is.na(ecr)) %>%
+  summarise(
+    total_first = n(),
+    n_ecr       = sum(ecr == "yes", na.rm = TRUE),
+    pct_ecr     = round(100 * n_ecr / total_first, 1)
+  )
+
+
+
+# =========================================
+# 1. Create lingual_diversity2 in edi
+#     "yes" if ≥1 language, "no" if 0, NA stays NA
+# =========================================
+edi <- edi %>%
+  mutate(
+    lingual_diversity2 = case_when(
+      is.na(lingual_diversity)   ~ NA_character_,
+      lingual_diversity > 1     ~ "yes",
+      TRUE                       ~ "no"   # this implicitly means 0
+    )
+  )
+
+# =========================================
+# 2. Base “yes” percentages for checklist-level items
+# =========================================
 df1 <- dplyr::select(
   edi,
   PRISMA_id,
@@ -464,9 +528,6 @@ df1 <- dplyr::select(
   open_access
 )
 
-# =========================================
-# 2. Compute percentage of "Yes" responses
-# =========================================
 df_fig <- df1 %>%
   summarise(across(
     c(
@@ -477,88 +538,104 @@ df_fig <- df1 %>%
     ),
     ~ mean(. == "yes", na.rm = TRUE) * 100
   )) %>%
-  tidyr::pivot_longer(cols = everything(),
-                      names_to = "variable",
-                      values_to = "percent_yes")
+  tidyr::pivot_longer(
+    cols      = everything(),
+    names_to  = "variable",
+    values_to = "percent_yes"
+  )
 
 # =========================================
-# 3. Add diversity ratios
+# 3. Add diversity ratios (assumes diversity_ratios already created)
 # =========================================
-diversity_ratios_m <- data.frame(
-  variable = c("author_diversity", "country_diversity"),
+diversity_ratios_m <- tibble(
+  variable    = c("author_diversity", "country_diversity"),
   percent_yes = c(
-    mean(diversity_ratios$female_ratio, na.rm = TRUE) * 100,
+    mean(diversity_ratios$female_ratio,       na.rm = TRUE) * 100,
     mean(diversity_ratios$global_south_ratio, na.rm = TRUE) * 100
   )
 )
 
-df_fig <- rbind(df_fig, diversity_ratios_m)
+# =========================================
+# 4. Combine all metrics (incl. ECR)
+# =========================================
+df_fig <- dplyr::bind_rows(df_fig, diversity_ratios_m, ecr_df)
 
 # =========================================
-# 4. Clean and relabel variables
+# 5. Clean and relabel variables
 # =========================================
-df_fig$variable <- c(
-  "EDI Considered",
-  "Lingual Diversity",
-  "Stakeholder Engagement",
-  "Open Access Status",
-  "Female Representation",
-  "Country Diversity"
-)
+df_fig <- df_fig %>%
+  mutate(
+    variable = dplyr::recode(
+      variable,
+      "edi_considered"        = "EDI Considered",
+      "lingual_diversity2"    = "Translated beyond English",
+      "stakeholder_engagement"= "Stakeholder Engagement",
+      "open_access"           = "Open Access Status",
+      "author_diversity"      = "Woman Representation",
+      "country_diversity"     = "Global South Affiliations",
+      "first_ECR"             = "First authors ECR",
+      "last_ECR"              = "Senior authors ECR"
+    )
+  )
 
 # =========================================
-# 5. Create circular barplot
+# 6. Create circular barplot
 # =========================================
-figure_3 <- ggplot(df_fig,
-                   aes(
-                     x = reorder(stringr::str_wrap(variable, 10), percent_yes),
-                     y = percent_yes,
-                     fill = percent_yes
-                   )) +
+figure_3 <- ggplot(
+  df_fig,
+  aes(
+    x    = stringr::str_wrap(variable, 10),
+    y    = percent_yes,
+    fill = percent_yes
+  )
+) +
   geom_col(position = "dodge2", show.legend = TRUE, alpha = 0.9) +
-  geom_segment(aes(
-    x = reorder(stringr::str_wrap(variable, 10), percent_yes),
-    y = 0,
-    xend = reorder(stringr::str_wrap(variable, 10), percent_yes),
-    yend = 100
-  ),
-  linetype = "dashed", color = "gray12") +
+  geom_segment(
+    aes(
+      x    = stringr::str_wrap(variable, 10),
+      y    = 0,
+      xend = stringr::str_wrap(variable, 10),
+      yend = 100
+    ),
+    linetype = "dashed",
+    color    = "gray12"
+  ) +
   geom_hline(
     aes(yintercept = y),
     data.frame(y = seq(0, 100, by = 25)),
     color = "lightgrey"
   ) +
   annotate(
-    x = 6.5,
+    x = length(unique(df_fig$variable)) + 0.5,
     y = 25,
     label = "25%",
-    geom = "text",
+    geom  = "text",
     color = "gray12",
-    size = 3
+    size  = 3
   ) +
   annotate(
-    x = 6.5,
+    x = length(unique(df_fig$variable)) + 0.5,
     y = 50,
     label = "50%",
-    geom = "text",
+    geom  = "text",
     color = "gray12",
-    size = 3
+    size  = 3
   ) +
   annotate(
-    x = 6.5,
+    x = length(unique(df_fig$variable)) + 0.5,
     y = 75,
     label = "75%",
-    geom = "text",
+    geom  = "text",
     color = "gray12",
-    size = 3
+    size  = 3
   ) +
   annotate(
-    x = 6.5,
+    x = length(unique(df_fig$variable)) + 0.5,
     y = 100,
     label = "100%",
-    geom = "text",
+    geom  = "text",
     color = "gray12",
-    size = 3
+    size  = 3
   ) +
   scale_y_continuous(
     limits = c(-10, 110),
@@ -566,37 +643,38 @@ figure_3 <- ggplot(df_fig,
     breaks = seq(0, 100, by = 25)
   ) +
   scale_fill_gradientn(
-    "Percentage of 'Yes'",
+    "Percentage",
     colours = c("#6C5B7B", "#C06C84", "#F67280", "#F8B195")
   ) +
   guides(fill = guide_colorsteps(
-    barwidth = 15,
-    barheight = 0.5,
+    barwidth       = 15,
+    barheight      = 0.5,
     title.position = "top",
-    title.hjust = 0.5
+    title.hjust    = 0.5
   )) +
   coord_polar() +
   labs(title = "EDI considerations in the development of PRISMA checklists") +
   theme_minimal() +
   theme(
-    axis.title = element_blank(),
-    axis.ticks = element_blank(),
-    axis.text.y = element_blank(),
-    axis.text.x = element_text(color = "gray12", size = 8),
-    legend.position = "bottom",
+    axis.title         = element_blank(),
+    axis.ticks         = element_blank(),
+    axis.text.y        = element_blank(),
+    axis.text.x        = element_text(color = "gray12", size = 8),
+    legend.position    = "bottom",
     legend.box.spacing = unit(-10, "pt"),
-    text = element_text(color = "gray12"),
-    plot.title = element_text(face = "bold", size = 12, hjust = 0.5),
-    panel.background = element_rect(fill = "white", color = "white"),
-    panel.grid = element_blank(),
+    text               = element_text(color = "gray12"),
+    plot.title         = element_text(face = "bold", size = 12, hjust = 0.5),
+    panel.background   = element_rect(fill = "white", color = "white"),
+    panel.grid         = element_blank(),
     panel.grid.major.x = element_blank()
   )
+
 
 # =========================================
 # 6. Save plot
 # =========================================
 
-# ggsave(here("figures", "figure_3_edi_circular_barplot.jpg"), plot = figure_3, width = 6, height = 6, dpi = 300)
+ ggsave(here("figures", "figure_3_edi_circular_barplot.jpg"), plot = figure_3, width = 6, height = 6, dpi = 300)
 ```
 
 # *Figure 4A & B*
@@ -670,41 +748,53 @@ geo_data_complete <- geo_data_complete %>%
 # 6. Define color palette
 # ============================================================
 color_palette <- c(
-  "0"       = "#D9D9D9",
-  "1–10"    = "#6C5B7B",
-  "11–20"   = "#C06C84",
+  "0"       = "#F9DCC4",
+  "1–10"    = "#D9D9D9",
+  "11–20"   = "#F8B195",
   "21–50"   = "#F67280",
-  "51–100"  = "#F8B195",
-  "100+"    = "#F9DCC4"
+  "51–100"  = "#C06C84",
+  "100+"    = "#6C5B7B"
 )
+
 
 # ============================================================
 # 7. Plot geographic diversity map
 # ============================================================
 p_map <- ggplot(geo_data_complete,
-                aes(x = long, y = lat, group = group, fill = Count_bin)) +
+                aes(x = long, y = lat, group = group, fill = Count)) +
   geom_polygon(colour = "white", size = 0.2) +
-  scale_fill_manual(
-    values   = color_palette,
-    na.value = "grey90",
-    name     = "Authors by country"
+  scale_fill_gradientn(
+    colours = c("grey85", "grey40", "grey5"),  # light (low) → dark (high)
+    name    = "Number of\nauthors",
+    limits  = c(0, max(geo_data_complete$Count, na.rm = TRUE)),
+    na.value = "grey92",
+    guide   = guide_colorbar(
+      barheight     = unit(0.8, "cm"),   # thin horizontal
+      barwidth      = unit(10, "cm"),    # wide horizontal
+      nbin          = 100,
+      raster        = TRUE,
+      frame.colour  = "black",
+      frame.linewidth = 0.3,
+      title.theme   = element_text(
+        size  = 14, 
+        face  = "bold"
+      ),
+      label.theme = element_text(size = 11)
+    )
   ) +
   labs(title = "a) Geographic Diversity", x = NULL, y = NULL) +
   theme_minimal(base_size = 12, base_family = "Arial") +
-  guides(fill = guide_legend(
-    keywidth = unit(1, "cm"),
-    keyheight = unit(1, "cm"),
-    title.theme = element_text(size = 14, face = "bold"),
-    label.theme = element_text(size = 12)
-  )) +
   theme(
-    legend.position = "bottom",
-    axis.text       = element_blank(),
-    axis.ticks      = element_blank(),
-    panel.grid      = element_blank(),
-    plot.title      = element_text(size = 16, face = "bold"),
-    plot.margin     = margin(t = 10, r = 10, b = 10, l = 10)
+    legend.position  = "bottom",
+    legend.key.width = unit(12, "cm"),   # extra wide
+    legend.key.height = unit(1, "cm"),
+    axis.text        = element_blank(),
+    axis.ticks       = element_blank(),
+    panel.grid       = element_blank(),
+    plot.title       = element_text(size = 16, face = "bold"),
+    plot.margin      = margin(t = 10, r = 10, b = 20, l = 10)  # more bottom space
   )
+
 
 # ============================================================
 # 8. (Optional) Save plot
