@@ -220,6 +220,7 @@ PRISMA_acupuncture ,Xiaoqin,Wang,Female,Female,95,"Evidence-Based Medicine Cente
 PRISMA_CHM,Xuan,Zhang,Female,Female,61,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,first,post doctoral researcher,ECR,China
 PRISMA_complex,Jeanne-Marie,Guise,Female,Female,100,"Department of Obstetrics & Gynecology, Oregon Health & Science University School of Medicine, Portland, OR, United States",United States,first,professor,,United States
 PRISMA_COSMIN,Ellen,Elsman,Female,Female,100,"Child Health Evaluative Sciences, The Hospital for Sick Children Research Institute, Toronto, ON, Canada; Amsterdam UMC, Amsterdam, Netherlands",Netherlands,first,associate professor,,Netherlands
+PRISMA_DTA_abstract,Matthew D. F.,McInnes,Male,Male,100,"University of Ottawa, Ottawa, Canada",Canada,first,professor,,Canada
 PRISMA_DTA,Matthew D. F.,McInnes,Male,Male,100,"University of Ottawa, Ottawa, Canada",Canada,first,professor,,Canada
 PRISMA_ecoevo,Rose,O'Dea,Female,Female,98,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,first,doctoral student,ECR,Australia
 PRISMA_equity,Vivian,Welch,Female,Female,98,"Bruyere Research Institute, Ottawa, Ontario, Canada",Canada,first,senior investigator,,Canada
@@ -240,7 +241,8 @@ PRISMA_acupuncture ,Kehu,Yang,Male,Male,83,"Evidence-Based Medicine Center, Lanz
 PRISMA_CHM,Zhaoxiang,Bian,Male,Male,100,"Chinese Clinical Trial Registry, Hong Kong Chinese Medicine Clinical Study Centre, School of Chinese Medicine, Hong Kong",Hong Kong,last,professor,,China
 PRISMA_complex,Peter,Tugwell,Male,Male,100,"Department of Medicine, University of Ottawa, Ottawa, Ontario, Canada",Canada,last,professor,,United Kingdom
 PRISMA_COSMIN,David,Moher,Male,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada",Canada,last,professor,,Ireland
-PRISMA_DTA_abstarct,Matthew D F,McInnes,Male,Male,100,"University of Ottawa, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,last,professor,,Canada
+PRISMA_DTA,Matthew D F,McInnes,Male,Male,100,"University of Ottawa, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,last,professor,,Canada
+PRISMA_DTA_abstract,Matthew D F,McInnes,Male,Male,100,"University of Ottawa, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,last,professor,,Canada
 PRISMA_ecoevo,Shinichi,Nakagawa,Male,Male,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,last,professor,,Japanese
 PRISMA_equity,Howard,White,Male,Male,100,"International Initiative for Impact Evaluation (3ie), Global Development Network, New Delhi, India",India,last,cannot find,,United Kingdom
 PRISMA_harms,Sunita,Vohra,Female,Female,98,"Faculty of Medicine and Dentistry, and Integrative Health Institute, University of Alberta, Edmonton, T6G 2C8, AB, Canada",Canada,last,professor,,Canada
@@ -380,30 +382,30 @@ PRISMA_DTA,Penny,Whiting,Female,Female,99,"University of York, United Kingdom",U
 PRISMA_DTA,Sally,Hopewell,Female,Female,99,"University of York, United Kingdom",United Kingdom,middle,,,
 PRISMA_DTA,Yemisi,Takwoingi,Female,Female,98,"University of York, United Kingdom",United Kingdom,middle,,,
 PRISMA_DTA,Constantine,Gatsonis,Male,Male,96,"Brown University, United States",United States,middle,,,
-PRISMA_DTA_abstarct,Petra,Macaskill,Female,Female,99,"University of Sydney, Sydney, NSW, Australia",Australia,middle,,,
-PRISMA_DTA_abstarct,Brett,Thombs,Male,Male,100,"Lady Davis Institute of the Jewish General Hospital and Department of Psychiatry, McGill University, MontrÃ©al, QC, Canada",Canada,middle,,,
-PRISMA_DTA_abstarct,David,Moher,Male,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,middle,,,
-PRISMA_DTA_abstarct,Jean-Paul,Salameh,Male,Male,100,"The Ottawa Hospital Research Institute Clinical Epidemiology Program, Ottawa, ON, Canada
+PRISMA_DTA_abstract,Petra,Macaskill,Female,Female,99,"University of Sydney, Sydney, NSW, Australia",Australia,middle,,,
+PRISMA_DTA_abstract,Brett,Thombs,Male,Male,100,"Lady Davis Institute of the Jewish General Hospital and Department of Psychiatry, McGill University, MontrÃ©al, QC, Canada",Canada,middle,,,
+PRISMA_DTA_abstract,David,Moher,Male,Male,100,"Centre for Journalology, Clinical Epidemiology Program, Ottawa Hospital Research Institute, Ottawa, ON, Canada",Canada,middle,,,
+PRISMA_DTA_abstract,Jean-Paul,Salameh,Male,Male,100,"The Ottawa Hospital Research Institute Clinical Epidemiology Program, Ottawa, ON, Canada
 2) Faculty of Medicine, Queenâ€™s University, Kingston, ON, Canada",Canada,middle,,,
-PRISMA_DTA_abstarct,Marcello,Tonelli,Male,Male,100,"Department of Medicine, University of Calgary, Calgary, AB, Canada",Canada,middle,,,
-PRISMA_DTA_abstarct,Trevor A,McGrath,Male,Male,100,"Department of Radiology, University of Ottawa, Ottawa, ON, Canada",Canada,middle,,,
-PRISMA_DTA_abstarct,Jérémie F.,Cohen,Male,Male,99,"Necker - Enfants Malades Hospital, Assistance Publique - Hôpitaux de Paris, Université de Paris",France,middle,,,
-PRISMA_DTA_abstarct,DaniÃ«l A,Korevaar,Male,Male,93,"Department of Respiratory Medicine, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,,,
-PRISMA_DTA_abstarct,Johannes B,Reitsma,Male,Male,100,"Cochrane Netherlands, Julius Center for Health Sciences and Primary Care, Utrecht University, University Medical Center Utrecht, Utrecht, Netherlands",Netherlands,middle,,,
-PRISMA_DTA_abstarct,Lotty,Hooft,Female,Female,91,"Cochrane Netherlands, Julius Center for Health Sciences and Primary Care, Utrecht University, University Medical Center Utrecht, Utrecht, Netherlands",Netherlands,middle,,,
-PRISMA_DTA_abstarct,Mariska M,Leeflang,Female,Female,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam Public Health, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,,,
-PRISMA_DTA_abstarct,Patrick M,Bossuyt,Male,Male,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam Public Health, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,,,
-PRISMA_DTA_abstarct,Anne W S,Rutjes,Female,Female,99,"Institute of Social and Preventive Medicine, University of Bern, Bern, Switzerland",Switzerland,middle,,,
-PRISMA_DTA_abstarct,Brian H,Willis,Male,Male,100,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK",United Kingdom,middle,,,
-PRISMA_DTA_abstarct,Chris J,Hyde,Male,Male,100,"Exeter Test Group, College of Medicine and Health, University of Exeter, Exeter, UK",United Kingdom,middle,,,
-PRISMA_DTA_abstarct,Harriet A,Hunt,Female,Female,100,"Exeter Test Group, College of Medicine and Health, University of Exeter, Exeter, UK",United Kingdom,middle,,,
-PRISMA_DTA_abstarct,Jonathan J,Deeks,Male,Male,98,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK
+PRISMA_DTA_abstract,Marcello,Tonelli,Male,Male,100,"Department of Medicine, University of Calgary, Calgary, AB, Canada",Canada,middle,,,
+PRISMA_DTA_abstract,Trevor A,McGrath,Male,Male,100,"Department of Radiology, University of Ottawa, Ottawa, ON, Canada",Canada,middle,,,
+PRISMA_DTA_abstract,Jérémie F.,Cohen,Male,Male,99,"Necker - Enfants Malades Hospital, Assistance Publique - Hôpitaux de Paris, Université de Paris",France,middle,,,
+PRISMA_DTA_abstract,DaniÃ«l A,Korevaar,Male,Male,93,"Department of Respiratory Medicine, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,,,
+PRISMA_DTA_abstract,Johannes B,Reitsma,Male,Male,100,"Cochrane Netherlands, Julius Center for Health Sciences and Primary Care, Utrecht University, University Medical Center Utrecht, Utrecht, Netherlands",Netherlands,middle,,,
+PRISMA_DTA_abstract,Lotty,Hooft,Female,Female,91,"Cochrane Netherlands, Julius Center for Health Sciences and Primary Care, Utrecht University, University Medical Center Utrecht, Utrecht, Netherlands",Netherlands,middle,,,
+PRISMA_DTA_abstract,Mariska M,Leeflang,Female,Female,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam Public Health, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,,,
+PRISMA_DTA_abstract,Patrick M,Bossuyt,Male,Male,100,"Department of Clinical Epidemiology, Biostatistics and Bioinformatics, Amsterdam Public Health, Academic Medical Centers, Amsterdam, Netherlands",Netherlands,middle,,,
+PRISMA_DTA_abstract,Anne W S,Rutjes,Female,Female,99,"Institute of Social and Preventive Medicine, University of Bern, Bern, Switzerland",Switzerland,middle,,,
+PRISMA_DTA_abstract,Brian H,Willis,Male,Male,100,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK",United Kingdom,middle,,,
+PRISMA_DTA_abstract,Chris J,Hyde,Male,Male,100,"Exeter Test Group, College of Medicine and Health, University of Exeter, Exeter, UK",United Kingdom,middle,,,
+PRISMA_DTA_abstract,Harriet A,Hunt,Female,Female,100,"Exeter Test Group, College of Medicine and Health, University of Exeter, Exeter, UK",United Kingdom,middle,,,
+PRISMA_DTA_abstract,Jonathan J,Deeks,Male,Male,98,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK
 2) NIHR Birmingham Biomedical Research Centre, University Hospitals Birmingham NHS Foundation Trust and University of Birmingham, Birmingham, UK",United Kingdom,middle,,,
-PRISMA_DTA_abstarct,Penny,Whiting,Female,Female,99,"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, UK",United Kingdom,middle,,,
-PRISMA_DTA_abstarct,Sally,Hopewell,Female,Female,99,"Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, UK",United Kingdom,middle,,,
-PRISMA_DTA_abstarct,Yemisi,Takwoingi,Female,Female,98,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK
+PRISMA_DTA_abstract,Penny,Whiting,Female,Female,99,"Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, UK",United Kingdom,middle,,,
+PRISMA_DTA_abstract,Sally,Hopewell,Female,Female,99,"Centre for Statistics in Medicine, Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, Oxford, UK",United Kingdom,middle,,,
+PRISMA_DTA_abstract,Yemisi,Takwoingi,Female,Female,98,"Institute of Applied Health Research, University of Birmingham, Birmingham, UK
 2) NIHR Birmingham Biomedical Research Centre, University Hospitals Birmingham NHS Foundation Trust and University of Birmingham, Birmingham, UK",United Kingdom,middle,,,
-PRISMA_DTA_abstarct,Constantine,Gatsonis,Male,Male,96,"Brown University, Providence, RI, USA",United States,middle,,,
+PRISMA_DTA_abstract,Constantine,Gatsonis,Male,Male,96,"Brown University, Providence, RI, USA",United States,middle,,,
 PRISMA_ecoevo,Daniel,Noble,Male,Male,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia; Research School of Biology, Australian National University, 46 Sullivans Creek Road, Canberra, 2600, Australia",Australia,middle,,,
 PRISMA_ecoevo,Malgorzata,Lagisz,Female,Female,99,"Evolution & Ecology Research Centre and School of Biological and Environmental Sciences, University of New South Wales, Sydney, NSW, 2052, Australia",Australia,middle,,,
 PRISMA_ecoevo,Matthew,Page,Male,Male,100,"School of Public Health and Preventative Medicine, Monash University, Melbourne, VIC, 3004, Australia",Australia,middle,,,
